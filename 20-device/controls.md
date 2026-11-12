@@ -20,17 +20,19 @@ Control scheme for the table board and timers ([function 1](functions.md#1-table
 1. The top line shows the selected table: `TBL-07`.
 2. The second line says what to do now: `BRING CHECK`. If nothing is due, it says what happened last: `ORDER TAKEN`.
 3. The third line shows the minutes since the last event and a bar toward the threshold.
-4. Below are the next 2 tables in the list, each with its action or minutes.
+4. Below is the table strip: all tables by number, always in the same place, `1 2 3 [4] 5 6 7 8`. A box marks the selected table. Orange numbers need an action; an orange box is a guest who waits.
 5. The bottom line shows the current meaning of each key.
 6. The status line shows only what needs attention: `MUTED`, `LOW BATTERY` (below 25 %).
 
 After every press, the second line shows a 1 s confirmation of what changed. Example: `TBL-07 ORDER TAKEN`, `TBL-07 UNDONE`.
 
-## Wheel and list
+## Choosing a table
 
-The wheel scrolls through the tables. The list is sorted by urgency: high alerts first, then low alerts, then tables by time left, then free tables.
+NEXT moves the box one table to the right on the strip; after the last table it goes back to the first. In 4-key mode a long press of NEXT moves left. On a high alert the box moves to the alerting table by itself.
 
-The list keeps its order while the server reads it. It re-sorts only after an action, after an alert, or while the screen is dimmed.
+The strip is in number order and does not change, so each table has a fixed place. Changed after desk test finding D5 `[A]` 2026-11-13: in the old design NEXT went through a list sorted by urgency, and Artemy could not tell how to reach a table.
+
+When the thumb wheel comes back, it moves the box in the same way.
 
 ## Keys
 

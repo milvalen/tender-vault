@@ -74,6 +74,6 @@ Findings of the scripted run `[Claude]`:
 | D2 | No stage for "check brought". `BILL` alerts while the guests pay | P6 | open: see [controls](../20-device/controls.md#open-points) |
 | D3 | Skipping dessert needs 2 STEP presses | P3 | open: 5 of 7 tables in the script |
 | D4 | 132 of 180 presses are NEXT to reach a table | P1 | open: measure with Artemy; a direct table choice can come with voice (stage 1) |
-| D5 | Desk test, Artemy, first minute: "I do not understand how to select a table" `[A]` 2026-11-13. The big number is the selected table, but nothing shows a list or a cursor. NEXT replaces the content in place, and the order is by urgency, so the next table is not predictable | P3, P9 | open: proposal is a fixed strip of all tables in number order with a cursor |
+| D5 | Desk test, Artemy, first minute: "I do not understand how to select a table" `[A]` 2026-11-13. The big number is the selected table, but nothing shows a list or a cursor. NEXT replaces the content in place, and the order is by urgency, so the next table is not predictable | P3, P9 | done in firmware `ai/table-board`: fixed table strip in number order with a box on the selected table; NEXT moves in number order. Scripted player: 82 instead of 132 move presses in 4-key mode |
 
 [Parent](10-concept.md)
