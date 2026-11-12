@@ -21,7 +21,7 @@ Stage 0. The device shows the list of tables and the time since the last event a
 2. The device starts the event timer.
 3. When the timer expires, the device vibrates and highlights the table with the accent color.
 
-Example thresholds: ask about dessert 15 min after mains; bring the check 3 min after the request. Thresholds are configurable `[?]`.
+Example thresholds: ask about dessert 15 min after mains; bring the check 3 min after the request. Thresholds are configurable `[?]`. Keys and stages: [controls](controls.md).
 
 ## 2. Voice order notebook
 
