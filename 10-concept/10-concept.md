@@ -17,5 +17,6 @@ parent: ../Home.md
 - [Ink Industrial design language](design-language.md): form, graphics, markings, palette.
 - [Enclosure concept sketches](concept-sketches.md): round 1, 3 mounting options.
 - [UX principles and audit](ux-principles.md): rules from research and findings in the current design.
+- [Design review of enclosure rev 0.1](design-review-rev-0-1.md): the enclosure, the screen and the sketch against the design language and the UX principles.
 
 [Parent](../Home.md)
