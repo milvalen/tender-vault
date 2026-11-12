@@ -1,0 +1,24 @@
+# Device state and secrets
+.obsidian/*
+!.obsidian/app.json
+!.obsidian/appearance.json
+!.obsidian/snippets/
+!.obsidian/snippets/*.css
+.trash/
+_private/
+.env
+.env.*
+*.key
+*.pem
+*credential*
+__pycache__/
+.DS_Store
+Thumbs.db
+
+# Heavy files live in tender-hardware or outside Git
+*.stl
+*.3mf
+*.step
+*.blend
+*.blend1
+*.zip
