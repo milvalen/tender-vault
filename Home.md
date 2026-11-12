@@ -20,7 +20,8 @@ parent: README.md
 ## Stage 0: prototype without soldering
 
 - [ ] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md) and buy the boards.
-- [ ] **Claude:** make 3 enclosure concept sketches in the [design language](10-concept/design-language.md).
+- [x] **Claude:** make 3 enclosure [concept sketches](10-concept/concept-sketches.md) in the [design language](10-concept/design-language.md). Done 2026-11-13.
+- [ ] **Artemy:** pick a sketch direction or a mix.
 - [ ] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d).
 - [ ] **Claude:** run the table board and timers on the stage 0 board in `tender-firmware`.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
