@@ -79,9 +79,9 @@ The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-f
 | Mode | Key A (front) | Key B (side) | Red key | Blue key |
 |---|---|---|---|---|
 | 4 keys: Dual Button unit on Grove | STEP, hold UNDO | NEXT table, hold previous | ACK, hold MUTE | REQUEST |
-| 2 keys: StickS3 alone | STEP, hold UNDO | NEXT table, hold ACK when an alert is shown, else REQUEST | — | — |
+| 2 keys: StickS3 alone | STEP, hold UNDO | NEXT table; hold: close the open request, else ACK when an alert is shown, else open a request | — | — |
 
-The 2-key mode gives one key 2 meanings on hold. The bottom line of the screen shows the current meaning. Use the 4-key mode if the desk test shows confusion.
+The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen shows the current meaning: `HOLD B: DONE`, `HOLD B: ACK` or `HOLD B: REQ`. An open request comes first, so an overdue request can always be closed. Use the 4-key mode if the desk test shows confusion.
 
 ## Example
 
@@ -95,8 +95,10 @@ The 2-key mode gives one key 2 meanings on hold. The bottom line of the screen s
 ## Open points
 
 1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
-2. Run the desk test from the [UX audit](../10-concept/ux-principles.md#desk-test-before-the-shift).
+2. Artemy runs the desk test from the [UX audit](../10-concept/ux-principles.md#desk-test-before-the-shift). The simulator is ready.
 3. Choose a vibration module for the stage 0 board `[?]`.
-4. Skipping dessert: step 5 is skipped in words, but the firmware still passes through `DESSERT SERVED`. The server presses STEP twice. Check in the desk test whether this confuses.
+4. Skipping dessert: step 5 is skipped in words, but the firmware still passes through `DESSERT SERVED`. The server presses STEP twice. The simulator shows this on 5 of 7 tables `[Claude]`. Check in the desk test whether this confuses.
+5. No stage for "check brought". `CHECK REQUESTED` alerts after 3 min even when the check is on the table and the guests are paying. The simulator gives this false alert on the slow-payment table `[Claude]`. Possible fix: a STEP after the check is brought, or a longer threshold.
+6. Moving between tables costs presses. In the simulated shift a scripted player used 132 of 180 presses on NEXT to reach the table `[Claude]`. The order by urgency helps for alerts, but not for floor events at any table. Check in the desk test.
 
 [Parent](20-device.md)

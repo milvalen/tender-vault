@@ -56,10 +56,23 @@ Artemy approved all changes `[A]` 2026-11-13. Status column: where each change i
 
 Run before the boards are bought, so the controls can still change.
 
-1. Build a screen simulator that runs the same table board core on a computer.
-2. Write a 10 min shift script: 6 tables, 2 requests, 1 check, 1 undo.
-3. Artemy plays the script with keyboard keys that map to the device keys, without a briefing.
+1. Build a screen simulator that runs the same table board core on a computer. Done `[Claude]` 2026-11-13: `tender-firmware` branch `ai/table-board`, `ui-unit/sim/`. The device and the simulator share the interface code (`app.h`), so the simulator shows the real screen.
+2. Write a shift script. Done: 32 min of shift time on 8 tables, 7 parties, 3 guest requests, 3 order reminders, 1 kitchen mix-up that needs UNDO, 1 slow payment. At speed x4 it takes 8 min.
+3. Artemy plays the script with keyboard keys that map to the device keys, without a briefing: `make -C ui-unit sim` (4 keys) and `make -C ui-unit sim ARGS=--two-keys` (2 keys). The `?` key records a question. Each run writes a log.
 4. Count: wrong-table actions, missed alerts, questions "what does this key do".
 5. Pass: 0 wrong-table actions, 0 missed high alerts, no more than 1 question.
+
+### Simulator check before Artemy plays
+
+A scripted good player passes in both key modes. A scripted sloppy player (acts late, on the selected table only) fails with 15 wrong-table actions and 4 missed alerts. So the score can tell a pass from a fail `[Claude]`.
+
+Findings of the scripted run `[Claude]`:
+
+| # | Finding | Principle | Status |
+|---|---|---|---|
+| D1 | 2-key mode: an overdue request turned hold B into ACK. The request could not be closed and alerted every 3 min | P3, P6 | fixed in firmware `43e4681`: hold B closes an open request first, label `HOLD B: DONE` |
+| D2 | No stage for "check brought". `BILL` alerts while the guests pay | P6 | open: see [controls](../20-device/controls.md#open-points) |
+| D3 | Skipping dessert needs 2 STEP presses | P3 | open: 5 of 7 tables in the script |
+| D4 | 132 of 180 presses are NEXT to reach a table | P1 | open: measure with Artemy; a direct table choice can come with voice (stage 1) |
 
 [Parent](10-concept.md)
