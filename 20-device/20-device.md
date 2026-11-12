@@ -16,5 +16,6 @@ parent: ../Home.md
 - [TND-01 device](device.md): architecture, input, output, power.
 - [Functions](functions.md): what the device does, by stage.
 - [Controls](controls.md): wheel, 3 keys, table stages.
+- [Orders by seat and pickup](orders-and-pickup.md): who ordered what, where to carry a dish from the pass.
 
 [Parent](../Home.md)

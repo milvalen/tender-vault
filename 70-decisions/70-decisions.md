@@ -15,6 +15,12 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Orders by seat and pickup
+
+**Decision:** the device records orders by table and seat. At the pass, the server says the menu item and the device shows the table and the seat. STEP marks the item as served `[A]`. Details: [orders by seat and pickup](../20-device/orders-and-pickup.md).
+
+**Consequence:** the voice unit (stage 1) becomes the main input for orders. Stage 0 keeps only the table board and timers.
+
 ## 2026-11-13. Control scheme and thresholds
 
 **Decision:** a second press of REQUEST closes an open request. The stage thresholds are approved: `SEAT` 3 min, `MAIN` 15 min, `BILL` 3 min, request 2 min `[A]`. Details: [controls](../20-device/controls.md).

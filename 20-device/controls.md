@@ -29,9 +29,9 @@ The wheel scrolls through the tables. The list is sorted by urgency: tables with
 
 | Key | Short press | Long press |
 |---|---|---|
-| **1. STEP** | Move the table to the next stage. The timer resets to `T+0` | Undo the last step |
+| **1. STEP** | Move the table to the next stage. The timer resets to `T+0`. After a pickup, mark the menu item as served ([orders and pickup](orders-and-pickup.md)) | Undo the last step |
 | **2. ACK** | Stop the vibration and snooze the signal for 3 min | Mute all signals for 10 min |
-| **3. REQUEST** | Mark a small guest request (water, cutlery, napkins) with a 2 min timer. The table stage does not change. A second press closes the open request `[A]` 2026-11-13 | Open the table menu: allergens, number of guests, free the table |
+| **3. REQUEST** | Mark a small guest request (water, cutlery, napkins) with a 2 min timer. The table stage does not change. A second press closes the open request `[A]` 2026-11-13 | Open the table menu: table map by seat, allergens, number of guests, free the table |
 
 Each key has its own shape, so the server can find it without a look:
 

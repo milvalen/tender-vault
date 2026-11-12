@@ -30,6 +30,9 @@ One term means one concept. Use the term from the "Use" column.
 | stage | the service step of a table: `SEAT`, `ORD`, `MAIN`, `DSRT`, `BILL`, `FREE` | status, phase |
 | threshold | the timer value at which the device signals | limit, deadline |
 | request | a small guest request with a short timer; it does not change the stage | task, ask |
+| pass | the place where the kitchen puts ready dishes for servers | window, counter |
+| pickup | the server takes a dish from the pass and the device shows its table and seat | handoff, runner call |
+| table map | the screen that shows the seats of a table and their menu items | seat plan, layout |
 | restaurant POS | the restaurant's system for orders and payment | R-keeper, till |
 | stage 0 | the prototype from ready-made boards without soldering | MVP |
 | Ink Industrial | the project's design language | style |

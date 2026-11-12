@@ -31,6 +31,7 @@ Stage 1. The server holds the button and says: "table seven, seat two, carbonara
 2. The parser extracts the table, the seat, the menu item and the modifiers.
 3. The parser matches the item against the menu. If the item contains a guest's allergen, the device warns the server.
 4. The server copies the order into the restaurant POS from the list on the screen.
+5. At the pass, the server says the menu item; the device shows the table and the seat. Details: [orders by seat and pickup](orders-and-pickup.md).
 
 ## 3. Menu trainer
 
