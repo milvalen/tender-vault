@@ -29,7 +29,7 @@ parent: README.md
 - [x] **Claude:** screen simulator for the desk test, `tender-firmware` `ai/table-board` `43e4681`, 2026-11-13. See the [UX audit](10-concept/ux-principles.md#desk-test-before-the-shift).
 - [ ] **Artemy:** play the desk test in both key modes: `make -C ui-unit sim`, then `make -C ui-unit sim ARGS=--two-keys`.
 - [x] **Artemy:** decide on the [design review of enclosure rev 0.1](10-concept/design-review-rev-0-1.md) findings R1–R9. All approved 2026-11-13; applied in enclosure rev 0.2.
-- [ ] **Artemy:** review enclosure [rev 0.2](40-hardware/40-hardware.md) and accept it into `dev`.
+- [x] **Artemy:** review enclosure [rev 0.2](40-hardware/40-hardware.md) and accept it into `dev`. Accepted 2026-11-13, commit `e8d4bf6`.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions

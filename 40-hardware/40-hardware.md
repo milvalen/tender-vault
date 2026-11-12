@@ -19,7 +19,7 @@ The enclosure model, the wiring and the full BOM are in the [tender-hardware](ht
 
 ## Enclosure rev 0.2
 
-Status: built and checked in code, not printed. Branch `ai/enclosure-rev-0-2` of `tender-hardware`, commit `e8d4bf6`, 2026-11-13. Not accepted into `dev` yet.
+Status: built and checked in code, not printed. Accepted by Artemy into `dev` of `tender-hardware`, commit `e8d4bf6`, 2026-11-13.
 
 Applies the [design review of rev 0.1](../10-concept/design-review-rev-0-1.md):
 
