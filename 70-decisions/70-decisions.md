@@ -15,6 +15,12 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. UX audit changes
+
+**Decision:** apply all changes of the [UX audit](../10-concept/ux-principles.md) `[A]`. One function per key, 2 alert levels, one alert burst instead of endless flashing, action text on screen, confirmation after every press, stable list order, house seat numbering.
+
+**Consequence:** the [controls](../20-device/controls.md) page and the firmware on `ai/table-board` changed. A desk test runs before the boards are bought.
+
 ## 2026-11-13. Orders by seat and pickup
 
 **Decision:** the device records orders by table and seat. At the pass, the server says the menu item and the device shows the table and the seat. STEP marks the item as served `[A]`. Details: [orders by seat and pickup](../20-device/orders-and-pickup.md).

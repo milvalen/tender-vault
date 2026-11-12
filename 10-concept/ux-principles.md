@@ -1,7 +1,7 @@
 ---
 title: UX principles and audit
 type: standard
-status: proposed
+status: active
 owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
@@ -36,19 +36,21 @@ Limit: most sources are design commentary and small studies. No test with real s
 
 Design state on 2026-11-13: [controls](../20-device/controls.md), firmware `ai/table-board` commit `495d6c0`.
 
-| # | Finding | Principle | Severity | Proposed change |
-|---|---|---|---|---|
-| A1 | Stage 0 firmware maps 6 actions to 2 buttons with single, double and long presses. The server must remember a hidden table of gestures. Single press also waits about 0.3 s for a possible double press | P3 | high | Single and long press only. Show the label of each button on screen. Buy a snap-in key unit for stage 0 if the 2-button version fails a desk test |
-| A2 | The screen flashes for as long as any table is due. This is an endless alarm | P6, P7 | high | One alert burst, then a steady accent marker. Repeat after the snooze only |
-| A3 | All due tables alert in the same way. "Offer dessert" (low) and "guest waits for the check" (high) look the same | P6 | high | 2 levels. High: request, `SEAT` (order not taken), `BILL`. Low: `MAIN` (dessert): accent marker on the list, no flash, no vibration |
-| A4 | The main line shows a stage code and minutes (`TBL-07 T+12`, `MAIN`). The server must translate the code into an action | P1, P2 | medium | Main line: table and action: `TBL-07 OFFER DESSERT`. Minutes become secondary |
-| A5 | When an alert starts, the selection stays on another table. STEP then acts on the wrong table | P1, P9 | high | On a high alert, select the alerting table. The key labels name it |
-| A6 | The list re-sorts every second. The selected table and the rows below it can move while the server reads | P9 | medium | Re-sort only on a key press or when the screen wakes. Selection stays on its table |
-| A7 | A press gives no confirmation. The change is visible only in the stage code | P4 | medium | Show "TBL-07 → ORDER TAKEN" for 1 s after STEP, and "UNDONE" after undo |
-| A8 | The header always shows `LOAD 3/4` and `UNIT TND-01` | P8 | low | Show the battery only below 25 %. Keep the unit marking on the enclosure only |
-| A9 | ACK, REQUEST and MUTE all exist. The server must choose between 3 "not now" style actions | P3, P8 | medium | Keep REQUEST and ACK. Move MUTE to a long press of ACK (already planned). Do not add more modes |
-| A10 | The seat numbering example "seat 1 at the window" is a guess | P10 | low | Use the house pivot point: seat 1 has its back to it, then clockwise. Ask the restaurant for its rule |
-| A11 | Stage 0 board has no vibration motor. A screen flash is not seen when the device is on the belt | P6, P7 | high | Add a snap-in vibration module in the lower bay `[?]`, or move the screen signal to an always-visible place |
+Artemy approved all changes `[A]` 2026-11-13. Status column: where each change is now.
+
+| # | Finding | Principle | Severity | Change | Status |
+|---|---|---|---|---|---|
+| A1 | Stage 0 firmware maps 6 actions to 2 buttons with single, double and long presses. The server must remember a hidden table of gestures. Single press also waits about 0.3 s for a possible double press | P3 | high | Single and long press only. Show the label of each button on screen. Buy a snap-in key unit for stage 0 if the 2-button version fails a desk test | done in firmware `a3548d5`: single and long press only, key labels on screen; Dual Button unit added to the [stage 0 list](../40-hardware/stage-0-bom.md) |
+| A2 | The screen flashes for as long as any table is due. This is an endless alarm | P6, P7 | high | One alert burst, then a steady accent marker. Repeat after the snooze only | done in firmware `a3548d5` |
+| A3 | All due tables alert in the same way. "Offer dessert" (low) and "guest waits for the check" (high) look the same | P6 | high | 2 levels. High: request, `SEAT` (order not taken), `BILL`. Low: `MAIN` (dessert): accent marker on the list, no flash, no vibration | done in firmware `a3548d5` and [controls](../20-device/controls.md#alerts) |
+| A4 | The main line shows a stage code and minutes (`TBL-07 T+12`, `MAIN`). The server must translate the code into an action | P1, P2 | medium | Main line: table and action: `TBL-07 OFFER DESSERT`. Minutes become secondary | done in firmware `a3548d5` and [controls](../20-device/controls.md#screen) |
+| A5 | When an alert starts, the selection stays on another table. STEP then acts on the wrong table | P1, P9 | high | On a high alert, select the alerting table. The key labels name it | done in firmware `a3548d5` |
+| A6 | The list re-sorts every second. The selected table and the rows below it can move while the server reads | P9 | medium | Re-sort only on a key press or when the screen wakes. Selection stays on its table | done in firmware `a3548d5` |
+| A7 | A press gives no confirmation. The change is visible only in the stage code | P4 | medium | Show "TBL-07 → ORDER TAKEN" for 1 s after STEP, and "UNDONE" after undo | done in firmware `a3548d5` |
+| A8 | The header always shows `LOAD 3/4` and `UNIT TND-01` | P8 | low | Show the battery only below 25 %. Keep the unit marking on the enclosure only | done in firmware `a3548d5` |
+| A9 | ACK, REQUEST and MUTE all exist. The server must choose between 3 "not now" style actions | P3, P8 | medium | Keep REQUEST and ACK. Move MUTE to a long press of ACK (already planned). Do not add more modes | done: MUTE is a long press of ACK |
+| A10 | The seat numbering example "seat 1 at the window" is a guess | P10 | low | Use the house pivot point: seat 1 has its back to it, then clockwise. Ask the restaurant for its rule | done in [orders and pickup](../20-device/orders-and-pickup.md#seat-numbering); restaurant rule still unknown |
+| A11 | Stage 0 board has no vibration motor. A screen flash is not seen when the device is on the belt | P6, P7 | high | Add a snap-in vibration module in the lower bay `[?]`, or move the screen signal to an always-visible place | open: firmware has `kVibroPin`; module not chosen |
 
 ## Desk test before the shift
 

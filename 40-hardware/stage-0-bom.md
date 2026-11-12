@@ -22,6 +22,16 @@ Status `proposed`: Artemy has not approved the list yet. Prices are in US dollar
 | M5Stack StopWatch Dev Kit | interface unit: ESP32-S3, round AMOLED, microphone, speaker, battery | about $45 |
 | USB-C data cable | flashing and charging | probably at home `[?]` |
 
+## Recommended for stage 0
+
+| Item | Purpose | Price |
+|---|---|---|
+| M5Stack StickS3 | interface unit used by the firmware and enclosure rev 0.1: 2 keys, 1.14-inch screen, no vibration motor | not checked |
+| M5Stack Dual Button unit | 2 more keys on the Grove port: ACK and REQUEST, one function per key ([UX audit](../10-concept/ux-principles.md)) | not checked |
+| Vibration module with a Grove or Hat connector | silent alert on the belt | not chosen `[?]` |
+
+The firmware and enclosure rev 0.1 target the StickS3, not the StopWatch kit above. Decision of 2026-11-13 by Claude when the enclosure was built `[Claude]`; confirm before the purchase.
+
 ## For voice (stage 1)
 
 | Item | Purpose | Price |

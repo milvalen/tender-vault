@@ -21,7 +21,13 @@ A server writes each order by seat. When a dish appears on the pass, the server 
 
 ## Seat numbering
 
-The server numbers the seats of each table from a fixed reference point, clockwise. Example: seat 1 is the seat nearest the window `[?]`. Seat numbers appear as `ST-N`.
+The device follows the common house standard from server training material `[Claude]` 2026-11-13:
+
+1. The restaurant fixes one pivot point per room, usually the kitchen door or the pass.
+2. Seat 1 is the seat with its back to the pivot point.
+3. The other seats follow clockwise.
+
+House rules can differ: some restaurants count counter-clockwise or use a separate rule for booths. Ask the restaurant for its rule `[?]`. Seat numbers appear as `ST-N`.
 
 ## Flow
 

@@ -19,13 +19,13 @@ parent: README.md
 
 ## Stage 0: prototype without soldering
 
-- [ ] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md) and buy the boards.
+- [ ] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md) and buy the boards after the desk test.
 - [x] **Claude:** make 3 enclosure [concept sketches](10-concept/concept-sketches.md) in the [design language](10-concept/design-language.md). Done 2026-11-13.
 - [ ] **Artemy:** pick a sketch direction or a mix.
 - [x] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d). Rev 0.1 in `dev`, 2026-11-13; see [hardware](40-hardware/40-hardware.md).
 - [x] **Artemy:** review enclosure rev 0.1 and accept it into `dev`. Accepted 2026-11-13.
 - [x] **Claude:** table board and timers for the stage 0 board in `tender-firmware`, branch `ai/table-board`, 2026-11-13. Builds for StickS3 and passes native tests; not run on a real board.
-- [ ] **Artemy:** decide on the [UX audit](10-concept/ux-principles.md) changes before the firmware is accepted into `dev`.
+- [x] **Artemy:** decide on the [UX audit](10-concept/ux-principles.md) changes. All approved 2026-11-13; applied in firmware `a3548d5` on `ai/table-board`.
 - [ ] **Claude:** desk test with a screen simulator (see the UX audit).
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 

@@ -34,7 +34,7 @@ EMBED = re.compile(r"!\[[^\]]*\]\(" + TARGET + r"\)")
 FENCE = re.compile(r"^(```|~~~).*?^\1", re.S | re.M)
 INLINE_CODE = re.compile(r"`[^`\n]*`")
 SECRET = re.compile(r"(gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY|"
-                    r"sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16})")
+                    r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16})")
 
 errors = []
 warnings = []
