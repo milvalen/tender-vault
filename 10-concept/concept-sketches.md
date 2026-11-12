@@ -17,6 +17,8 @@ Round 1, 2026-11-13. 3 sketches test the [Ink Industrial design language](design
 
 Limit: an image model drew the sketches. Dimensions, materials and battery capacity in the callouts are invented by the model `[?]`. They are not specifications.
 
+The screen text and key labels in the sketches (`TBL-07 T+12`, `START / STOP`, `LAP`, `LOAD 3/4`) are replaced by the [UX audit](ux-principles.md) and the [design review](design-review-rev-0-1.md). The current enclosure is [rev 0.2](../40-hardware/40-hardware.md).
+
 ## A. Forearm bracer
 
 ![Concept A: forearm bracer](assets/concept-a-forearm-bracer.jpg)
@@ -31,7 +33,7 @@ Limit: an image model drew the sketches. Dimensions, materials and battery capac
 
 - Slab on the apron belt, screen tilted up under a visor, thumb wheel on the side, 3 keys, spring clip.
 - Strength: the smallest and the easiest to hide. Closest to the stage 0 board size.
-- Risk: the server must look down; no talk button in this sketch.
+- Risk: the server must look down; no talk button in this sketch. The visor over the screen hides the top line from above; rev 0.2 has no visor.
 
 ## C. Modular split
 
@@ -43,7 +45,7 @@ Limit: an image model drew the sketches. Dimensions, materials and battery capac
 
 ## Open points
 
-1. Artemy picks a direction or a mix. Example: the shell of B with the talk button of A.
-2. The chosen direction becomes the first parametric enclosure in `tender-hardware`.
+1. Direction B is built as the parametric enclosure in `tender-hardware`, rev 0.1 and rev 0.2.
+2. Check the size of rev 0.2 (62 × 62 mm) on the belt with a paper mockup. Sketch B shows 58 × 38 mm `[?]`.
 
 [Parent](10-concept.md)

@@ -74,14 +74,14 @@ STEP moves a table through these stages. Thresholds are configurable. Artemy app
 
 ## Stage 0 key mapping
 
-The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `ai/table-board`.
+The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `ai/table-board`. The screen and enclosure rev 0.2 name keys by function, not by colour.
 
-| Mode | Key A (front) | Key B (side) | Red key | Blue key |
+| Mode | `STEP`: key A (front) | `NEXT`: key B (top) | `ACK`: red key | `REQ`: blue key |
 |---|---|---|---|---|
 | 4 keys: Dual Button unit on Grove | STEP, hold UNDO | NEXT table, hold previous | ACK, hold MUTE | REQUEST |
 | 2 keys: StickS3 alone | STEP, hold UNDO | NEXT table; hold: close the open request, else ACK when an alert is shown, else open a request | — | — |
 
-The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen shows the current meaning: `HOLD B: DONE`, `HOLD B: ACK` or `HOLD B: REQ`. An open request comes first, so an overdue request can always be closed. Use the 4-key mode if the desk test shows confusion.
+The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen shows the current meaning: `HOLD NEXT: DONE`, `HOLD NEXT: ACK` or `HOLD NEXT: REQ`. An open request comes first, so an overdue request can always be closed. Use the 4-key mode if the desk test shows confusion.
 
 ## Example
 

@@ -15,6 +15,12 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Design review changes
+
+**Decision:** apply all changes R1–R9 of the [design review of enclosure rev 0.1](../10-concept/design-review-rev-0-1.md) `[A]`. One enclosure part for each firmware key, key functions engraved and shown on screen (`STEP`, `NEXT`, `ACK`, `REQ`), no visor, no fixed battery marking, no orange part on the enclosure. The screen uses black, white, the accent and grey for secondary text.
+
+**Consequence:** enclosure rev 0.2 on `ai/enclosure-rev-0-2`, screen labels changed on `ai/table-board`, the [design language](../10-concept/design-language.md) changed.
+
 ## 2026-11-13. UX audit changes
 
 **Decision:** apply all changes of the [UX audit](../10-concept/ux-principles.md) `[A]`. One function per key, 2 alert levels, one alert burst instead of endless flashing, action text on screen, confirmation after every press, stable list order, house seat numbering.
