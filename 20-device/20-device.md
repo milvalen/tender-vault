@@ -1,19 +1,19 @@
 ---
-title: Устройство
+title: Device
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13
 parent: ../Home.md
 ---
 
-# Устройство
+# Device
 
-- [Устройство TND-01](device.md): архитектура, ввод, вывод, питание.
-- [Функции](functions.md): что устройство делает, по этапам.
+- [TND-01 device](device.md): architecture, input, output, power.
+- [Functions](functions.md): what the device does, by stage.
 
-[Родитель](../Home.md)
+[Parent](../Home.md)

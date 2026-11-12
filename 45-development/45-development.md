@@ -1,28 +1,28 @@
 ---
-title: Разработка
+title: Development
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Решение Артемия 2026-11-13
+source: Decision of Artemy 2026-11-13
 parent: ../Home.md
 ---
 
-# Разработка
+# Development
 
-Код живёт в отдельных репозиториях. Хранилище не копирует код. Команды запуска лежат в `README.md` репозитория.
+Code lives in separate repositories. The vault does not copy code. Run commands are in each repository's `README.md`.
 
-| Репозиторий | Назначение | Статус |
+| Repository | Purpose | Status |
 |---|---|---|
-| [tender-firmware](https://github.com/milvalen/tender-firmware) | прошивка блока интерфейса и программы блока голоса | `planned` |
-| [tender-hardware](https://github.com/milvalen/tender-hardware) | параметрический корпус (build123d), схема подключения, BOM | `planned` |
+| [tender-firmware](https://github.com/milvalen/tender-firmware) | interface unit firmware and voice unit software | `planned` |
+| [tender-hardware](https://github.com/milvalen/tender-hardware) | parametric enclosure (build123d), wiring, BOM | `planned` |
 
-## Ветки
+## Branches
 
-1. Ветка по умолчанию — `dev`. Ветка `main` — релизная и не опережает `dev`.
-2. Агенты работают в ветках `ai/<область>`. Готовое попадает в `dev` после приёмки Артемием.
+1. The default branch is `dev`. `main` is the release branch and is never ahead of `dev`.
+2. Agents work in `ai/<area>` branches. Work reaches `dev` after acceptance by Artemy.
 
-[Родитель](../Home.md)
+[Parent](../Home.md)

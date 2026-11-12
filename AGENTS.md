@@ -1,37 +1,37 @@
-# Хранилище tender — инструкции для агентов
+# tender vault — instructions for agents
 
-Прочитайте [Home](Home.md), [стандарт документации](90-system/documentation-standard.md) и [глоссарий](90-system/glossary.md). Пишите по-русски по принципам ASD-STE100, адаптированным к русскому языку. Используйте термины из глоссария. Имена файлов и папок содержат только латиницу, цифры и дефис.
+Read [Home](Home.md), the [documentation standard](90-system/documentation-standard.md) and the [glossary](90-system/glossary.md). Write in English under ASD-STE100. Use the terms from the glossary. File and folder names contain only Latin letters, digits and hyphens.
 
-Область: устройство TENDER (TND-01) для работы официанта. Концепт, дизайн-язык, функции, наблюдения со смен, железо, корпус, инструменты. Код хранится в отдельных репозиториях `tender-firmware` и `tender-hardware`, не здесь.
+Scope: the TENDER device (TND-01) for restaurant floor work. Concept, design language, functions, shift field notes, hardware, enclosure, tools. Code is kept in the separate repositories `tender-firmware` and `tender-hardware`, not here.
 
-## Публичность
+## Public repository
 
-Репозиторий публичный. Не вносите в него:
+This repository is public. Do not put into it:
 
-- доходы, чаевые, ставки и графики смен владельца;
-- название и адрес ресторана, имена коллег и гостей;
-- пароли, токены, ключи;
-- внешние референсы стиля: имена художников, названия игр, брендов и чужих устройств.
+- the owner's income, tips, pay rates and shift schedules;
+- the restaurant name and address, the names of colleagues and guests;
+- passwords, tokens, keys;
+- external style references: names of artists, games, brands and other companies' devices.
 
-Такие данные лежат в `_private/`. Папка исключена из Git. В публичной заметке пишите обобщённо: «ресторан», «коллега», «гость».
+Such data goes to `_private/`. Git ignores that folder. In a public note, write in general terms: "the restaurant", "a colleague", "a guest".
 
 ## Git
 
-Работайте только в ветке `main`. Не создавайте ветки, форки и pull request. Не используйте `git push --force`.
+Work only on the `main` branch. Do not create branches, forks or pull requests. Do not use `git push --force`.
 
-1. Перед записью выполните `git status -sb`. Клон должен быть чистым и актуальным.
-2. Выполните `git pull --rebase`.
-3. Перед коммитом выполните `python3 -I 90-system/tools/check-vault.py` и `git diff --check`.
-4. Коммитьте короткими коммитами по одной теме и отправляйте только в `main`.
+1. Before you write, run `git status -sb`. The clone must be clean and up to date.
+2. Run `git pull --rebase`.
+3. Before you commit, run `python3 -I 90-system/tools/check-vault.py` and `git diff --check`.
+4. Make short commits, one topic each, and push only to `main`.
 
-Покупки, публикацию в соцсетях и заказы у сервисов печати разрешает владелец отдельно.
+The owner approves purchases, social media posts and print service orders separately.
 
-## Содержимое
+## Content
 
-Не придумывайте факты. Цены и характеристики помечайте источником: `[А]` Артемий, `[Claude]` веб-ресёрч, `[?]` догадка. Новый факт не стирает старый: записывайте дату.
+Do not invent facts. Mark prices and specifications with a source: `[A]` Artemy, `[Claude]` web research, `[?]` guess. A new fact does not erase an old one: write the date.
 
-Страницы со статусом `verified` описывают только проверенное: что проверено, когда, на каком железе и коммите. Планы имеют статус `proposed` или `planned`.
+Pages with status `verified` describe only what was checked: what, when, on which hardware and commit. Plans have status `proposed` or `planned`.
 
-## Обновление
+## Updates
 
-Обновляйте минимальный набор: Home (действия), профильную заметку, журнал решений для значимых решений. Сырые заметки добавляйте во [входящие](00-inbox/00-inbox.md).
+Update the minimum set: Home (actions), the topic note, the decision log for significant decisions. Add raw notes to the [inbox](00-inbox/00-inbox.md).

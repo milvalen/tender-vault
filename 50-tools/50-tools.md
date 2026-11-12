@@ -1,61 +1,61 @@
 ---
-title: Инструменты
+title: Tools
 type: reference
 status: proposed
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Веб-ресёрч [Claude] 2026-11-13 (3daistudio.com, floyo.ai, youngju.dev, kunalganglani.com, magnific.com, picassoia.com)
+source: Web research [Claude] 2026-11-13 (3daistudio.com, floyo.ai, youngju.dev, kunalganglani.com, magnific.com, picassoia.com)
 parent: ../Home.md
 ---
 
-# Инструменты
+# Tools
 
-Набор инструментов для дизайна и разработки. Ресёрч `[Claude]` 2026-11-13. Ограничение: многие обзоры написаны продавцами инструментов. Перед выбором сравните результат на одной задаче.
+Tools for design and development. Research `[Claude]` 2026-11-13. Limit: tool vendors wrote many of the reviews. Before you choose, compare the results on one task.
 
-## Концепт-эскизы
+## Concept sketches
 
-| Инструмент | Сильная сторона |
+| Tool | Strength |
 |---|---|
-| Midjourney | стилизованные эскизы с выраженной эстетикой |
-| GPT Image | технические детали и подписи |
-| Krea | рендер в реальном времени по наброску |
-| Figma Weave | генерация из Claude, результат сразу в Figma |
+| Midjourney | stylized sketches with a strong look |
+| GPT Image | technical details and labels |
+| Krea | real-time render from a rough sketch |
+| Figma Weave | generation from Claude, results go to Figma |
 
-## Картинка → 3D
+## Image to 3D
 
-Нужно для поиска силуэта, не для производства. На выходе сетка, а не точная геометрия.
+Use for silhouette search, not for production. The output is a mesh, not precise geometry.
 
-| Инструмент | Сильная сторона |
+| Tool | Strength |
 |---|---|
-| Tripo | чистые механические формы |
-| Hyper3D Rodin | hard-surface и материалы; дороже |
-| Meshy 7 | скорость |
+| Tripo | clean mechanical shapes |
+| Hyper3D Rodin | hard-surface and materials; more expensive |
+| Meshy 7 | speed |
 
 ## CAD
 
-| Инструмент | Роль |
+| Tool | Role |
 |---|---|
-| build123d | основной: корпус как код на Python, выход STEP и STL, изменения видны в Git |
-| Plasticity | ручная скульптура пластин (NURBS) |
-| Zoo Zookeeper | эксперимент: текст → CAD, выход STEP |
+| build123d | primary: the enclosure as Python code, STEP and STL output, changes visible in Git |
+| Plasticity | manual sculpting of plates (NURBS) |
+| Zoo Zookeeper | experiment: text to CAD, STEP output |
 
-## Рендер и графика
+## Render and graphics
 
-| Инструмент | Роль |
+| Tool | Role |
 |---|---|
-| Blender | рендеры и постеры |
-| Figma | макеты экрана |
-| LVGL | интерфейс на устройстве |
+| Blender | renders and posters |
+| Figma | screen mockups |
+| LVGL | on-device interface |
 
-## Электроника и производство
+## Electronics and manufacturing
 
-| Инструмент | Роль |
+| Tool | Role |
 |---|---|
-| KiCad | своя плата на поздних этапах |
-| JLCPCB | изготовление и монтаж платы |
-| JLC3DP или местный сервис | печать корпуса, фотополимер (SLA) для мелких граней |
+| KiCad | own board in later stages |
+| JLCPCB | board fabrication and assembly |
+| JLC3DP or a local service | enclosure printing; resin (SLA) for sharp edges |
 
-[Родитель](../Home.md)
+[Parent](../Home.md)

@@ -1,20 +1,20 @@
 ---
-title: Железо
+title: Hardware
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13
 parent: ../Home.md
 ---
 
-# Железо
+# Hardware
 
-- [Список покупок этапа 0](stage-0-bom.md): платы и модули без пайки.
+- [Stage 0 shopping list](stage-0-bom.md): boards and modules without soldering.
 
-Модель корпуса, схема подключения и полный BOM лежат в репозитории [tender-hardware](https://github.com/milvalen/tender-hardware).
+The enclosure model, the wiring and the full BOM are in the [tender-hardware](https://github.com/milvalen/tender-hardware) repository.
 
-[Родитель](../Home.md)
+[Parent](../Home.md)

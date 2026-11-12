@@ -1,54 +1,54 @@
 ---
-title: Дизайн-язык Ink Industrial
+title: Ink Industrial design language
 type: standard
 status: proposed
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13
 parent: 10-concept.md
 ---
 
-# Дизайн-язык Ink Industrial
+# Ink Industrial design language
 
-Ink Industrial — собственный дизайн-язык TENDER. Он соединяет полевое снаряжение и чернильную графику. Правила ниже действуют для корпуса, экрана, иконок и постеров.
+Ink Industrial is the design language of TENDER. It joins field equipment with ink graphics. The rules below apply to the enclosure, the screen, the icons and the posters.
 
-## Форма
+## Form
 
-1. Корпус собран из угловатых асимметричных пластин. Пластины перекрывают друг друга.
-2. Крепёж открыт. Швы и сочленения видны.
-3. Каждая деталь работает: защищает экран, служит упором для пальца или держит ремешок. Декоративных деталей нет.
-4. Грани прямые. Скругления малые, радиус до 1 мм `[?]`, уточнить после первой печати.
+1. The enclosure is made of angular, asymmetric plates. The plates overlap.
+2. Fasteners are exposed. Seams and joints are visible.
+3. Every part has a job: it protects the screen, gives a finger rest or holds the strap. There are no decorative parts.
+4. Edges are straight. Fillets are small, radius up to 1 mm `[?]`; confirm after the first print.
 
-## Графика
+## Graphics
 
-1. Экран 1-битный: чёрный и белый, без полутонов.
-2. Иконки и постеры рисуются кистевым штрихом с неровным краем.
-3. Пустое пространство — часть композиции. Плотные блоки стоят рядом с пустыми полями.
+1. The screen is 1-bit: black and white, no grey.
+2. Icons and posters are drawn with a brush stroke that has a rough edge.
+3. Empty space is part of the composition. Dense blocks stand next to empty fields.
 
-## Маркировка
+## Markings
 
-Трафаретный шрифт, только заглавные буквы. Своя система обозначений:
+Stencil typeface, capitals only. The project's own designation system:
 
-| Обозначение | Значение |
+| Designation | Meaning |
 |---|---|
-| `UNIT TND-01` | устройство |
-| `TBL-07` | стол 7 |
-| `ST-2` | место 2 за столом |
-| `LOAD 3/4` | заряд батареи |
-| `T+12` | 12 мин с момента заказа |
+| `UNIT TND-01` | the device |
+| `TBL-07` | table 7 |
+| `ST-2` | seat 2 at the table |
+| `LOAD 3/4` | battery charge |
+| `T+12` | 12 min since the order |
 
-## Палитра
+## Palette
 
-| Роль | Цвет |
+| Role | Color |
 |---|---|
-| Основа | матовый чёрный |
-| Вторая основа | тёмный оливковый или графит |
-| Акцент | один сигнальный цвет: красный или оранжевый |
-| Маркировка | белый или светло-серый |
+| Base | matte black |
+| Second base | dark olive or graphite |
+| Accent | one signal color: red or orange |
+| Markings | white or light grey |
 
-Акцент отмечает только то, что требует действия. Пример: стол, где таймер истёк.
+The accent marks only what needs action. Example: a table whose timer has expired.
 
-[Родитель](10-concept.md)
+[Parent](10-concept.md)

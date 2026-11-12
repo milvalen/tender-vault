@@ -1,33 +1,34 @@
 ---
-title: Глоссарий
+title: Glossary
 type: reference
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Правило «один термин — одно понятие» из стандарта документации
+source: Rule "one term, one concept" from the documentation standard
 parent: 90-system.md
 ---
 
-# Глоссарий
+# Glossary
 
-Один термин означает одно понятие. Используйте термин из колонки «Используем».
+One term means one concept. Use the term from the "Use" column.
 
-| Используем | Значение | Не используем |
+| Use | Meaning | Do not use |
 |---|---|---|
-| устройство | TENDER TND-01 целиком | гаджет, девайс |
-| блок интерфейса | плата с экраном, кнопками и вибромотором | часы, браслет |
-| блок голоса | плата, которая распознаёт речь офлайн | мозг, сервер |
-| смена | рабочий день официанта от начала до конца | выход |
-| стол | стол в зале с номером `TBL-NN` | столик |
-| место | место гостя за столом с номером `ST-N` | позиция |
-| позиция меню | блюдо или напиток из меню | айтем, пункт |
-| модификатор | изменение позиции меню: «без бекона», «без льда» | допик |
-| таймер | отсчёт времени с события за столом | напоминалка |
-| касса ресторана | система ресторана для заказов и оплаты | POS, R-keeper |
-| этап 0 | прототип из готовых плат без пайки | MVP |
-| Ink Industrial | дизайн-язык проекта | стиль |
+| device | TENDER TND-01 as a whole | gadget |
+| interface unit | the board with the screen, keys and vibration motor | watch, bracelet |
+| voice unit | the board that recognizes speech offline | brain, server |
+| shift | a server's working day from start to end | — |
+| server | the person who serves tables | waiter, waitress |
+| table | a table on the floor with the number `TBL-NN` | — |
+| seat | a guest's place at a table with the number `ST-N` | position |
+| menu item | a dish or drink from the menu | item, product |
+| modifier | a change to a menu item: "no bacon", "no ice" | add-on |
+| timer | the time count since an event at a table | reminder |
+| restaurant POS | the restaurant's system for orders and payment | R-keeper, till |
+| stage 0 | the prototype from ready-made boards without soldering | MVP |
+| Ink Industrial | the project's design language | style |
 
-[Родитель](90-system.md)
+[Parent](90-system.md)

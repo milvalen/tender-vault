@@ -1,45 +1,45 @@
 ---
-title: Панель проекта
+title: Project dashboard
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13
 parent: README.md
 ---
 
-# Панель проекта
+# Project dashboard
 
-**Проект:** TENDER, устройство TND-01 `[А]`, 2026-11-13.
+**Project:** TENDER, device TND-01 `[A]`, 2026-11-13.
 
-**Суть:** автономное носимое устройство на предплечье или поясе фартука. Устройство помогает официанту в смене без телефона, интернета и кассы ресторана. Подробности: [концепт](10-concept/concept.md).
+**Summary:** a self-contained wearable unit on the forearm or the apron belt. The device helps a server through a shift without a phone, the internet or the restaurant POS. Details: [concept](10-concept/concept.md).
 
-## Этап 0: прототип без пайки
+## Stage 0: prototype without soldering
 
-- [ ] **Артемий:** утвердить [список покупок этапа 0](40-hardware/stage-0-bom.md) и купить платы.
-- [ ] **Claude:** сделать 3 концепт-эскиза корпуса в [дизайн-языке](10-concept/design-language.md).
-- [ ] **Claude:** собрать первый параметрический корпус в `tender-hardware` (build123d).
-- [ ] **Claude:** запустить табло столов и таймеры на плате этапа 0 в `tender-firmware`.
-- [ ] **Артемий:** после 2–3 смен записать наблюдения в [полевые заметки](30-field/30-field.md).
+- [ ] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md) and buy the boards.
+- [ ] **Claude:** make 3 enclosure concept sketches in the [design language](10-concept/design-language.md).
+- [ ] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d).
+- [ ] **Claude:** run the table board and timers on the stage 0 board in `tender-firmware`.
+- [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
-## Открытые вопросы
+## Open questions
 
-- Разрешено ли носить устройство в зале? От ответа зависит форма: рукав или скрытый модуль на поясе.
-- Какой вычислитель берём для голоса: Raspberry Pi Zero 2 WH или облачный запрос через телефон? См. [устройство](20-device/device.md).
+- Is it allowed to wear the device on the floor? The answer sets the form: a forearm sleeve or a hidden belt module.
+- Which computer runs voice: Raspberry Pi Zero 2 WH, or a cloud request through the phone? See [device](20-device/device.md).
 
-## Навигация
+## Navigation
 
-- [Входящие](00-inbox/00-inbox.md)
-- [Концепт и дизайн-язык](10-concept/10-concept.md)
-- [Устройство и функции](20-device/20-device.md)
-- [Полевые заметки](30-field/30-field.md)
-- [Железо](40-hardware/40-hardware.md)
-- [Разработка](45-development/45-development.md)
-- [Инструменты](50-tools/50-tools.md)
-- [Журнал решений](70-decisions/70-decisions.md)
-- [Система](90-system/90-system.md)
+- [Inbox](00-inbox/00-inbox.md)
+- [Concept and design language](10-concept/10-concept.md)
+- [Device and functions](20-device/20-device.md)
+- [Field notes](30-field/30-field.md)
+- [Hardware](40-hardware/40-hardware.md)
+- [Development](45-development/45-development.md)
+- [Tools](50-tools/50-tools.md)
+- [Decision log](70-decisions/70-decisions.md)
+- [System](90-system/90-system.md)
 
-[Родитель](README.md)
+[Parent](README.md)

@@ -1,24 +1,24 @@
 ---
-title: Входящие
+title: Inbox
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Стандарт документации
+source: Documentation standard
 parent: ../Home.md
 ---
 
-# Входящие
+# Inbox
 
-Сюда попадают сырые идеи и заметки. Правила письма здесь не действуют. После разбора заметка переходит в профильный раздел.
+Raw ideas and notes go here. The writing rules do not apply here. After review, a note moves to its topic section.
 
-## Идеи
+## Ideas
 
-- Переводчик для иностранных гостей: готовые фразы о блюдах на английском и китайском.
-- Справка по допродажам: что предложить к заказанному блюду.
-- Режим «тихий зал»: только вибрация, экран гаснет без касания.
+- Translator for foreign guests: ready phrases about dishes in English and Chinese.
+- Upsell hints: what to offer with an ordered dish.
+- "Quiet floor" mode: vibration only, the screen turns off without a touch.
 
-[Родитель](../Home.md)
+[Parent](../Home.md)

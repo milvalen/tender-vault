@@ -1,18 +1,18 @@
 ---
-title: Шаблоны
+title: Templates
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Стандарт документации
+source: Documentation standard
 parent: ../90-system.md
 ---
 
-# Шаблоны
+# Templates
 
-- [Решение](decision.md)
+- [Decision](decision.md)
 
-[Родитель](../90-system.md)
+[Parent](../90-system.md)

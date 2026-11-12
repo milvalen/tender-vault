@@ -1,38 +1,44 @@
 ---
-title: Журнал решений
+title: Decision log
 type: record
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13
 parent: ../Home.md
 ---
 
-# Журнал решений
+# Decision log
 
-Новое решение добавляется сверху по [шаблону](../90-system/templates/decision.md).
+Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
-## 2026-11-13. Название TENDER
+## 2026-11-13. Documentation in English
 
-**Решение:** проект называется TENDER, устройство — TND-01, подзаголовок FIELD SERVICE UNIT `[А]`.
+**Decision:** all documentation, including the vault, is written in English under ASD-STE100 `[A]`.
 
-**Отклонено:** названия с отсылками к чужим играм и брендам.
+**Consequence:** the vault notes were translated from Russian. Russian stays only as product content: on-screen labels, menu items, speech phrases.
 
-## 2026-11-13. Собственный дизайн-язык
+## 2026-11-13. Name TENDER
 
-**Решение:** внешний вид следует [дизайн-языку Ink Industrial](../10-concept/design-language.md). Публичные файлы не ссылаются на чужие игры, бренды и художников `[А]`.
+**Decision:** the project is TENDER, the device is TND-01, the subtitle is FIELD SERVICE UNIT `[A]`.
 
-## 2026-11-13. Публичные репозитории
+**Rejected:** names that reference other companies' games and brands.
 
-**Решение:** `tender-vault`, `tender-firmware` и `tender-hardware` публичные `[А]`.
+## 2026-11-13. Own design language
 
-**Следствие:** личные доходы, чаевые, название ресторана и имена людей хранятся только в `_private/`.
+**Decision:** the look follows the [Ink Industrial design language](../10-concept/design-language.md). Public files do not reference other companies' games, brands or artists `[A]`.
 
-## 2026-11-13. Этап 0 без пайки и принтера
+## 2026-11-13. Public repositories
 
-**Решение:** этап 0 собирается из готовых плат с защёлкивающимися разъёмами. Корпус печатает сервис на заказ `[А]`.
+**Decision:** `tender-vault`, `tender-firmware` and `tender-hardware` are public `[A]`.
 
-[Родитель](../Home.md)
+**Consequence:** personal income, tips, the restaurant name and people's names are stored only in `_private/`.
+
+## 2026-11-13. Stage 0 without soldering or a printer
+
+**Decision:** stage 0 uses ready-made boards with snap-in connectors. An on-demand service prints the enclosure `[A]`.
+
+[Parent](../Home.md)

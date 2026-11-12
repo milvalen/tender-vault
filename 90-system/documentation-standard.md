@@ -1,101 +1,101 @@
 ---
-title: Стандарт документации
+title: Documentation standard
 type: standard
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Стандарт хранилища miniatures (2026-11-11), адаптирован для TENDER 2026-11-13; ASD-STE100 Issue 9
+source: miniatures vault standard (2026-11-11), adapted for TENDER 2026-11-13; ASD-STE100 Issue 9
 parent: 90-system.md
 ---
 
-# Стандарт документации
+# Documentation standard
 
-## Область действия
+## Scope
 
-Стандарт действует для всех заметок хранилища, кроме сырых записей во [входящих](../00-inbox/00-inbox.md).
+The standard applies to all vault notes except raw entries in the [inbox](../00-inbox/00-inbox.md).
 
-## Язык
+## Language
 
-Мы пишем на русском языке по принципам ASD-STE100 Issue 9. Русского издания стандарта нет, поэтому мы применяем его принципы как правило проекта. Словарь проекта хранится в [глоссарии](glossary.md).
+We write in English under ASD-STE100 Issue 9 (Simplified Technical English). We follow its writing rules; we do not claim full compliance with its dictionary. The project vocabulary is in the [glossary](glossary.md).
 
-### Правила письма
+### Writing rules
 
-1. Пишите одну мысль в одном предложении. В описаниях используйте до 25 слов в предложении, в инструкциях до 20.
-2. Указывайте исполнителя, условие, действие и результат.
-3. Используйте действительный залог и простые глаголы.
-4. Пишите инструкции как нумерованный список. Один шаг — одно действие. Начинайте шаг с глагола в повелительном наклонении.
-5. Один термин означает одно понятие. Новый термин добавляйте в глоссарий.
-6. Пишите числа цифрами. Указывайте единицы: ₽, мм, мА·ч, ч. Пишите даты в формате ISO: `2026-11-13`.
-7. Не пишите оценки и рекламу. Пишите проверяемый факт.
-8. Не используйте обороты `и т. д.`, `и т. п.` и слова `скоро`, `недавно`. Не пишите «примерно» без диапазона.
-9. Отделяйте факт от догадки. Ставьте метку источника.
+1. Write one idea in one sentence. Use up to 25 words in a description sentence and up to 20 in an instruction.
+2. Name the actor, the condition, the action and the result.
+3. Use the active voice and simple verbs. Avoid noun clusters of more than 3 words.
+4. Write instructions as a numbered list. One step is one action. Start each step with an imperative verb.
+5. One term means one concept. Add a new term to the glossary.
+6. Write numbers as digits. Give units: ₽, mm, mAh, h. Write dates in ISO format: `2026-11-13`.
+7. Do not write praise or advertising. Write a fact that can be checked.
+8. Do not use `etc.`, `soon` or `recently`. Do not write "about" without a range.
+9. Keep fact and guess apart. Add a source mark.
 
-### Язык кода и README
+### Code and README
 
-1. Пишите на английском код, имена, комментарии, сообщения коммитов, сообщения программ для разработчика и `README.md`.
-2. Русский текст допустим в коде только как содержимое продукта: надписи на экране, названия блюд, фразы для распознавания речи.
-3. `README.md` репозитория кода ссылается на хранилище и не дублирует его.
-4. Ветка по умолчанию репозитория кода — `dev`. Ветка `main` — релизная и не опережает `dev`.
+1. Write code, identifiers, comments, commit messages, developer-facing program output and `README.md` in English.
+2. Russian text is allowed in code only as product content: on-screen labels, menu item names, speech phrases.
+3. A code repository's `README.md` links to the vault and does not copy it.
+4. The default branch of a code repository is `dev`. `main` is the release branch and is never ahead of `dev`.
 
-## Структура
+## Structure
 
-| Папка | Что лежит |
+| Folder | Contents |
 |---|---|
-| `00-inbox` | сырые идеи |
-| `10-concept` | концепт и дизайн-язык |
-| `20-device` | устройство и функции |
-| `30-field` | наблюдения со смен |
-| `40-hardware` | платы, модули, покупки |
-| `45-development` | репозитории кода и их компоненты |
-| `50-tools` | инструменты дизайна и разработки |
-| `70-decisions` | журнал решений |
-| `90-system` | стандарт, глоссарий, шаблоны, проверка |
+| `00-inbox` | raw ideas |
+| `10-concept` | concept and design language |
+| `20-device` | device and functions |
+| `30-field` | shift observations |
+| `40-hardware` | boards, modules, purchases |
+| `45-development` | code repositories and their components |
+| `50-tools` | design and development tools |
+| `70-decisions` | decision log |
+| `90-system` | standard, glossary, templates, check |
 
-В каждой папке есть обзор с именем папки. Файл `index.md` не используется. Имена файлов и папок содержат только латиницу, цифры и дефис. Ссылки относительные, в формате Markdown. Пустые страницы и папки не создаются.
+Each folder has an overview named after the folder. Do not use `index.md`. File and folder names contain only Latin letters, digits and hyphens. Links are relative Markdown links. Do not create empty pages or folders.
 
-## Метаданные
+## Metadata
 
-Каждая заметка начинается с плоского YAML: `title`, `type`, `status`, `owner`, `created`, `updated`, `observed`, `sensitivity`, `source`, `parent`. `README.md` не имеет `parent`. `AGENTS.md` и `CLAUDE.md` не имеют метаданных.
+Each note starts with flat YAML: `title`, `type`, `status`, `owner`, `created`, `updated`, `observed`, `sensitivity`, `source`, `parent`. `README.md` has no `parent`. `AGENTS.md` and `CLAUDE.md` have no metadata.
 
-| Поле | Значение |
+| Field | Value |
 |---|---|
 | `type` | `index`, `reference`, `plan`, `record`, `runbook`, `standard`, `template` |
 | `status` | `draft`, `proposed`, `active`, `verified`, `historical`, `deprecated`, `planned`, `template` |
-| `created`, `updated` | даты ISO |
-| `observed` | дата события или источника; `unknown`, если дата неизвестна |
-| `sensitivity` | `public`: хранилище публичное |
-| `source` | конкретный источник |
-| `parent` | относительный путь к родителю; в конце заметки стоит ссылка `[Родитель](...)` |
+| `created`, `updated` | ISO dates |
+| `observed` | the date of the event or source; `unknown` if the date is not known |
+| `sensitivity` | `public`: the vault is public |
+| `source` | a specific source |
+| `parent` | relative path to the parent; the note ends with the link `[Parent](...)` |
 
-Статус `verified` требует указать, что проверено, когда, на каком железе и коммите.
+Status `verified` requires what was checked, when, and on which hardware and commit.
 
-## Источники
+## Sources
 
-Метки: `[А]` Артемий, `[Claude]` веб-ресёрч или вывод Claude, `[?]` догадка. Новый факт не стирает старый: пишите дату рядом с обоими.
+Marks: `[A]` Artemy, `[Claude]` web research or a conclusion of Claude, `[?]` guess. A new fact does not erase an old one: write the date next to both.
 
-## Публичность и личные данные
+## Public vault and personal data
 
-Хранилище публичное. Не вносите пароли, токены, ключи, доходы, чаевые, графики смен, название ресторана, имена коллег и гостей. Такие данные лежат в `_private/`, папка исключена из Git.
+The vault is public. Do not put passwords, tokens, keys, income, tips, shift schedules, the restaurant name or the names of colleagues and guests into it. Such data goes to `_private/`; Git ignores that folder.
 
-Публичные заметки не ссылаются на чужие игры, бренды и художников как на образец. Внешние референсы лежат в `_private/`.
+Public notes do not use other companies' games, brands or artists as a model. External references are stored in `_private/`.
 
 ## Git
 
-1. Работайте только в ветке `main`. Не создавайте ветки, форки и pull request.
-2. Перед правкой выполните `git pull --rebase`.
-3. Пишите короткие коммиты по одной теме.
-4. Не используйте `git push --force`.
+1. Work only on the `main` branch. Do not create branches, forks or pull requests.
+2. Before an edit, run `git pull --rebase`.
+3. Make short commits, one topic each.
+4. Do not use `git push --force`.
 
-## Проверка
+## Check
 
-Перед коммитом выполните:
+Before a commit, run:
 
 ```bash
 python3 -I 90-system/tools/check-vault.py
 git diff --check
 ```
 
-[Родитель](90-system.md)
+[Parent](90-system.md)

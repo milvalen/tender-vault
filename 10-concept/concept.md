@@ -1,59 +1,59 @@
 ---
-title: Концепт TENDER
+title: TENDER concept
 type: plan
 status: proposed
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13; обзор рынка приложений для официантов [Claude] 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13; market review of server apps [Claude] 2026-11-13
 parent: 10-concept.md
 ---
 
-# Концепт TENDER
+# TENDER concept
 
-## Название
+## Name
 
-**TENDER** `[А]`, 2026-11-13. Слово имеет 3 значения:
+**TENDER** `[A]`, 2026-11-13. The word has 3 meanings:
 
-1. *to tend tables* — обслуживать столы.
-2. *tender* — судно снабжения, которое обеспечивает флот.
-3. *tender* — бережный.
+1. *to tend tables* — to serve tables.
+2. *tender* — a supply vessel that supports a fleet.
+3. *tender* — gentle, careful.
 
-Обозначение устройства: **TND-01**. Подзаголовок: **FIELD SERVICE UNIT**.
+Device designation: **TND-01**. Subtitle: **FIELD SERVICE UNIT**.
 
-## Задача
+## Problem
 
-Официант держит в голове столы, заказы, время, аллергии гостей и меню. Ошибка стоит денег и чаевых. Устройство берёт на себя память и время, а официант остаётся с гостем.
+A server keeps tables, orders, times, guest allergies and the menu in memory. A mistake costs money and tips. The device takes over memory and time, so the server stays with the guest.
 
-## Принципы
+## Principles
 
-1. **Автономность.** Устройство работает без телефона, интернета и кассы ресторана. Синхронизация с компьютером нужна только для меню и статистики.
-2. **Одна рука, без взгляда.** Ввод: кнопка разговора, крутилка, 3–4 клавиши. Вывод: вибрация и короткий взгляд на экран.
-3. **Смена целиком.** Батарея держит 10–12 ч.
-4. **Тишина в зале.** Устройство не издаёт звуков. Сигналы — только вибрация.
-5. **Своя форма.** Внешний вид следует [дизайн-языку](design-language.md).
+1. **Self-contained.** The device works without a phone, the internet or the restaurant POS. It syncs with a computer only for the menu and statistics.
+2. **One hand, no long look.** Input: a talk button, a rotary encoder, 3–4 keys. Output: vibration and a short look at the screen.
+3. **A full shift.** The battery lasts 10–12 h.
+4. **A quiet floor.** The device makes no sound. Signals are vibration only.
+5. **Its own form.** The look follows the [design language](design-language.md).
 
-## Почему не готовое решение
+## Why not an existing product
 
-Обзор рынка `[Claude]` 2026-11-13. Ограничение: обзор по открытым источникам, отзывы официантов в Telegram и VK не проверены.
+Market review `[Claude]` 2026-11-13. Limit: the review uses open sources only; server reviews in Telegram and VK were not checked.
 
-| Класс решений | Примеры | Почему не подходит |
+| Product class | Examples | Why it does not fit |
 |---|---|---|
-| Мобильный терминал официанта | r_keeper Waiter, Saby Presto, iiko | Выбирает ресторан; личные функции добавить нельзя |
-| Сервисы чаевых | CloudTips, one2tips | Только приём денег, нет учёта и аналитики |
-| Трекеры чаевых | ServerLife, Server44 | Рынок США, нет русского языка |
-| Голосовой ИИ для заказов | Loman и аналоги | Работает по телефону и через кассу ресторана |
+| Mobile POS for servers | r_keeper Waiter, Saby Presto, iiko | The restaurant chooses it; personal functions cannot be added |
+| Tip services | CloudTips, one2tips | Only take payments; no tracking or analytics |
+| Tip trackers | ServerLife, Server44 | US market, no Russian language |
+| Voice AI for orders | Loman and similar | Work over the phone and through the restaurant POS |
 
-## Функции по очереди
+## Functions in order
 
-Подробности: [функции](../20-device/functions.md).
+Details: [functions](../20-device/functions.md).
 
-1. Табло столов и таймеры с вибрацией.
-2. Голосовой блокнот заказов.
-3. Тренажёр меню.
-4. Журнал смены и чаевых.
-5. Справка по аллергенам и допродажам.
+1. Table board and timers with vibration.
+2. Voice order notebook.
+3. Menu trainer.
+4. Shift and tip log.
+5. Allergen and upsell lookup.
 
-[Родитель](10-concept.md)
+[Parent](10-concept.md)

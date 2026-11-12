@@ -2,20 +2,20 @@
 title: tender-vault
 type: index
 status: active
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Решение Артемия 2026-11-13; структура по хранилищам miniatures и logopolza
+source: Decision of Artemy 2026-11-13; structure follows the miniatures and logopolza vaults
 ---
 
 # tender-vault
 
-**TENDER** — автономное носимое устройство официанта. Обозначение **TND-01**, подзаголовок **FIELD SERVICE UNIT**.
+**TENDER** is a self-contained wearable unit for restaurant floor work. Designation **TND-01**, subtitle **FIELD SERVICE UNIT**.
 
-Хранилище описывает концепт, дизайн-язык, функции, наблюдения со смен, железо и инструменты. Код лежит в репозиториях `tender-firmware` и `tender-hardware`. Начните с [Home](Home.md).
+The vault describes the concept, the design language, the functions, shift field notes, hardware and tools. Code is in the `tender-firmware` and `tender-hardware` repositories. Start at [Home](Home.md).
 
-Заметки лежат обычным Markdown. Их можно открыть как vault в Obsidian или читать прямо на GitHub.
+Notes are plain Markdown. Open them as a vault in Obsidian or read them on GitHub.
 
-[Правила для агентов](AGENTS.md) · [Стандарт документации](90-system/documentation-standard.md) · [Глоссарий](90-system/glossary.md) · [Концепт](10-concept/10-concept.md)
+[Agent rules](AGENTS.md) · [Documentation standard](90-system/documentation-standard.md) · [Glossary](90-system/glossary.md) · [Concept](10-concept/10-concept.md)

@@ -39,7 +39,7 @@ SECRET = re.compile(r"(gh[pousr]_[A-Za-z0-9]{30,}|-----BEGIN [A-Z ]*PRIVATE KEY|
 errors = []
 warnings = []
 MAX_WORDS = 30
-BANNED = re.compile(r"(?i)\b(и т\. ?[дп]\.|скоро|недавно|etc\.?)(?!\w)")
+BANNED = re.compile(r"(?i)\b(etc\.?|and so on|soon|recently)(?!\w)")
 LINT_SKIP = ("00-inbox/",)
 
 
@@ -60,7 +60,7 @@ def lint_prose(rel, body):
             continue
         line = re.sub(r"^([-*]|\d+\.)\s+(\[[ x]\]\s+)?", "", line)
         line = re.sub(r"\[([^\]]*)\]\([^)]*\)", r"\1", line)
-        line = INLINE_CODE.sub("код", line).replace("**", "")
+        line = INLINE_CODE.sub("code", line).replace("**", "")
         m = BANNED.search(line)
         if m:
             warn(rel, f"banned phrase `{m.group(1)}`: {line[:60]!r}")

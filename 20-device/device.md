@@ -1,63 +1,63 @@
 ---
-title: Устройство TND-01
+title: TND-01 device
 type: plan
 status: proposed
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: Разговор Артемия с Claude 2026-11-13; характеристики плат [Claude] по cnx-software.com и hackster.io, 2026-11-13
+source: Conversation of Artemy with Claude 2026-11-13; board specifications [Claude] from cnx-software.com and hackster.io, 2026-11-13
 parent: 20-device.md
 ---
 
-# Устройство TND-01
+# TND-01 device
 
-## Ограничения этапа 0
+## Stage 0 limits
 
-- У Артемия нет 3D-принтера и паяльника `[А]`, 2026-11-13.
-- Бюджет ограничен, но «в рамках разумного» `[А]`, 2026-11-13.
+- Artemy has no 3D printer and no soldering iron `[A]`, 2026-11-13.
+- The budget is limited but reasonable `[A]`, 2026-11-13.
 
-Поэтому этап 0 собирается из готовых плат и модулей с защёлкивающимися разъёмами. Корпус печатает сервис на заказ.
+Therefore stage 0 uses ready-made boards and modules with snap-in connectors. An on-demand service prints the enclosure.
 
-## Архитектура
+## Architecture
 
-Устройство состоит из 2 блоков. На этапе 0 работает только блок интерфейса.
+The device has 2 units. In stage 0, only the interface unit works.
 
-| Блок | Задача | Кандидат |
+| Unit | Task | Candidate |
 |---|---|---|
-| Интерфейс | экран, кнопки, вибрация, таймеры, табло столов | M5Stack StopWatch Dev Kit: ESP32-S3, круглый AMOLED, микрофон, батарея |
-| Голос | офлайн-распознавание русской речи, разбор заказа | Raspberry Pi Zero 2 WH и плата с микрофонами |
+| Interface unit | screen, keys, vibration, timers, table board | M5Stack StopWatch Dev Kit: ESP32-S3, round AMOLED, microphone, battery |
+| Voice unit | offline Russian speech recognition, order parsing | Raspberry Pi Zero 2 WH with a microphone board |
 
-Блоки связываются по UART или BLE `[?]`. Решение принимается после этапа 0.
+The units connect over UART or BLE `[?]`. The decision is made after stage 0.
 
-### Почему голос на отдельном блоке
+### Why voice runs on a separate unit
 
-ESP32-S3 не тянет распознавание свободной русской речи офлайн `[Claude]`. Raspberry Pi Zero 2 W запускает Vosk или whisper.cpp с малой моделью `[?]`. Скорость на русской речи нужно измерить.
+ESP32-S3 cannot run offline recognition of free Russian speech `[Claude]`. Raspberry Pi Zero 2 W can run Vosk or whisper.cpp with a small model `[?]`. Measure the speed on Russian speech.
 
-### Экран
+### Screen
 
-Для финальной версии рассматривается Sharp Memory LCD. Экран 1-битный, читается при ярком свете и почти не тратит батарею. Такой экран совпадает с [дизайн-языком](../10-concept/design-language.md). На этапе 0 используется AMOLED готовой платы с 1-битной графикой.
+The final version considers a Sharp Memory LCD. The screen is 1-bit, readable in bright light and uses almost no power. It matches the [design language](../10-concept/design-language.md). Stage 0 uses the board's AMOLED with 1-bit graphics.
 
-## Ввод и вывод
+## Input and output
 
-| Элемент | Назначение |
+| Element | Purpose |
 |---|---|
-| Кнопка разговора | держать и говорить заказ |
-| Крутилка | листать столы и пункты меню |
-| 3–4 клавиши | выбор, назад, отметка «выполнено» |
-| Вибромотор | сигнал таймера без звука |
-| Микрофон | голосовой блокнот |
+| Talk button | hold it and say the order |
+| Rotary encoder | scroll tables and menu items |
+| 3–4 keys | select, back, mark as done |
+| Vibration motor | silent timer signal |
+| Microphone | voice notebook |
 
-## Питание
+## Power
 
-Цель: 10–12 ч смены от одного заряда. Зарядка через USB-C. Реальное время работы измеряется на этапе 0.
+Target: 10–12 h of a shift on one charge. Charging through USB-C. Measure the real run time in stage 0.
 
-## Крепление
+## Mounting
 
-2 варианта, выбор зависит от правил ресторана:
+2 options; the choice depends on the restaurant rules:
 
-1. Рукав на предплечье, экран к лицу.
-2. Скрытый модуль на поясе фартука, экран вверх.
+1. A forearm sleeve, screen toward the face.
+2. A hidden module on the apron belt, screen up.
 
-[Родитель](20-device.md)
+[Parent](20-device.md)

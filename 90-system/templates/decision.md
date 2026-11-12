@@ -1,28 +1,28 @@
 ---
-title: Шаблон решения
+title: Decision template
 type: template
 status: template
-owner: Артемий
+owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
 observed: unknown
 sensitivity: public
-source: Стандарт документации
+source: Documentation standard
 parent: templates.md
 ---
 
-# Шаблон решения
+# Decision template
 
-Скопируйте блок в начало [журнала решений](../../70-decisions/70-decisions.md).
+Copy the block to the top of the [decision log](../../70-decisions/70-decisions.md).
 
 ```markdown
-## ГГГГ-ММ-ДД. Название решения
+## YYYY-MM-DD. Decision name
 
-**Решение:** что решили и кто `[А]`.
+**Decision:** what was decided and by whom `[A]`.
 
-**Отклонено:** что рассматривали и почему не выбрали.
+**Rejected:** what was considered and why it was not chosen.
 
-**Следствие:** что меняется.
+**Consequence:** what changes.
 ```
 
-[Родитель](templates.md)
+[Parent](templates.md)
