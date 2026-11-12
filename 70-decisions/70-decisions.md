@@ -15,6 +15,12 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Control scheme and thresholds
+
+**Decision:** a second press of REQUEST closes an open request. The stage thresholds are approved: `SEAT` 3 min, `MAIN` 15 min, `BILL` 3 min, request 2 min `[A]`. Details: [controls](../20-device/controls.md).
+
+**Rejected:** closing a request with ACK, because ACK only snoozes signals.
+
 ## 2026-11-13. Documentation in English
 
 **Decision:** all documentation, including the vault, is written in English under ASD-STE100 `[A]`.

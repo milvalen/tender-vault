@@ -31,7 +31,7 @@ The wheel scrolls through the tables. The list is sorted by urgency: tables with
 |---|---|---|
 | **1. STEP** | Move the table to the next stage. The timer resets to `T+0` | Undo the last step |
 | **2. ACK** | Stop the vibration and snooze the signal for 3 min | Mute all signals for 10 min |
-| **3. REQUEST** | Mark a small guest request (water, cutlery, napkins) with a 2 min timer. The table stage does not change | Open the table menu: allergens, number of guests, free the table |
+| **3. REQUEST** | Mark a small guest request (water, cutlery, napkins) with a 2 min timer. The table stage does not change. A second press closes the open request `[A]` 2026-11-13 | Open the table menu: allergens, number of guests, free the table |
 
 Each key has its own shape, so the server can find it without a look:
 
@@ -43,7 +43,7 @@ The talk button from [concept sketch A](../10-concept/concept-sketches.md#a-fore
 
 ## Table stages
 
-STEP moves a table through these stages. Thresholds are configurable; the values below are the first proposal `[?]`.
+STEP moves a table through these stages. Thresholds are configurable. Artemy approved the values below `[A]` 2026-11-13; they are not tested on a shift yet.
 
 | Stage | Meaning | Threshold | Signal |
 |---|---|---|---|
@@ -58,14 +58,13 @@ STEP moves a table through these stages. Thresholds are configurable; the values
 
 1. Guests sit at table 7. Select `TBL-07` with the wheel and press STEP. The screen shows `SEAT T+0`.
 2. After 3 min, the device vibrates. Take the order and press STEP. The stage is `ORD`.
-3. A guest asks for water. Press REQUEST. If the request is not closed in 2 min, the device vibrates.
+3. A guest asks for water. Press REQUEST. If the request is not closed in 2 min, the device vibrates. Bring the water and press REQUEST again to close it.
 4. Serve the mains and press STEP. The stage is `MAIN`. After 15 min, the device signals to offer dessert.
 5. The guests ask for the check. Press STEP. The stage is `BILL`.
 6. After payment, press STEP. The table is `FREE`.
 
 ## Open points
 
-1. How to close a REQUEST: a second press of REQUEST, or ACK `[?]`.
-2. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
+1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
 
 [Parent](20-device.md)
