@@ -1,7 +1,7 @@
 ---
 title: Stage 0 shopping list
 type: plan
-status: proposed
+status: active
 owner: Artemy
 created: '2026-11-13'
 updated: '2026-11-13'
@@ -13,7 +13,7 @@ parent: 40-hardware.md
 
 # Stage 0 shopping list
 
-Status `proposed`: Artemy has not approved the list yet. The list follows the desk test: the 4-key mode (StickS3 with the Dual Button unit) passed, the 2-key mode is the fallback. See the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).
+Approved by Artemy 2026-11-13 `[A]`. The list follows the desk test: the 4-key mode (StickS3 with the Dual Button unit) passed, the 2-key mode is the fallback. See the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).
 
 Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-13. Prices in Russia with delivery were not checked.
 

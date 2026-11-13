@@ -15,6 +15,10 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Stage 0 shopping list
+
+**Decision:** stage 0 uses the M5Stack StickS3 with the Dual Button unit, a short Grove cable and enclosure rev 0.3 `[A]`. The StopWatch Dev Kit is removed. The vibration module is recommended, not required. See the [shopping list](../40-hardware/stage-0-bom.md).
+
 ## 2026-11-13. Desk test run 4 changes
 
 **Decision:** STEP closes an open guest request, and its label reads `DONE`; REQUEST only opens a request `[A]`. This replaces "a second press of REQUEST closes an open request" from the control scheme decision below. The undo hint moves to the status line. STEP keeps the snooze of an open request. Findings D14 to D17 in the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).

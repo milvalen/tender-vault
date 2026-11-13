@@ -19,7 +19,8 @@ parent: README.md
 
 ## Stage 0: prototype without soldering
 
-- [ ] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md) and buy the boards after the desk test.
+- [x] **Artemy:** approve the [stage 0 shopping list](40-hardware/stage-0-bom.md). Approved 2026-11-13.
+- [ ] **Artemy:** buy the boards and modules from the [stage 0 shopping list](40-hardware/stage-0-bom.md).
 - [x] **Claude:** make 3 enclosure [concept sketches](10-concept/concept-sketches.md) in the [design language](10-concept/design-language.md). Done 2026-11-13.
 - [ ] **Artemy:** pick a sketch direction or a mix.
 - [x] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d). Rev 0.1 in `dev`, 2026-11-13; see [hardware](40-hardware/40-hardware.md).
