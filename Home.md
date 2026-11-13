@@ -36,7 +36,7 @@ parent: README.md
 - [x] **Artemy:** review enclosure [rev 0.3](40-hardware/40-hardware.md#enclosure-rev-03) and accept it into `dev`. Accepted 2026-11-13, commit `5c0953d`.
 - [x] **Artemy:** review enclosure [rev 0.4](40-hardware/40-hardware.md#enclosure-rev-04) (belt clip, `TALK` key) and accept it into `dev`. Accepted 2026-11-13, commit `535f230`.
 - [x] **Claude:** split the desk-test simulator into readable parts, `tender-firmware` `ai/sim-refactor` `a2ce472`, 2026-11-13. No behaviour change: the autoplay logs and the drawn screen are the same as before.
-- [ ] **Artemy:** review the simulator code on `ai/sim-refactor` and accept it into `dev`.
+- [x] **Artemy:** review the simulator code on `ai/sim-refactor` and accept it into `dev`. Accepted 2026-11-13, commit `a2ce472`.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions
