@@ -31,10 +31,6 @@ Add a new decision at the top with the [template](../90-system/templates/decisio
 
 **Consequence:** [controls](../20-device/controls.md#open-points) change (open point 7); the firmware must change. After 2–3 shifts, write in the [field notes](../30-field/30-field.md) if a full stop of all alerts was needed.
 
-## 2026-11-13. Vault follows dev; main after review
-
-**Decision:** the vault records the state of the `dev` branches of the code repositories `[A]`. `dev` goes to `main` only after Artemy carefully examines `dev` `[A]`. See [branches](../45-development/45-development.md#branches).
-
 ## 2026-11-13. Feature branches for review
 
 **Decision:** agents merge each `ai/<area>` branch into a `feature/<area>` branch. Artemy examines and accepts the work there. After acceptance, the agent merges `feature/<area>` into `dev` when Artemy tells it to `[A]`. This replaces the direct merge of `ai/<area>` into `dev`. See [branches](../45-development/45-development.md#branches).
