@@ -39,7 +39,8 @@ parent: README.md
 - [x] **Artemy:** review the simulator code on `ai/sim-refactor` and accept it into `dev`. Accepted 2026-11-13, commit `a2ce472`.
 - [ ] **Artemy:** [vibrator desk test](40-hardware/40-hardware.md#silent-alert-desk-test-first) on an open board. Buy the Grove cable with **male** 2.54 mm pins, not female. The enclosure place for the vibrator waits for the result.
 - [x] **Artemy:** review the screen label `TALK` for the blue key (was `REQ`) and accept it into `dev`. Accepted 2026-11-13, `tender-firmware` `dev` commit `72ae11a`. Not run on a real board. See [controls](20-device/controls.md).
-- [ ] **Claude:** change `MUTED` in `tender-firmware` to the quiet floor mode (vibration only, the screen off when idle), see the [decision log](70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode). Given to the firmware session 2026-11-13; not done yet.
+- [x] **Claude:** change `MUTED` in `tender-firmware` to the quiet floor mode (vibration only, the screen off when idle), see the [decision log](70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode). Done 2026-11-13: `ai/quiet-mute` `0e5d109`, in `feature/quiet-mute` `6599ba7`. Native tests and the StickS3 build pass; not run on a real board.
+- [ ] **Artemy:** review `MUTED` on `feature/quiet-mute` (simulator or board) and accept it into `dev`. New: the first press on an off screen only turns it on.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions

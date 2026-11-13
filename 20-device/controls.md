@@ -43,7 +43,7 @@ One function per key. A long press is used only for rare actions that can be rev
 | Key | Press | Long press |
 |---|---|---|
 | **1. STEP** | Move the table to the next stage. After a pickup, mark the menu item as served ([orders and pickup](orders-and-pickup.md)) | Undo the last step |
-| **2. ACK** | Stop the current alert. A high alert comes back after 3 min if the table is not served | `MUTED` (quiet floor) on or off: alerts by vibration only, no screen burst; the screen turns off when idle. Planned, not in firmware yet: see open point 7 |
+| **2. ACK** | Stop the current alert. A high alert comes back after 3 min if the table is not served | `MUTED` (quiet floor) on or off: alerts by vibration only, no screen burst; the screen turns off when idle. In firmware `feature/quiet-mute`, not in `dev` yet: see open point 7 |
 | **3. REQUEST** | Open a guest request (water, cutlery, napkins) with a 2 min timer. STEP closes it: while a request is open, the STEP key reads `DONE` (desk test D15). The stage does not change | Open the table menu: table map by seat, allergens, number of guests, free the table |
 
 Each key has its own shape, so the server can find it without a look:
@@ -107,11 +107,11 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 6. Moving between tables costs presses. The table strip in number order cut the presses of a scripted player from 132 to 79 in 4-key mode `[Claude]`. Check again in the desk test.
 7. `MUTED` is the "quiet floor" mode. Decided `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode):
    - alerts come by vibration only, with no screen burst;
-   - the screen turns off when idle; a key press turns it on;
+   - the screen turns off after 20 s without a press, the same time as the dim; the first key press only turns it on and does no action, because the server cannot see the selection; an alert vibrates but does not turn the screen on;
    - there is no "mute all alerts for 10 min"; to stop one alert, use `ACK`.
 
    - `MUTED` stays on until the next hold of `ACK`; it does not end after a time `[A]` 2026-11-13.
 
-   Without a vibrator, `MUTED` hides high alerts, so the stage 0 board needs the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) first. The firmware still has the old 10 min mute.
+   Without a vibrator, `MUTED` hides high alerts, so the stage 0 board needs the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) first. Firmware: `tender-firmware` `ai/quiet-mute` `0e5d109`, merged into `feature/quiet-mute` `6599ba7`, 2026-11-13. Native tests and the StickS3 build pass; not run on a real board.
 
 [Parent](20-device.md)
