@@ -43,7 +43,7 @@ One function per key. A long press is used only for rare actions that can be rev
 | Key | Press | Long press |
 |---|---|---|
 | **1. STEP** | Move the table to the next stage. After a pickup, mark the menu item as served ([orders and pickup](orders-and-pickup.md)) | Undo the last step |
-| **2. ACK** | Stop the current alert. A high alert comes back after 3 min if the table is not served | Mute all alerts for 10 min |
+| **2. ACK** | Stop the current alert. A high alert comes back after 3 min if the table is not served | `MUTED` (quiet floor) on or off: alerts by vibration only, no screen burst; the screen turns off when idle. Planned, not in firmware yet: see open point 7 |
 | **3. REQUEST** | Open a guest request (water, cutlery, napkins) with a 2 min timer. STEP closes it: while a request is open, the STEP key reads `DONE` (desk test D15). The stage does not change | Open the table menu: table map by seat, allergens, number of guests, free the table |
 
 Each key has its own shape, so the server can find it without a look:
@@ -105,10 +105,11 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 4. Skipping dessert: done. The dessert stage is removed and STEP goes from `MAIN` to `BILL` in 1 press (desk test D6).
 5. No stage for "check brought". `CHECK REQUESTED` alerts after 3 min even when the check is on the table and the guests are paying. The simulator gives this false alert on the slow-payment table `[Claude]`. Possible fix: a STEP after the check is brought, or a longer threshold.
 6. Moving between tables costs presses. The table strip in number order cut the presses of a scripted player from 132 to 79 in 4-key mode `[Claude]`. Check again in the desk test.
-7. "Quiet floor" mode is the `MUTED` mode, not a second mode (`[A]` 2026-11-13). The two descriptions do not agree yet:
-   - Inbox idea: vibration only, and the screen turns off after a time without a press.
-   - Firmware (`tableboard.h`, hold `ACK`): all alerts stop for 10 min, vibration too. The screen dims when idle in all modes.
+7. `MUTED` is the "quiet floor" mode. Decided `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode):
+   - alerts come by vibration only, with no screen burst;
+   - the screen turns off when idle; a key press turns it on;
+   - there is no "mute all alerts for 10 min"; to stop one alert, use `ACK`.
 
-   Artemy decides which behaviour `MUTED` gets `[?]`.
+   Open: does `MUTED` stay on until the next hold of `ACK`, or end after a time `[?]`? Without a vibrator, `MUTED` hides high alerts, so the stage 0 board needs the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) first. The firmware still has the old 10 min mute.
 
 [Parent](20-device.md)

@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. MUTED is the quiet floor mode
+
+**Decision:** `MUTED` and the "quiet floor" mode from the inbox are one mode `[A]`. In `MUTED`, alerts come by vibration only, with no screen burst, and the screen turns off when idle. The "mute all alerts for 10 min" behaviour is removed. `ACK` stops one alert; a high alert comes back after 3 min.
+
+**Rejected:** keep the 10 min mute as a second mode (`SNOOZE`): one more hold meaning on a key. Keep `MUTED` as it is and drop the quiet floor idea.
+
+**Consequence:** [controls](../20-device/controls.md#open-points) change (open point 7); the firmware must change. After 2–3 shifts, write in the [field notes](../30-field/30-field.md) if a full stop of all alerts was needed.
+
 ## 2026-11-13. Feature branches for review
 
 **Decision:** agents merge each `ai/<area>` branch into a `feature/<area>` branch. Artemy examines and accepts the work there. After acceptance, the agent merges `feature/<area>` into `dev` when Artemy tells it to `[A]`. This replaces the direct merge of `ai/<area>` into `dev`. See [branches](../45-development/45-development.md#branches).

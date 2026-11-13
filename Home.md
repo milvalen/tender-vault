@@ -39,6 +39,7 @@ parent: README.md
 - [x] **Artemy:** review the simulator code on `ai/sim-refactor` and accept it into `dev`. Accepted 2026-11-13, commit `a2ce472`.
 - [ ] **Artemy:** [vibrator desk test](40-hardware/40-hardware.md#silent-alert-desk-test-first) on an open board. Buy the Grove cable with **male** 2.54 mm pins, not female. The enclosure place for the vibrator waits for the result.
 - [ ] **Artemy:** review the screen label `TALK` for the blue key (was `REQ`), `tender-firmware` `ai/talk-label` `62aedc1`, and accept it into `dev`. Tests pass, the firmware builds; not run on a real board. See [controls](20-device/controls.md).
+- [ ] **Claude:** change `MUTED` in `tender-firmware` to the quiet floor mode (vibration only, the screen off when idle), see the [decision log](70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode). Not started.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions
