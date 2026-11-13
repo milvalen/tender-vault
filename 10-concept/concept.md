@@ -55,5 +55,6 @@ Details: [functions](../20-device/functions.md).
 3. Menu trainer.
 4. Shift and tip log.
 5. Allergen and upsell lookup.
+6. Guest phrases (stage not set).
 
 [Parent](10-concept.md)

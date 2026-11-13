@@ -17,8 +17,6 @@ Raw ideas and notes go here. The writing rules do not apply here. After review, 
 
 ## Ideas
 
-- Translator for foreign guests: ready phrases about dishes in English and Chinese.
-- Upsell hints: what to offer with an ordered dish.
-- "Quiet floor" mode: vibration only, the screen turns off without a touch.
+No open entries. Reviewed 2026-11-13: the ideas moved to [functions](../20-device/functions.md) and [controls](../20-device/controls.md#open-points).
 
 [Parent](../Home.md)

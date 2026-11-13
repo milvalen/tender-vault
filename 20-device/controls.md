@@ -105,5 +105,6 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 4. Skipping dessert: done. The dessert stage is removed and STEP goes from `MAIN` to `BILL` in 1 press (desk test D6).
 5. No stage for "check brought". `CHECK REQUESTED` alerts after 3 min even when the check is on the table and the guests are paying. The simulator gives this false alert on the slow-payment table `[Claude]`. Possible fix: a STEP after the check is brought, or a longer threshold.
 6. Moving between tables costs presses. The table strip in number order cut the presses of a scripted player from 132 to 79 in 4-key mode `[Claude]`. Check again in the desk test.
+7. "Quiet floor" mode (idea from the inbox, `[A]` 2026-11-13): vibration only, and the screen turns off after a time without a press. This saves the battery and hides the screen from guests. It needs a vibrator: without one, the server does not get high alerts (UX audit A11). Decide after the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first). How is this mode different from `MUTED`? `[?]`
 
 [Parent](20-device.md)

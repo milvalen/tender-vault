@@ -45,4 +45,16 @@ Stage 1. Shift start and end, number of tables, tips. Data exports to a computer
 
 Stage 2. The query "gluten free" shows the matching menu items. A query for a dish shows what to offer with it.
 
+Upsell hint (idea from the inbox, `[A]` 2026-11-13): when the [voice order notebook](#2-voice-order-notebook) records a menu item, the device shows what to offer with it. The hint uses the "what to offer" field of the [menu trainer](#3-menu-trainer) cards. Open point: the hint must not take the screen when an alert is due.
+
+## 6. Guest phrases
+
+Stage not set `[?]`. Idea from the inbox, `[A]` 2026-11-13. Ready phrases about dishes for foreign guests, in English and Chinese: ingredients, allergens, spice level.
+
+Open points:
+
+1. The device makes no sound ([concept](../10-concept/concept.md), principle 4). Thus the phrase is shown, not spoken. Who reads the screen: the server, who says the phrase, or the guest?
+2. Is the stage 0 screen large enough for a guest to read a phrase? `[?]`
+3. The phrase text is product content. It loads with the menu from a computer.
+
 [Parent](20-device.md)
