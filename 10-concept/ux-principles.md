@@ -82,5 +82,10 @@ Findings of the scripted run `[Claude]`:
 | D10 | UNDO was used 0 times. To correct a wrong STEP, Artemy pressed STEP around the full circle (4 to 5 presses). UNDO is a hidden long press with no label | P3, P5 | done in firmware `ai/table-board`: `HOLD: UNDO` on the STEP key for 5 s after each STEP |
 | D11 | 232 of 292 presses moved between tables (scripted player: 79). A thumb wheel would cut this | P1 | open: decide on the wheel and the Grove port plan |
 | D12 | The simulator counted a STEP on a request alert as a correct answer to the alert | — | done: REQUEST ends a request alert, STEP a stage alert, ACK and MUTE end all |
+| D13 | Desk test run 4, Artemy, 4-key mode `[A]` 2026-11-13: 32 of 37 floor events in time, 4 of 8 high alerts missed, 6 wrong-table, 19 extra presses, 3 questions. FAIL, worse than run 3 | — | record |
+| D14 | Firmware bug: STEP clears the alert snooze of the table. On an overdue request, STEP starts the same alert again at once. Each of the 2 missed request alerts was counted 2 times | P6 | open: fix in the core |
+| D15 | On both request alerts Artemy pressed STEP again, with `REQ` in orange. Artemy uses the main key as "done" | P3 | open: proposal is that STEP closes an open request first, with the label `DONE`; REQ only opens a request |
+| D16 | After the `HOLD: UNDO` label came, Artemy pressed STEP 5 more times on TBL-03 and asked 3 questions. The label hid what the next tap does | P3, P4 | open: proposal is to keep the next-stage label and show `HOLD = UNDO` in the status line |
+| D17 | Script: "order dessert. You serve it." made Artemy press STEP 5 times on TBL-07 to record the dessert. There is no dessert stage | — | open: change the line to "Guests at TBL-07 order dessert." |
 
 [Parent](10-concept.md)
