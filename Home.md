@@ -57,7 +57,7 @@ parent: README.md
 See the [proposed test](20-device/voice-recognition.md#proposed-test).
 
 - [ ] **Artemy:** record 30 order phrases with the phone in a noisy place, with real menu items. Put the files and the correct text in `_private/voice-test/` (template there).
-- [ ] **Artemy:** make accounts for ElevenLabs, Soniox, Deepgram and OpenAI, or fal.ai for several models. Put the keys in `keys/`, outside the repositories.
+- [ ] **Artemy:** make an account on OpenRouter with prepaid credit (optional: fal.ai). 1 account gives models from many vendors. Put the keys in `keys/`, outside the repositories.
 - [ ] **Claude:** send the recordings to each service, count the phrases with the correct table, seat and dish, measure the time, and write the result.
 
 ## Open questions

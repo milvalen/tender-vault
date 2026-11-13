@@ -7,62 +7,71 @@ created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: fal.ai/elevenlabs, help.elevenlabs.io (restricted countries), deepgram.com (pricing, Nova-3 languages changelog 2026-08-17), soniox.com (pricing, benchmarks), assemblyai.com (pricing, models, benchmarks), artificialanalysis.ai (speech-to-text leaderboard), mistral speech pricing reviews (developersdigest.tech, digitalapplied.com), console.groq.com/docs/models, cloud.google.com/speech/pricing, convertaudiototext.com (API prices), aistudio.yandex.ru, alphacephei.com/vosk/android [Claude] 2026-11-13
+source: openrouter.ai (audio APIs announcement, speech-to-text collection, model pages, STT docs), fal.ai/elevenlabs, deepinfra.com/models/automatic-speech-recognition, edenai.co, artificialanalysis.ai (speech-to-text leaderboard), assemblyai.com/benchmarks, deepgram.com (Nova-3 changelog 2026-08-17), soniox.com (pricing), help.elevenlabs.io (restricted countries) [Claude] 2026-11-13
 parent: 20-device.md
 ---
 
 # Speech recognition services
 
-Comparison for the [voice order notebook](functions.md#2-voice-order-notebook). Voice runs in the cloud through the server's phone `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone). The device is not used in Russia, and payment from abroad is possible `[A]` 2026-11-13. Thus the limits of services for Russia do not apply.
+Comparison for the [voice order notebook](functions.md#2-voice-order-notebook). Voice runs in the cloud through the server's phone `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone). The device is not used in Russia, and payment from abroad is possible `[A]` 2026-11-13.
 
-Limit: web research only `[Claude]` 2026-11-13. No service was tested on real speech. Prices come from vendor pages and reviews; some reviews do not agree. No independent Russian benchmark for all services was found. Check the vendor page before you pay.
+Limit: web research only `[Claude]` 2026-11-13. No service was tested on real speech. Prices come from vendor pages and reviews; some reviews do not agree. Check the platform page before you pay.
 
 ## What the device needs
 
 1. Russian speech, short phrases of 3 to 6 s: "table seven, seat two, carbonara without bacon".
 2. Noise of the restaurant floor.
 3. Menu words: dish names, often borrowed words. Keyterms (a list of words that the service must expect) help.
-4. Streaming or a fast short request: the server waits for the result.
+4. A fast result. Streaming is not necessary: the server holds `TALK`, the phone sends the short recording after the release.
+5. Many models from different vendors through 1 account, with prepaid credit and no subscription `[A]` 2026-11-13. The model changes with 1 parameter, so tests and later changes are easy.
 
-## Comparison
+## Platforms with many vendors
 
-Prices in USD. "Realtime" means streaming.
+| Platform | Speech models (vendor) | Billing | Notes |
+|---|---|---|---|
+| OpenRouter | Scribe v2 (ElevenLabs), GPT Transcribe, gpt-4o-transcribe and mini (OpenAI), Voxtral Small Transcribe 3 (Mistral), Gemini 3.5 Transcribe (Google), Universal-3.5 Pro (AssemblyAI), Transcribe 1 (Fish Audio), Whisper | prepaid credit; per second or per token | 1 endpoint `/api/v1/audio/transcriptions`; the model is a parameter. Speech models since 2026 |
+| fal.ai | Scribe v2 (ElevenLabs), Whisper large-v3 and Wizper, Canary streaming, Cohere Transcribe | prepaid credit; each model has its own price | also has streaming models |
+| DeepInfra | Voxtral Mini and Small (Mistral), Whisper | per minute | the lowest prices; open models only |
+| Eden AI | Deepgram, AssemblyAI, Speechmatics, Google and others | per minute, higher than direct | 1 API for the classic speech vendors |
 
-| Service | Model | Price | Keyterms | Russian | Notes |
-|---|---|---|---|---|---|
-| ElevenLabs | Scribe v2 | 0.22/h batch, 0.39/h realtime | yes, up to 1,000 | yes | best results in several multilingual benchmarks |
-| fal.ai | Scribe v2, Whisper and others | Scribe v2 0.008/min | as the model | as the model | 1 account and prepaid credit for several models; good for a test |
-| Soniox | stt-rt-v6, realtime | 0.12/h | not checked `[?]` | yes | the vendor says it is more accurate in Russian than Deepgram; not independent |
-| Deepgram | Nova-3, realtime | about 0.46/h (0.0077/min); keyterms +0.0013/min | yes | yes, monolingual model `ru`; improved 2026-08 | sub-300 ms streaming |
-| AssemblyAI | Universal-3.6 Pro Realtime | 0.45/h | yes, included, up to 100 | yes | the cheaper multilingual streaming model has no Russian |
-| OpenAI | gpt-4o-transcribe, mini | 0.006 and 0.003/min | text prompt | yes | weak on mixed-language speech in 1 benchmark |
-| Mistral | Voxtral Mini Transcribe 3 | 0.21/h batch; realtime 0.006 to 0.008/min | custom vocabulary, 1 source `[?]` | not confirmed `[?]` | |
-| Groq | Whisper large-v3-turbo | 0.04/h, minimum 10 s per request | no | yes | files only, no streaming; very fast |
-| Google | Chirp | 0.016/min | phrase hints | yes | not checked further |
+Hugging Face Inference Providers also route to some of these platforms. Not checked further.
 
-Other options from the first version of this page. Yandex SpeechKit: about 0.16 RUB for 15 s, billed in 15 s steps. Vosk runs offline on an Android phone, free, with a word list; it is usually less accurate `[?]`.
+## Models to compare
+
+Prices in USD per hour of audio, through the platform.
+
+| Model | Platform | Price | Keyterms | Notes |
+|---|---|---|---|---|
+| ElevenLabs Scribe v2 | OpenRouter, fal.ai | 0.22 (OpenRouter), 0.48 (fal.ai) | through the platform: not checked `[?]` | best results in several multilingual benchmarks |
+| OpenAI GPT Transcribe | OpenRouter | 0.27 | yes: keyword hints | newer than gpt-4o-transcribe |
+| Mistral Voxtral Small Transcribe 3 | OpenRouter | 0.24 | not checked `[?]` | Voxtral Mini on DeepInfra: about 0.06 |
+| Google Gemini 3.5 Transcribe | OpenRouter | per token, not converted `[?]` | prompt | |
+| AssemblyAI Universal-3.5 Pro | OpenRouter | not checked `[?]` | not checked `[?]` | Russian is supported in Universal-3.6 Pro direct |
+| Deepgram Nova-3 | OpenRouter `[?]`, Eden AI | about 0.26 | direct: yes | Russian monolingual model, improved 2026-08 |
+| Whisper large-v3 | all platforms | 0.01 to 0.07 | prompt only | the reference for the comparison |
+
+Soniox (0.12/h realtime) is on none of these platforms. It needs its own account.
 
 ## Cost per shift
 
-Estimate `[?]`: 60 voice entries per shift, 5 s each, 5 min of speech in total.
-
-With any service in the table, a shift costs less than 0.05 USD. The price does not decide the choice. Accuracy on the floor and the keyterms decide it.
+Estimate `[?]`: 60 voice entries per shift, 5 s each, 5 min of speech in total. With any model in the table, a shift costs less than 0.05 USD. The price does not decide the choice. Accuracy on the floor and the keyterms decide it.
 
 ## Findings
 
-1. ElevenLabs Scribe v2 is the first candidate: the best benchmark results, streaming and up to 1,000 keyterms. The full menu fits in the keyterms.
-2. Soniox and Deepgram Nova-3 are the next candidates: streaming, keyterms (Deepgram), low price.
-3. fal.ai is useful for the test: 1 account gives Scribe v2 and Whisper.
-4. Groq is the cheapest and fast, but it has no streaming and no keyterms.
+1. OpenRouter is the first choice: 1 account and 1 endpoint give ElevenLabs, OpenAI, Mistral, Google and AssemblyAI. The model changes with 1 parameter.
+2. fal.ai is the second: it adds Whisper variants and streaming models.
+3. Keyterms through the platforms are not clear. Only GPT Transcribe documents keyword hints on OpenRouter. Check in the test if the platforms pass the keyterms of the other models.
+4. Streaming is not necessary for push-to-talk. A short file request is enough if the time to the result is short.
 
 ## Proposed test
 
 Status: proposed `[Claude]` 2026-11-13. Artemy decides.
 
-1. Record 30 order phrases on the floor with the phone, or in a noisy room. Use real menu items. Keep the recordings in `_private/`.
-2. Write the correct text for each phrase.
-3. Send the same recordings to ElevenLabs Scribe v2, Soniox, Deepgram Nova-3 and OpenAI gpt-4o-transcribe. Give the menu items as keyterms where the service supports them.
-4. Count the phrases where the table, the seat and the dish are all correct. Measure the time to the result.
-5. Choose the service with the best count. Write the result and the decision in the [decision log](../70-decisions/70-decisions.md).
+1. Make an account on OpenRouter and put prepaid credit on it. Optional: fal.ai too. Put the keys in `keys/`.
+2. Record 30 order phrases on the floor with the phone, or in a noisy room. Use real menu items. Keep the recordings in `_private/voice-test/`.
+3. Write the correct text for each phrase.
+4. Send the same recordings to Scribe v2, GPT Transcribe, Voxtral Small Transcribe 3, Gemini 3.5 Transcribe and Whisper large-v3. Give the menu items as keyterms or as a prompt where the model takes them.
+5. Count the phrases where the table, the seat and the dish are all correct. Measure the time to the result.
+6. Choose the model with the best count. Write the result and the decision in the [decision log](../70-decisions/70-decisions.md).
 
 [Parent](20-device.md)
