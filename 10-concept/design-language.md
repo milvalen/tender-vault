@@ -38,7 +38,7 @@ Capitals only. Stencil typeface on the enclosure and on posters. The screen uses
 | `UNIT TND-01` | the device, on the enclosure only |
 | `TBL-07` | table 7 |
 | `ST-2` | seat 2 at the table |
-| `STEP`, `NEXT`, `ACK`, `REQ` | key functions, on the enclosure and on the screen |
+| `STEP`, `NEXT`, `ACK`, `TALK` | key functions, on the enclosure and on the screen |
 | `12 MIN` | 12 min since the last stage change |
 | `LOW BATTERY` | shown only below 25 % charge |
 
