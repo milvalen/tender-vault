@@ -91,5 +91,7 @@ Findings of the scripted run `[Claude]`:
 | D19 | Guest requests: Artemy opened 0 of 3 requests when the guest asked (run 4: 0 of 3). A request handled at once needs no timer, so REQ may be extra work | P8 | open: check on a real shift whether REQ is used |
 | D20 | A `TAKE ORDER` alert on TBL-05 moved the selection 2 s before the kitchen called TBL-02. TBL-02 then missed `SERVED`, and its check and its departure were missed too. One missed STEP leaves a table 1 stage behind, and nothing shows it | P1, P5 | open |
 | D21 | The simulator counted 486 moves; a held key repeats in the terminal. On the device a held key is 1 long press | — | open: ignore key repeat in the simulator |
+| D22 | Desk test run 6, Artemy, 2-key mode `[A]` 2026-11-13: FAIL by the rule, but all 5 wrong-table presses came in the first 30 s, before the first guests. Artemy pressed STEP on TBL-01 (the start selection) and went round the full circle back to `FREE`. After that: 0 wrong-table, 6 of 6 high alerts handled, 1 question, 35 of 37 floor events in time. Requests opened at the guest's ask: 1 of 3 (see D19) | P3 | record |
+| D23 | 2 of 6 runs started with STEP on the start selection `TBL-01` (run 2 and run 6). The confirmation `TBL-01 GUESTS SEATED` shows the error, but the fix was the full circle, not UNDO | P5 | open: watch on a real shift |
 
 [Parent](10-concept.md)
