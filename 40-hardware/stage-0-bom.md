@@ -37,9 +37,8 @@ Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-
 
 Do not order the print before these checks:
 
-1. Rev 0.3 is accepted by Artemy. Rev 0.2 did not fit the Dual Button unit.
-2. Measure the real StickS3 and Dual Button unit against the values from the maker drawings in `enclosure/params.py`.
-3. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. See the [rev 0.3 open points](40-hardware.md#enclosure-rev-03).
+1. Measure the real StickS3 and Dual Button unit against the values from the maker drawings in `enclosure/params.py`.
+2. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. See the [rev 0.3 open points](40-hardware.md#enclosure-rev-03).
 
 ## Recommended: silent alert
 

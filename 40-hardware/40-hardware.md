@@ -19,7 +19,7 @@ The enclosure model, the wiring and the full BOM are in the [tender-hardware](ht
 
 ## Enclosure rev 0.3
 
-Status: built and checked in code, not printed. Branch `ai/enclosure-rev-0-3` of `tender-hardware`, commit `5c0953d`, 2026-11-13. Waits for acceptance by Artemy.
+Status: built and checked in code, not printed. Accepted by Artemy into `dev` of `tender-hardware`, commit `5c0953d`, 2026-11-13.
 
 Fits the real Dual Button unit. Sizes come from the maker drawings of the StickS3 (K150) and the Dual Button unit (U025):
 
