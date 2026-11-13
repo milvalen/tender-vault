@@ -25,9 +25,9 @@ Code lives in separate repositories. The vault does not copy code. Run commands 
 1. The default branch is `dev`. `main` is the release branch and is never ahead of `dev`.
 2. Agents work in `ai/<area>` branches.
 3. When the work is ready, the agent merges `ai/<area>` into `feature/<area>`. If `feature/<area>` does not exist, the agent makes it from `dev`. The agent pushes both branches.
-4. Artemy examines the result on `feature/<area>` and accepts it.
-5. After acceptance, the agent merges `feature/<area>` into `dev` when Artemy tells it to.
-6. The vault describes the state of `dev`. Before the merge into `dev`, work is only a Home task to review it, with the branch and commit. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
+4. The agent opens a pull request from `feature/<area>` into `dev`. The agent never merges into `dev` itself.
+5. Artemy reviews the pull request and merges it. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-pull-requests-into-dev).
+6. The vault describes the state of `dev`. Before the merge into `dev`, work is only a Home task to review it, with the pull request, the branch and the commit. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
 7. Nobody merges `dev` into `main` without an explicit command from Artemy after a careful review of `dev`.
 8. Exception to steps 3 to 5: changes to working rules only (`CLAUDE.md`, branch and process rules) go straight into `dev`, without a `feature/<area>` review. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-working-rule-changes-go-straight-into-dev).
 

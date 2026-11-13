@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Pull requests into dev
+
+**Decision:** the agent never merges into `dev`. It opens a pull request from `feature/<area>` into `dev`, and Artemy reviews and merges it `[A]`. The exceptions stay: working-rule changes go straight into `dev`; `dev` goes to `main` only on Artemy's command after a review of `dev`.
+
+**Rejected:** the agent merges `feature/<area>` into `dev` on Artemy's command in the conversation.
+
+**Consequence:** see [branches](../45-development/45-development.md#branches). First used in `tender-firmware` `ec29f0b` and `tender-hardware` `b5d98db`.
+
 ## 2026-11-13. Voice runs in the cloud through the phone
 
 **Decision:** speech recognition for the voice order notebook runs as a cloud request through the server's phone `[A]`. This closes the open question "Which computer runs voice?" on Home.
