@@ -29,5 +29,6 @@ Code lives in separate repositories. The vault does not copy code. Run commands 
 5. After acceptance, the agent merges `feature/<area>` into `dev` when Artemy tells it to.
 6. The vault describes the state of `dev`. Before the merge into `dev`, work is only a Home task to review it, with the branch and commit. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
 7. Nobody merges `dev` into `main` without an explicit command from Artemy after a careful review of `dev`.
+8. Exception to steps 3 to 5: changes to working rules only (`CLAUDE.md`, branch and process rules) go straight into `dev`, without a `feature/<area>` review. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-working-rule-changes-go-straight-into-dev).
 
 [Parent](../Home.md)

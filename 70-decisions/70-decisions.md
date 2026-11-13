@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Working-rule changes go straight into dev
+
+**Decision:** changes to working rules only (`CLAUDE.md`, branch and process rules) go straight into `dev`, without a `feature/<area>` review `[A]`. Code, enclosure models and other work still go through `feature/<area>` and Artemy's review. `dev` still goes to `main` only after a careful review and an explicit command from Artemy.
+
+**Rejected:** a `feature/<area>` review for each rule change. A rule change is short, and Artemy gives it in the conversation.
+
+**Consequence:** first used for `tender-firmware` `c0824bf` and `tender-hardware` `0f19649`. See [branches](../45-development/45-development.md#branches).
+
 ## 2026-11-13. The vault records the state of dev
 
 **Decision:** vault pages describe what is in the `dev` branch of `tender-firmware` and `tender-hardware`, not in `ai/<area>` or `feature/<area>` branches `[A]`. Work on `ai/<area>` or `feature/<area>` appears only as a Home task to review it, with the branch and commit. `dev` goes to `main` only after a careful review of `dev` and an explicit command from Artemy `[A]`.
