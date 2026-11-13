@@ -51,7 +51,8 @@ parent: README.md
 
 ## Open questions
 
-- Concept principle 1 says the device works without a phone or the internet. Voice now runs in the cloud through the phone ([decision log](70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone)). Change the principle to "the table board works without a phone", or keep it and accept voice as the exception?
+- Is a thumb wheel needed to choose a table? Most presses move between tables (desk test D11 in the [UX audit](10-concept/ux-principles.md)). The answer depends on the Grove port plan.
+- Is the enclosure width of 62 mm good on the belt? Sketch B shows 58 × 38 mm. Check with a paper mockup ([concept sketches](10-concept/concept-sketches.md)).
 
 ## Navigation
 

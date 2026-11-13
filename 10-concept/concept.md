@@ -29,7 +29,7 @@ A server keeps tables, orders, times, guest allergies and the menu in memory. A 
 
 ## Principles
 
-1. **Self-contained.** The device works without a phone, the internet or the restaurant POS. It syncs with a computer only for the menu and statistics.
+1. **Self-contained.** The device works without a phone, the internet or the restaurant POS. It syncs with a computer only for the menu and statistics. Exception: voice (stage 1) runs in the cloud through the phone `[A]` 2026-11-13. Without the phone, the table board and timers still work.
 2. **One hand, no long look.** Input: a talk button, a rotary encoder, 3–4 keys. Output: vibration and a short look at the screen.
 3. **A full shift.** The battery lasts 10–12 h.
 4. **A quiet floor.** The device makes no sound. Signals are vibration only.

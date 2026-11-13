@@ -21,7 +21,7 @@ Add a new decision at the top with the [template](../90-system/templates/decisio
 
 **Rejected:** a separate voice unit, Raspberry Pi Zero 2 WH with offline Vosk or whisper.cpp.
 
-**Consequence:** the device has no voice unit. Voice needs the phone and the mobile internet. The table board and timers still work without them. Concept principle 1 ("works without a phone, the internet") does not agree with this decision yet: see the open questions on [Home](../Home.md#open-questions). Details: [device](../20-device/device.md#architecture).
+**Consequence:** the device has no voice unit. Voice needs the phone and the mobile internet. The table board and timers still work without them. Concept principle 1 ("works without a phone, the internet") stays; voice is the exception `[A]`. See the [concept](../10-concept/concept.md#principles). Details: [device](../20-device/device.md#architecture).
 
 ## 2026-11-13. The device is worn on the belt
 
