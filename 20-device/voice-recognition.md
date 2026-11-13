@@ -53,7 +53,7 @@ Prices in USD. "Realtime" means streaming.
 | OpenAI | gpt-4o-transcribe, mini | 0.006 and 0.003/min | text prompt | yes | use from Russia forbidden |
 | Google | Chirp | 0.016/min | phrase hints | yes | not checked further |
 
-Services in Russia, from the first version of this page: Yandex SpeechKit (about 0.16 RUB for 15 s, billed in 15 s steps) and SaluteSpeech (package of 1,000 min for 1,200 RUB a month for a private person; word hints, up to 100). They have no access risk. Vosk runs offline on an Android phone, free, with a word list; it is usually less accurate `[?]`.
+Services in Russia, from the first version of this page, have no access risk. Yandex SpeechKit: about 0.16 RUB for 15 s, billed in 15 s steps. SaluteSpeech: a package of 1,000 min for 1,200 RUB a month for a private person, with word hints, up to 100. Vosk runs offline on an Android phone, free, with a word list; it is usually less accurate `[?]`.
 
 ## Cost per shift
 
