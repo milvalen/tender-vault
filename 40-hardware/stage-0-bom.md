@@ -22,10 +22,11 @@ Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-
 | Item | Purpose | Price |
 |---|---|---|
 | M5Stack StickS3 | interface unit: ESP32-S3, 1.14-inch screen, 2 keys, microphone, speaker, battery, 1 Grove port, Hat2 header. Firmware and enclosure rev 0.2 are made for it | about $21.50 (M5Stack store, launch price) |
-| M5Stack Unit Dual Button (U025) | keys `ACK` and `REQ` on the Grove port. Grove cable 20 cm in the box | about £2.90 or €3.50 |
+| M5Stack Unit Dual Button (U025) | keys `ACK` and `REQ` on the Grove port | about £2.90 or €3.50 |
+| Grove cable HY2.0-4P, 5 to 10 cm | connects the Dual Button unit inside the enclosure; the 20 cm cable in the box does not fit in the cable bay | not checked `[?]` |
 | USB-C data cable | flashing and charging | probably at home `[?]` |
 
-## Enclosure rev 0.2
+## Enclosure rev 0.3
 
 | Item | Purpose | Price |
 |---|---|---|
@@ -36,8 +37,9 @@ Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-
 
 Do not order the print before these checks:
 
-1. **The Dual Button unit does not fit the lower bay.** The unit is 48 × 24 × 8 mm (maker spec). The bay of rev 0.2 is 44 × 20 mm. The shell is large enough for a 49 × 25 mm bay; the model needs rev 0.3.
-2. Measure the key positions on the real StickS3 and Dual Button unit. They are `[?]` in `enclosure/params.py`.
+1. Rev 0.3 is accepted by Artemy. Rev 0.2 did not fit the Dual Button unit.
+2. Measure the real StickS3 and Dual Button unit against the values from the maker drawings in `enclosure/params.py`.
+3. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. See the [rev 0.3 open points](40-hardware.md#enclosure-rev-03).
 
 ## Recommended: silent alert
 

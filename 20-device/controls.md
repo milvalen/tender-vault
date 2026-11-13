@@ -77,7 +77,7 @@ STEP moves a table through these stages. The STEP key label on the screen names 
 
 ## Stage 0 key mapping
 
-The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `ai/table-board`. The screen and enclosure rev 0.2 name keys by function, not by colour.
+The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `ai/table-board`. The screen and the enclosure (rev 0.2 and later) name keys by function, not by colour.
 
 | Mode | `STEP`: key A (front) | `NEXT`: key B (top) | `ACK`: red key | `REQ`: blue key |
 |---|---|---|---|---|

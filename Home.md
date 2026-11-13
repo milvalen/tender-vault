@@ -31,6 +31,8 @@ parent: README.md
 - [x] **Artemy:** desk test in 2-key mode. Run 6, 2026-11-13: failed only on 5 presses in the first 30 s; after that, within the pass rule. The 4-key mode (Dual Button unit) is the stage 0 setup; the 2-key mode stays as a fallback `[Claude]`.
 - [x] **Artemy:** decide on the [design review of enclosure rev 0.1](10-concept/design-review-rev-0-1.md) findings R1–R9. All approved 2026-11-13; applied in enclosure rev 0.2.
 - [x] **Artemy:** review enclosure [rev 0.2](40-hardware/40-hardware.md) and accept it into `dev`. Accepted 2026-11-13, commit `e8d4bf6`.
+- [x] **Claude:** enclosure rev 0.3 for the real Dual Button unit, `tender-hardware` `ai/enclosure-rev-0-3` `5c0953d`, 2026-11-13.
+- [ ] **Artemy:** review enclosure [rev 0.3](40-hardware/40-hardware.md#enclosure-rev-03) and accept it into `dev`.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions
