@@ -50,6 +50,7 @@ parent: README.md
 - [x] **Artemy:** review the `PAY` stage on `tender-firmware` `feature/check-brought` `ad41a42` and accept it into `dev`. In `BILL` the STEP key reads `BROUGHT`; `PAY` has no timer, so a slow payment gives no alert (desk test D2). Accepted 2026-11-13, `tender-firmware` `dev` commit `7d8b0bd`. Not run on a real board.
 - [x] **Claude:** shift log on the device and `tools/shift_log.py` to read it, `tender-firmware` `dev` `939676f`. Accepted by Artemy 2026-11-13. Not run on a real board. See [read the shift log](30-field/30-field.md#read-the-shift-log).
 - [x] **Artemy:** review the `CHECK MAINS` hint on `tender-firmware` `feature/ord-hint` `986a5cb` and accept it into `dev`. A table in `ORD` for 10 min gets a low hint: an orange mark, no burst, no vibration; `ACK` answers it (desk test D20). Accepted 2026-11-13, `tender-firmware` `dev` commit `d5a8b01`. Not run on a real board.
+- [ ] **Artemy:** review [PR #1](https://github.com/milvalen/tender-firmware/pull/1) and merge it into `dev`: the firmware commit on the board and in the shift log (`feature/fw-version` `b757bbf`). Tests pass, the firmware builds; not run on a real board.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Stage 1: voice test
