@@ -30,7 +30,7 @@ Why the enclosure does not change now `[Claude]` 2026-11-13:
 Test steps:
 
 1. Connect the vibrator to the Hat2 header with the Grove cable to male pins: signal to a free GPIO (G1 to G8), 5 V, GND. Write down the pins.
-2. Set `kVibroPin` in `tender-firmware` and limit the PWM duty (see the [shopping list](stage-0-bom.md#recommended-silent-alert) for the current).
+2. Set `kVibroPin` in `ui-unit/src/main.cpp` of `tender-firmware` to the GPIO number. The firmware drives the motor with PWM: 10 kHz, duty 90 of 255 (about 35 %), `kVibroDuty`. Branch `feature/vibro-pwm`, commit `e3929b7`, 2026-11-13: builds for the StickS3 and passes the native tests; not run on a real board. Measure the current on battery before you increase the duty (see the [shopping list](stage-0-bom.md#recommended-silent-alert)).
 3. Run on battery, USB not connected. Check that the 5 V output works and the board does not restart when the motor starts.
 4. Put the board and the vibrator in a pocket or tape them to the belt. Walk and bend. Is a high alert felt through the clothes? Is it heard by a guest at the table?
 5. Measure the battery time with the alerts on.
