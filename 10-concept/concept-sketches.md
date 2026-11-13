@@ -45,7 +45,7 @@ The screen text and key labels in the sketches (`TBL-07 T+12`, `START / STOP`, `
 
 ## Open points
 
-1. Direction B is built as the parametric enclosure in `tender-hardware`, rev 0.1 and rev 0.2.
+1. Artemy chose direction B `[A]` 2026-11-13. Direction B is built as the parametric enclosure in `tender-hardware`, rev 0.1 and rev 0.2.
 2. Check the size of rev 0.2 (62 × 62 mm) on the belt with a paper mockup. Sketch B shows 58 × 38 mm `[?]`.
 
 [Parent](10-concept.md)

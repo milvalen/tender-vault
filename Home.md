@@ -24,7 +24,7 @@ parent: README.md
 - [ ] **Artemy:** when the boards arrive, fill in the [measurement sheet](40-hardware/measurement-sheet.md) and give it to Claude.
 - [ ] **Claude:** update the enclosure and firmware constants from the measurement sheet, then run the fit checks.
 - [x] **Claude:** make 3 enclosure [concept sketches](10-concept/concept-sketches.md) in the [design language](10-concept/design-language.md). Done 2026-11-13.
-- [ ] **Artemy:** pick a sketch direction or a mix.
+- [x] **Artemy:** pick a sketch direction or a mix. Direction B `[A]` 2026-11-13; the enclosure revisions already follow it.
 - [x] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d). Rev 0.1 in `dev`, 2026-11-13; see [hardware](40-hardware/40-hardware.md).
 - [x] **Artemy:** review enclosure rev 0.1 and accept it into `dev`. Accepted 2026-11-13.
 - [x] **Claude:** table board and timers for the stage 0 board in `tender-firmware`, branch `ai/table-board`, 2026-11-13. Builds for StickS3 and passes native tests; not run on a real board. Accepted by Artemy into `dev` after the desk test, commit `df802b7`, 2026-11-13.
