@@ -110,6 +110,8 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
    - the screen turns off when idle; a key press turns it on;
    - there is no "mute all alerts for 10 min"; to stop one alert, use `ACK`.
 
-   Open: does `MUTED` stay on until the next hold of `ACK`, or end after a time `[?]`? Without a vibrator, `MUTED` hides high alerts, so the stage 0 board needs the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) first. The firmware still has the old 10 min mute.
+   - `MUTED` stays on until the next hold of `ACK`; it does not end after a time `[A]` 2026-11-13.
+
+   Without a vibrator, `MUTED` hides high alerts, so the stage 0 board needs the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) first. The firmware still has the old 10 min mute.
 
 [Parent](20-device.md)

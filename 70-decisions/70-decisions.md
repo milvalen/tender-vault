@@ -17,7 +17,7 @@ Add a new decision at the top with the [template](../90-system/templates/decisio
 
 ## 2026-11-13. MUTED is the quiet floor mode
 
-**Decision:** `MUTED` and the "quiet floor" mode from the inbox are one mode `[A]`. In `MUTED`, alerts come by vibration only, with no screen burst, and the screen turns off when idle. The "mute all alerts for 10 min" behaviour is removed. `ACK` stops one alert; a high alert comes back after 3 min.
+**Decision:** `MUTED` and the "quiet floor" mode from the inbox are one mode `[A]`. In `MUTED`, alerts come by vibration only, with no screen burst, and the screen turns off when idle. `MUTED` stays on until the next hold of `ACK`. The "mute all alerts for 10 min" behaviour is removed. `ACK` stops one alert; a high alert comes back after 3 min.
 
 **Rejected:** keep the 10 min mute as a second mode (`SNOOZE`): one more hold meaning on a key. Keep `MUTED` as it is and drop the quiet floor idea.
 
