@@ -7,7 +7,7 @@ created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: docs.m5stack.com (StickS3, Unit Dual Button, Unit Vibrator), cnx-software.com (StickS3 launch price, 2026-01-23), thepihut.com, robotshop.com, market.yandex.ru, eicom.ru [Claude] 2026-11-13
+source: docs.m5stack.com (StickS3, Unit Dual Button, Unit Vibrator), cnx-software.com (StickS3 launch price, 2026-01-23), thepihut.com, robotshop.com, market.yandex.ru, eicom.ru, siusystem.ru, future-perfect.design, 3dzipper.ru [Claude] 2026-11-13
 parent: 40-hardware.md
 ---
 
@@ -61,6 +61,22 @@ Do not order the print before these checks:
 
 1. Measure the real StickS3 and Dual Button unit against the values from the maker drawings in `enclosure/params.py`.
 2. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. See the [rev 0.3 open points](40-hardware.md#enclosure-rev-03).
+
+### Where to print in Russia
+
+Checked 2026-11-13 `[Claude]`. Prices are from the service pages, before the upload of the model. Part volumes from `build.py` (rev 0.4): front shell 29.4 cm³, back cover 16.4 cm³, 4 key parts 1.3 cm³ together. The STL files are in `out/` after `build.py`.
+
+| Service | What | Price | Time | Notes |
+|---|---|---|---|---|
+| SIU System, Moscow | back cover, SLS PA12, black | 90 RUB/cm³: about 1,500 RUB | 3 to 5 working days | STL calculator on the site; ships across Russia. The general print page gives a minimum order of 10,000 RUB: ask if it applies to SLS |
+| Future Perfect, Moscow | back cover, SLS polyamide (partner) | from 3,000 RUB per part | 3 to 5 days | Also prints SLA in-house in 1 to 2 days: both parts in 1 order. STL and STEP calculator |
+| 3D ZIPPER, Pushkino | front shell and keys, SLA | standard resin 22 RUB/g: about 800 RUB; Tough resin 32 RUB/g | from 1 day | Minimum 1 part; ships by courier services. Their PA12 is not SLS: do not order the back cover there |
+
+Estimate for 1 set: about 2,300 to 4,000 RUB without delivery. Before the order:
+
+1. Ask for SLS or MJF PA12, not FDM nylon: the clip must be one solid part.
+2. Ask for black or dyed black PA12: no bare white parts on the unit.
+3. The engraving on the front shell is 0.4 mm deep: SLA keeps it; SLS can blur it.
 
 ## Recommended: silent alert
 
