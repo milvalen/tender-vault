@@ -92,7 +92,7 @@ Correction 2026-11-13 `[Claude]`: an earlier version of this list gave a cable w
 Open points `[?]`:
 
 - The vibrator connects to a free GPIO, 5 V and GND on the Hat2 header (G1 to G8 are on the header). Confirm the pins and the 5 V output on battery on the real board, then set `kVibroPin` in the firmware.
-- The maker gives 5 V at 424 mA for the motor at 10 kHz PWM, 50 % duty (docs.m5stack.com, U059) `[Claude]`. The StickS3 page gives a limit of 0.38 A for 5 V on the Grove port. The firmware drives the motor with PWM at about 35 % duty (`kVibroDuty`, branch `feature/vibro-pwm`); increase it only after a current measurement on battery.
+- The maker gives 5 V at 424 mA for the motor at 10 kHz PWM, 50 % duty (docs.m5stack.com, U059) `[Claude]`. The StickS3 page gives a limit of 0.38 A for 5 V on the Grove port. The firmware drives the motor with PWM at about 35 % duty (`kVibroDuty`, firmware `dev` `29ffb53`); increase it only after a current measurement on battery.
 - The enclosure has no place for the vibrator. Do the [vibrator desk test](40-hardware.md#silent-alert-desk-test-first) first.
 
 ## For voice (stage 1)
