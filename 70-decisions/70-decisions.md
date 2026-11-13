@@ -15,6 +15,10 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Feature branches for review
+
+**Decision:** agents merge each `ai/<area>` branch into a `feature/<area>` branch. Artemy examines and accepts the work there. After acceptance, the agent merges `feature/<area>` into `dev` when Artemy tells it to `[A]`. This replaces the direct merge of `ai/<area>` into `dev`. See [branches](../45-development/45-development.md#branches).
+
 ## 2026-11-13. Vibrator: desk test before an enclosure place
 
 **Decision:** test the Unit Vibrator on an open board before the enclosure gets a place for it `[A]`. See [silent alert: desk test first](../40-hardware/40-hardware.md#silent-alert-desk-test-first).
