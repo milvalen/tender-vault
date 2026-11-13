@@ -52,6 +52,14 @@ parent: README.md
 - [ ] **Artemy:** review the `CHECK MAINS` hint on `tender-firmware` `feature/ord-hint` `2e9cdcf` and accept it into `dev`. A table in `ORD` for 10 min gets a low hint: an orange mark, no burst, no vibration; `ACK` answers it (desk test D20). Tests pass, the firmware builds; not run on a real board.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
+## Stage 1: voice test
+
+See the [proposed test](20-device/voice-recognition.md#proposed-test).
+
+- [ ] **Artemy:** record 30 order phrases with the phone in a noisy place, with real menu items. Put the files and the correct text in `_private/voice-test/` (template there).
+- [ ] **Artemy:** make accounts for ElevenLabs, Soniox, Deepgram and OpenAI, or fal.ai for several models. Put the keys in `keys/`, outside the repositories.
+- [ ] **Claude:** send the recordings to each service, count the phrases with the correct table, seat and dish, measure the time, and write the result.
+
 ## Open questions
 
 - Is a thumb wheel needed to choose a table? Most presses move between tables (desk test D11 in the [UX audit](10-concept/ux-principles.md)). The answer depends on the Grove port plan.
