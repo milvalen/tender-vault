@@ -56,7 +56,7 @@ Artemy approved all changes `[A]` 2026-11-13. Status column: where each change i
 
 Run before the boards are bought, so the controls can still change.
 
-1. Build a screen simulator that runs the same table board core on a computer. Done `[Claude]` 2026-11-13: `tender-firmware` branch `ai/table-board`, `ui-unit/sim/`. The device and the simulator share the interface code (`app.h`), so the simulator shows the real screen.
+1. Build a screen simulator that runs the same table board core on a computer. Done `[Claude]` 2026-11-13: `tender-firmware` branch `ai/table-board`, `ui-unit/sim/`. The device and the simulator share the interface code (`app.h`), so the simulator shows the real screen. The terminal cannot vibrate: since 2026-11-13 the simulator shows `BZZ` in orange under the screen while the vibration motor runs, also in `MUTED` (firmware `dev` `2c4d4a5`) `[Claude]`.
 2. Write a shift script. Done: 32 min of shift time on 8 tables, 7 parties, 3 guest requests, 3 order reminders, 1 kitchen mix-up that needs UNDO, 1 slow payment. At speed x4 it takes 8 min.
 3. Artemy plays the script with keyboard keys that map to the device keys, without a briefing: `make -C ui-unit sim` (4 keys) and `make -C ui-unit sim ARGS=--two-keys` (2 keys). The `?` key records a question. Each run writes a log.
 4. Count: wrong-table actions, missed alerts, questions "what does this key do".
@@ -81,7 +81,7 @@ Findings of the scripted run `[Claude]`:
 | D9 | On a `GUEST REQUEST` alert Artemy pressed STEP 2 times, not REQ. The table went to `FREE`, and that closed the request by accident. The screen does not show which key ends the alert | P3, P4 | done in firmware `ai/table-board`: the label of the key that ends the alert is orange |
 | D10 | UNDO was used 0 times. To correct a wrong STEP, Artemy pressed STEP around the full circle (4 to 5 presses). UNDO is a hidden long press with no label | P3, P5 | done in firmware `ai/table-board`: `HOLD: UNDO` on the STEP key for 5 s after each STEP |
 | D11 | 232 of 292 presses moved between tables (scripted player: 79). A thumb wheel would cut this | P1 | open: decide on the wheel and the Grove port plan |
-| D12 | The simulator counted a STEP on a request alert as a correct answer to the alert | — | done: REQUEST ends a request alert, STEP a stage alert, ACK and MUTE end all |
+| D12 | The simulator counted a STEP on a request alert as a correct answer to the alert | — | done: REQUEST ends a request alert, STEP a stage alert, ACK and MUTE end all. Since firmware `dev` `52725fd` (2026-11-13), MUTE (quiet floor) does not end alerts |
 | D13 | Desk test run 4, Artemy, 4-key mode `[A]` 2026-11-13: 32 of 37 floor events in time, 4 of 8 high alerts missed, 6 wrong-table, 19 extra presses, 3 questions. FAIL, worse than run 3 | — | record |
 | D14 | Firmware bug: STEP clears the alert snooze of the table. On an overdue request, STEP starts the same alert again at once. Each of the 2 missed request alerts was counted 2 times | P6 | done: STEP keeps the snooze of an open request |
 | D15 | On both request alerts Artemy pressed STEP again, with `REQ` in orange. Artemy uses the main key as "done" | P3 | done: STEP reads `DONE` and closes an open request; REQ only opens |
