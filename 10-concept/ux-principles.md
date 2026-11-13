@@ -87,5 +87,9 @@ Findings of the scripted run `[Claude]`:
 | D15 | On both request alerts Artemy pressed STEP again, with `REQ` in orange. Artemy uses the main key as "done" | P3 | done: STEP reads `DONE` and closes an open request; REQ only opens |
 | D16 | After the `HOLD: UNDO` label came, Artemy pressed STEP 5 more times on TBL-03 and asked 3 questions. The label hid what the next tap does | P3, P4 | done: the key keeps the next-stage label; the status line reads `HOLD STEP = UNDO` for 5 s |
 | D17 | Script: "order dessert. You serve it." made Artemy press STEP 5 times on TBL-07 to record the dessert. There is no dessert stage | — | done in the shift script |
+| D18 | Desk test run 5, Artemy, 4-key mode `[A]` 2026-11-13: **PASS**. 0 wrong-table, 3 of 3 high alerts handled, 0 questions, 3 extra presses, 32 of 37 floor events in time | — | record |
+| D19 | Guest requests: Artemy opened 0 of 3 requests when the guest asked (run 4: 0 of 3). A request handled at once needs no timer, so REQ may be extra work | P8 | open: check on a real shift whether REQ is used |
+| D20 | A `TAKE ORDER` alert on TBL-05 moved the selection 2 s before the kitchen called TBL-02. TBL-02 then missed `SERVED`, and its check and its departure were missed too. One missed STEP leaves a table 1 stage behind, and nothing shows it | P1, P5 | open |
+| D21 | The simulator counted 486 moves; a held key repeats in the terminal. On the device a held key is 1 long press | — | open: ignore key repeat in the simulator |
 
 [Parent](10-concept.md)
