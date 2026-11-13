@@ -19,7 +19,7 @@ The enclosure model, the wiring and the full BOM are in the [tender-hardware](ht
 
 ## Enclosure rev 0.4
 
-Status: built and checked in code, not printed. Branch `ai/enclosure-belt-clip` of `tender-hardware`, commits `0a3832e` and `535f230`, 2026-11-13. Waits for acceptance by Artemy.
+Status: built and checked in code, not printed. Accepted by Artemy into `dev` of `tender-hardware`, commit `535f230`, 2026-11-13.
 
 - **Belt clip.** A spring clip on the back cover replaces the webbing loop, as on a hand-held radio. The unit comes off the belt at any time: pull the flared tip out with a finger and lift. The belt goes in from below between the tongue and the cover. A ridge near the tip holds the bottom edge of the belt.
 - Clip: 30 mm wide, 46 mm long, tongue 2.6 mm, gap 2 mm. A 4 mm belt preloads the tongue. At full opening for a 4.5 mm belt, the strain at the root is 1.1 % (check in `build.py`).
