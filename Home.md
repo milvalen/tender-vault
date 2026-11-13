@@ -24,7 +24,7 @@ parent: README.md
 - [ ] **Artemy:** pick a sketch direction or a mix.
 - [x] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d). Rev 0.1 in `dev`, 2026-11-13; see [hardware](40-hardware/40-hardware.md).
 - [x] **Artemy:** review enclosure rev 0.1 and accept it into `dev`. Accepted 2026-11-13.
-- [x] **Claude:** table board and timers for the stage 0 board in `tender-firmware`, branch `ai/table-board`, 2026-11-13. Builds for StickS3 and passes native tests; not run on a real board.
+- [x] **Claude:** table board and timers for the stage 0 board in `tender-firmware`, branch `ai/table-board`, 2026-11-13. Builds for StickS3 and passes native tests; not run on a real board. Accepted by Artemy into `dev` after the desk test, commit `df802b7`, 2026-11-13.
 - [x] **Artemy:** decide on the [UX audit](10-concept/ux-principles.md) changes. All approved 2026-11-13; applied in firmware `a3548d5` on `ai/table-board`.
 - [x] **Claude:** screen simulator for the desk test, `tender-firmware` `ai/table-board` `43e4681`, 2026-11-13. See the [UX audit](10-concept/ux-principles.md#desk-test-before-the-shift).
 - [x] **Artemy:** desk test in 4-key mode. Passed on run 5, 2026-11-13, after 4 rounds of changes; see the [UX audit](10-concept/ux-principles.md#simulator-check-before-artemy-plays).
