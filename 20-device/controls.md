@@ -79,7 +79,7 @@ STEP moves a table through these stages. The STEP key label on the screen names 
 
 The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `dev`. The screen and the enclosure (rev 0.2 and later) name keys by function, not by colour.
 
-The enclosure engraves the key names of the final version: the blue key is `TALK` (rev 0.4, `[A]` 2026-11-13). With the voice unit, hold `TALK` and speak a request: a guest request, an order, a menu question. In stage 0 a press opens a guest request. The bottom line of the screen reads `TALK`: firmware `dev` commit `72ae11a`, accepted by Artemy 2026-11-13.
+The enclosure engraves the key names of the final version: the blue key is `TALK` (rev 0.4, `[A]` 2026-11-13). With voice (stage 1, through the phone), hold `TALK` and speak a request: a guest request, an order, a menu question. In stage 0 a press opens a guest request. The bottom line of the screen reads `TALK`: firmware `dev` commit `72ae11a`, accepted by Artemy 2026-11-13.
 
 | Mode | `STEP`: key A (front) | `NEXT`: key B (top) | `ACK`: red key | `TALK`: blue key |
 |---|---|---|---|---|

@@ -27,7 +27,7 @@ Example thresholds: ask about dessert 15 min after mains; bring the check 3 min 
 
 Stage 1. The server holds the button and says: "table seven, seat two, carbonara without bacon".
 
-1. The voice unit recognizes the speech offline.
+1. The interface unit sends the speech to the phone. The phone sends it to a cloud recognition service and gets the text ([device](device.md#architecture)).
 2. The parser extracts the table, the seat, the menu item and the modifiers.
 3. The parser matches the item against the menu. If the item contains a guest's allergen, the device warns the server.
 4. The server copies the order into the restaurant POS from the list on the screen.

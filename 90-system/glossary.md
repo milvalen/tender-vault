@@ -19,7 +19,7 @@ One term means one concept. Use the term from the "Use" column.
 |---|---|---|
 | device | TENDER TND-01 as a whole | gadget |
 | interface unit | the board with the screen, keys and vibration motor | watch, bracelet |
-| voice unit | the board that recognizes speech offline | brain, server |
+| voice unit | the board that recognizes speech offline. Rejected 2026-11-13: voice runs in the cloud through the phone | brain, server |
 | shift | a server's working day from start to end | — |
 | server | the person who serves tables | waiter, waitress |
 | table | a table on the floor with the number `TBL-NN` | — |

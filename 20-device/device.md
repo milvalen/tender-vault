@@ -22,18 +22,23 @@ Therefore stage 0 uses ready-made boards and modules with snap-in connectors. An
 
 ## Architecture
 
-The device has 2 units. In stage 0, only the interface unit works.
+The device is 1 unit and the server's phone. In stage 0, only the interface unit works.
 
-| Unit | Task | Candidate |
+| Part | Task | Candidate |
 |---|---|---|
-| Interface unit | screen, keys, vibration, timers, table board | M5Stack StopWatch Dev Kit: ESP32-S3, round AMOLED, microphone, battery |
-| Voice unit | offline Russian speech recognition, order parsing | Raspberry Pi Zero 2 WH with a microphone board |
+| Interface unit | screen, keys, vibration, timers, table board; records the speech while `TALK` is held | M5Stack StickS3 (stage 0) |
+| Phone | sends the speech to a cloud recognition service, returns the text | the server's own phone |
 
-The units connect over UART or BLE `[?]`. The decision is made after stage 0.
+Voice runs in the cloud through the phone `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone).
 
-### Why voice runs on a separate unit
+Open points:
 
-ESP32-S3 cannot run offline recognition of free Russian speech `[Claude]`. Raspberry Pi Zero 2 W can run Vosk or whisper.cpp with a small model `[?]`. Measure the speed on Russian speech.
+1. The link between the unit and the phone: BLE `[?]`.
+2. Which cloud service recognizes Russian speech, and where does the order parsing run: on the phone or in the cloud `[?]`?
+3. Without the mobile internet there is no voice. The table board and timers still work.
+4. Does the StickS3 microphone give speech good enough for recognition on the floor `[?]`?
+
+Rejected: a separate voice unit, Raspberry Pi Zero 2 WH with offline Vosk or whisper.cpp. ESP32-S3 cannot run offline recognition of free Russian speech `[Claude]`.
 
 ### Screen
 

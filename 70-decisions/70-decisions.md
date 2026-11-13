@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Voice runs in the cloud through the phone
+
+**Decision:** speech recognition for the voice order notebook runs as a cloud request through the server's phone `[A]`. This closes the open question "Which computer runs voice?" on Home.
+
+**Rejected:** a separate voice unit, Raspberry Pi Zero 2 WH with offline Vosk or whisper.cpp.
+
+**Consequence:** the device has no voice unit. Voice needs the phone and the mobile internet. The table board and timers still work without them. Concept principle 1 ("works without a phone, the internet") does not agree with this decision yet: see the open questions on [Home](../Home.md#open-questions). Details: [device](../20-device/device.md#architecture).
+
 ## 2026-11-13. The device is worn on the belt
 
 **Decision:** the restaurant allows the device on the floor, on the belt `[A]`. TND-01 is a belt module with a spring clip. This closes the open question "Is it allowed to wear the device on the floor?" on Home.

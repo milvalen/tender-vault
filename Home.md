@@ -51,7 +51,7 @@ parent: README.md
 
 ## Open questions
 
-- Which computer runs voice: Raspberry Pi Zero 2 WH, or a cloud request through the phone? See [device](20-device/device.md).
+- Concept principle 1 says the device works without a phone or the internet. Voice now runs in the cloud through the phone ([decision log](70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone)). Change the principle to "the table board works without a phone", or keep it and accept voice as the exception?
 
 ## Navigation
 

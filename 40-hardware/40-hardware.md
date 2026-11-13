@@ -47,7 +47,7 @@ Status: built and checked in code, not printed. Accepted by Artemy into `dev` of
 - **Belt clip.** A spring clip on the back cover replaces the webbing loop, as on a hand-held radio. The unit comes off the belt at any time: pull the flared tip out with a finger and lift. The belt goes in from below between the tongue and the cover. A ridge near the tip holds the bottom edge of the belt.
 - Clip: 30 mm wide, 46 mm long, tongue 2.6 mm, gap 2 mm. A 4 mm belt preloads the tongue. At full opening for a 4.5 mm belt, the strain at the root is 1.1 % (check in `build.py`).
 - **Print the back cover in nylon (PA12, MJF or SLS).** Standard SLA resin breaks at about 2 % strain. The front shell and the key caps can stay SLA.
-- **Key names for the final version.** The ribbed key is `TALK`: hold it and speak a request to the voice unit. In stage 0, without the voice unit, a press opens a guest request; the screen shows this meaning. Approved by Artemy `[A]` 2026-11-13. The separate talk button on the top face is no longer planned.
+- **Key names for the final version.** The ribbed key is `TALK`: hold it and speak a request; the phone sends it to cloud recognition. In stage 0, without voice, a press opens a guest request; the screen shows this meaning. Approved by Artemy `[A]` 2026-11-13. The separate talk button on the top face is no longer planned.
 - Depth with the clip: 31.3 mm, 1.7 mm more than with the loop.
 
 Open points `[?]`: the clip force on a real belt, and whether the catch ridge holds when the server bends down.

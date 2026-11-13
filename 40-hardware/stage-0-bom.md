@@ -97,6 +97,8 @@ Open points `[?]`:
 
 ## For voice (stage 1)
 
+Rejected 2026-11-13: voice runs in the cloud through the phone, so these items are not bought `[A]`. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-voice-runs-in-the-cloud-through-the-phone). The list stays as history.
+
 | Item | Purpose | Price |
 |---|---|---|
 | Raspberry Pi Zero 2 WH | voice unit; the header is already soldered | not checked |

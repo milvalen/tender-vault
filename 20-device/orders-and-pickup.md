@@ -57,7 +57,7 @@ House rules can differ: some restaurants count counter-clockwise or use a separa
 ## Limits
 
 1. The device is not connected to the kitchen or the restaurant POS. It does not know when a dish is ready. It knows only the orders that the server dictated.
-2. Comfortable order entry needs the voice unit (stage 1). In stage 0, order entry with the wheel through the menu is slow; stage 0 shows only the table board and timers.
+2. Comfortable order entry needs voice (stage 1, cloud recognition through the phone). In stage 0, order entry with the wheel through the menu is slow; stage 0 shows only the table board and timers.
 
 ## Related
 
