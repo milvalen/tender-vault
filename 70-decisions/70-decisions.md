@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. The vault records the state of dev
+
+**Decision:** vault pages describe what is in the `dev` branch of `tender-firmware` and `tender-hardware`, not in `ai/<area>` or `feature/<area>` branches `[A]`. Work on `ai/<area>` or `feature/<area>` appears only as a Home task to review it, with the branch and commit. `dev` goes to `main` only after a careful review of `dev` and an explicit command from Artemy `[A]`.
+
+**Rejected:** record the result of an agent branch before acceptance. The pages then describe code that is not accepted.
+
+**Consequence:** the vault agent updates topic notes after the merge into `dev`. See [branches](../45-development/45-development.md#branches). Older dated entries with `ai/<area>` branches stay as history.
+
 ## 2026-11-13. MUTED is the quiet floor mode
 
 **Decision:** `MUTED` and the "quiet floor" mode from the inbox are one mode `[A]`. In `MUTED`, alerts come by vibration only, with no screen burst, and the screen turns off when idle. `MUTED` stays on until the next hold of `ACK`. The "mute all alerts for 10 min" behaviour is removed. `ACK` stops one alert; a high alert comes back after 3 min.
