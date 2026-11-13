@@ -50,7 +50,7 @@ Artemy approved all changes `[A]` 2026-11-13. Status column: where each change i
 | A8 | The header always shows `LOAD 3/4` and `UNIT TND-01` | P8 | low | Show the battery only below 25 %. Keep the unit marking on the enclosure only | done in firmware `a3548d5` |
 | A9 | ACK, REQUEST and MUTE all exist. The server must choose between 3 "not now" style actions | P3, P8 | medium | Keep REQUEST and ACK. Move MUTE to a long press of ACK (already planned). Do not add more modes | done: MUTE is a long press of ACK |
 | A10 | The seat numbering example "seat 1 at the window" is a guess | P10 | low | Use the house pivot point: seat 1 has its back to it, then clockwise. Ask the restaurant for its rule | done in [orders and pickup](../20-device/orders-and-pickup.md#seat-numbering); restaurant rule still unknown |
-| A11 | Stage 0 board has no vibration motor. A screen flash is not seen when the device is on the belt | P6, P7 | high | Add a snap-in vibration module in the lower bay `[?]`, or move the screen signal to an always-visible place | open: firmware has `kVibroPin`; module not chosen |
+| A11 | Stage 0 board has no vibration motor. A screen flash is not seen when the device is on the belt | P6, P7 | high | Add a snap-in vibration module in the lower bay `[?]`, or move the screen signal to an always-visible place | open: candidate module Unit Vibrator (U059) `[A]`; firmware has `kVibroPin` and a PWM limit (`dev` `29ffb53`); waits for the [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) |
 
 ## Desk test before the shift
 
