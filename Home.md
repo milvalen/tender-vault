@@ -44,7 +44,7 @@ parent: README.md
 - [x] **Claude:** change `MUTED` in `tender-firmware` to the quiet floor mode (vibration only, the screen off when idle), see the [decision log](70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode). Done 2026-11-13: `ai/quiet-mute` `0e5d109`, in `feature/quiet-mute` `6599ba7`. Native tests and the StickS3 build pass; not run on a real board.
 - [x] **Artemy:** review `MUTED` on `feature/quiet-mute` and accept it into `dev`. Accepted 2026-11-13, merge commit `52725fd`. The first press on an off screen only turns it on.
 - [x] **Claude:** vibration indicator `BZZ` in the desk-test simulator, so a `MUTED` alert can be seen. Accepted by Artemy into `tender-firmware` `dev` 2026-11-13, commit `2c4d4a5`.
-- [ ] **Artemy:** review the release rule in `CLAUDE.md` ("`dev` goes to `main` only after a review of `dev`; the vault follows `dev`") on `feature/release-rule` and accept it into `dev`: `tender-firmware` `68b634e`, `tender-hardware` `9ae18ad`. See the [decision log](70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
+- [x] **Artemy:** review the release rule in `CLAUDE.md` ("`dev` goes to `main` only after a review of `dev`; the vault follows `dev`") on `feature/release-rule` and accept it into `dev`: `tender-firmware` `68b634e`, `tender-hardware` `9ae18ad`. Accepted into `dev` 2026-11-13. See the [decision log](70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions
