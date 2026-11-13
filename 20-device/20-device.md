@@ -17,5 +17,6 @@ parent: ../Home.md
 - [Functions](functions.md): what the device does, by stage.
 - [Controls](controls.md): wheel, 3 keys, table stages.
 - [Orders by seat and pickup](orders-and-pickup.md): who ordered what, where to carry a dish from the pass.
+- [Speech recognition services](voice-recognition.md): cloud services for voice, compared.
 
 [Parent](../Home.md)

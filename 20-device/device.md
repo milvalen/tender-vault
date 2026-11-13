@@ -34,7 +34,7 @@ Voice runs in the cloud through the phone `[A]` 2026-11-13, see the [decision lo
 Open points:
 
 1. The link between the unit and the phone: BLE `[?]`.
-2. Which cloud service recognizes Russian speech, and where does the order parsing run: on the phone or in the cloud `[?]`?
+2. Which cloud service recognizes Russian speech, and where does the order parsing run: on the phone or in the cloud `[?]`? See the [comparison of services](voice-recognition.md).
 3. Without the mobile internet there is no voice. The table board and timers still work.
 4. Does the StickS3 microphone give speech good enough for recognition on the floor `[?]`?
 
