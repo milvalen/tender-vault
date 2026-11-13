@@ -15,6 +15,10 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Belt clip and final key names
+
+**Decision:** the enclosure hangs on the belt with a spring clip, as a hand-held radio does, and comes off at any time `[A]`. The engravings name the keys of the final version with voice: the REQUEST key becomes `TALK` (hold and speak) `[A]`. There is no separate talk button. See [enclosure rev 0.4](../40-hardware/40-hardware.md#enclosure-rev-04).
+
 ## 2026-11-13. Stage 0 shopping list
 
 **Decision:** stage 0 uses the M5Stack StickS3 with the Dual Button unit, a short Grove cable and enclosure rev 0.3 `[A]`. The StopWatch Dev Kit is removed. The vibration module is recommended, not required. See the [shopping list](../40-hardware/stage-0-bom.md).

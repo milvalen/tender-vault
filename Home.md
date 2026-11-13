@@ -34,6 +34,7 @@ parent: README.md
 - [x] **Artemy:** review enclosure [rev 0.2](40-hardware/40-hardware.md) and accept it into `dev`. Accepted 2026-11-13, commit `e8d4bf6`.
 - [x] **Claude:** enclosure rev 0.3 for the real Dual Button unit, `tender-hardware` `ai/enclosure-rev-0-3` `5c0953d`, 2026-11-13.
 - [x] **Artemy:** review enclosure [rev 0.3](40-hardware/40-hardware.md#enclosure-rev-03) and accept it into `dev`. Accepted 2026-11-13, commit `5c0953d`.
+- [ ] **Artemy:** review enclosure [rev 0.4](40-hardware/40-hardware.md#enclosure-rev-04) (belt clip, `TALK` key) and accept it into `dev`.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions

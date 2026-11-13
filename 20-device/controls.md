@@ -52,7 +52,7 @@ Each key has its own shape, so the server can find it without a look:
 - ACK: flat;
 - REQUEST: ribbed.
 
-The talk button from [concept sketch A](../10-concept/concept-sketches.md#a-forearm-bracer) sits separately on the side, under the thumb.
+In the final version the REQUEST key becomes `TALK`: hold it and speak. There is no separate talk button (enclosure rev 0.4).
 
 ## Alerts
 
@@ -79,9 +79,11 @@ STEP moves a table through these stages. The STEP key label on the screen names 
 
 The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-firmware`, branch `ai/table-board`. The screen and the enclosure (rev 0.2 and later) name keys by function, not by colour.
 
+The enclosure engraves the key names of the final version: the blue key is `TALK` (rev 0.4, `[A]` 2026-11-13). With the voice unit, hold `TALK` and speak a request: a guest request, an order, a menu question. In stage 0 a press opens a guest request, and the bottom line of the screen reads `REQ`.
+
 | Mode | `STEP`: key A (front) | `NEXT`: key B (top) | `ACK`: red key | `REQ`: blue key |
 |---|---|---|---|---|
-| 4 keys: Dual Button unit on Grove | STEP (`DONE` closes an open request), hold UNDO | NEXT table, hold previous | ACK, hold MUTE | open a REQUEST |
+| 4 keys: Dual Button unit on Grove | STEP (`DONE` closes an open request), hold UNDO | NEXT table, hold previous | ACK, hold MUTE | open a REQUEST (engraved `TALK`) |
 | 2 keys: StickS3 alone | STEP (`DONE` closes an open request), hold UNDO | NEXT table; hold: ACK when an alert is shown, else open a request | — | — |
 
 The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen shows the current meaning: `HOLD NEXT: DONE`, `HOLD NEXT: ACK` or `HOLD NEXT: REQ`. An open request comes first, so an overdue request can always be closed. Use the 4-key mode if the desk test shows confusion.

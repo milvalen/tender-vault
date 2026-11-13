@@ -48,13 +48,13 @@ Notes:
 - eicom.ru has only 20 cm and longer M5Stack Grove cables (A034-B: 20 cm). The 10 cm cables are from marketplace sellers; check the HY2.0-4P plug in the photos.
 - Order all at the same time: the StickS3 arrives first, the modules from abroad in about 2 weeks.
 
-## Enclosure rev 0.3
+## Enclosure rev 0.4
 
 | Item | Purpose | Price |
 |---|---|---|
-| Print by an on-demand service, SLA resin | front shell, back cover, 4 key parts | not checked |
+| Print by an on-demand service, SLA resin | front shell, 4 key parts | not checked |
+| Print by an on-demand service, PA12 nylon (MJF or SLS) | back cover with the spring belt clip; resin breaks in the clip | not checked |
 | 4 × M2 × 16 self-tapping screws | back cover | not checked |
-| 25 mm webbing belt | belt loop on the back cover | not checked |
 | White paint marker | fill the engraved markings | not checked |
 
 Do not order the print before these checks:

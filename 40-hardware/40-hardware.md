@@ -17,9 +17,21 @@ parent: ../Home.md
 
 The enclosure model, the wiring and the full BOM are in the [tender-hardware](https://github.com/milvalen/tender-hardware) repository.
 
+## Enclosure rev 0.4
+
+Status: built and checked in code, not printed. Branch `ai/enclosure-belt-clip` of `tender-hardware`, commits `0a3832e` and `535f230`, 2026-11-13. Waits for acceptance by Artemy.
+
+- **Belt clip.** A spring clip on the back cover replaces the webbing loop, as on a hand-held radio. The unit comes off the belt at any time: pull the flared tip out with a finger and lift. The belt goes in from below between the tongue and the cover. A ridge near the tip holds the bottom edge of the belt.
+- Clip: 30 mm wide, 46 mm long, tongue 2.6 mm, gap 2 mm. A 4 mm belt preloads the tongue. At full opening for a 4.5 mm belt, the strain at the root is 1.1 % (check in `build.py`).
+- **Print the back cover in nylon (PA12, MJF or SLS).** Standard SLA resin breaks at about 2 % strain. The front shell and the key caps can stay SLA.
+- **Key names for the final version.** The ribbed key is `TALK`: hold it and speak a request to the voice unit. In stage 0, without the voice unit, a press opens a guest request; the screen shows this meaning. Approved by Artemy `[A]` 2026-11-13. The separate talk button on the top face is no longer planned.
+- Depth with the clip: 31.3 mm, 1.7 mm more than with the loop.
+
+Open points `[?]`: the clip force on a real belt, and whether the catch ridge holds when the server bends down.
+
 ## Enclosure rev 0.3
 
-Status: built and checked in code, not printed. Accepted by Artemy into `dev` of `tender-hardware`, commit `5c0953d`, 2026-11-13.
+Accepted by Artemy into `dev` of `tender-hardware`, commit `5c0953d`, 2026-11-13. Rev 0.4 adds the belt clip and the `TALK` key name.
 
 Fits the real Dual Button unit. Sizes come from the maker drawings of the StickS3 (K150) and the Dual Button unit (U025):
 
