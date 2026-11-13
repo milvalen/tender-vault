@@ -33,9 +33,10 @@ Test steps:
 
 1. Connect the vibrator to the Hat2 header with the Grove cable to male pins: signal to a free GPIO (G1 to G8), 5 V, GND. Write down the pins.
 2. Set `kVibroPin` in `ui-unit/src/main.cpp` of `tender-firmware` to the GPIO number. The firmware drives the motor with PWM: 10 kHz, duty 90 of 255 (about 35 %), `kVibroDuty`. Accepted by Artemy into `dev`, merge commit `29ffb53`, 2026-11-13: builds for the StickS3 and passes the native tests; not run on a real board. Measure the current on battery before you increase the duty (see the [shopping list](stage-0-bom.md#recommended-silent-alert)).
-3. Run on battery, USB not connected. Check that the 5 V output works and the board does not restart when the motor starts.
+   With the board self-test (firmware `dev` `c9eeb51`, type `!` in the serial console): type `vibro <GPIO>`. Allowed pins: Hat2 G1 to G3 and G5 to G8, Grove G9 and G10. Do not use G4 (Boot) or G43 and G44 (UART0). Type `pulse` for one alert pattern, or `on` and `off`. `duty <n>` sets the PWM duty, 0 to 128 of 255 (default 90, about 35 %). Write the pin and the duty into `kVibroPin` and `kVibroDuty`.
+3. Run on battery, USB not connected. Check that the 5 V output works and the board does not restart when the motor starts. On battery the screen shows `USB OFF`. If the board restarts when the motor starts, the self-test and the boot line show the reset reason `BROWNOUT`.
 4. Put the board and the vibrator in a pocket or tape them to the belt. Walk and bend. Is a high alert felt through the clothes? Is it heard by a guest at the table?
-5. Measure the battery time with the alerts on.
+5. Measure the battery time with the alerts on. Type `log`: the self-test writes a battery line every 10 s (level, voltage). The StickS3 power chip does not report the battery current (`I N/A`). Measure the current with a multimeter.
 
 Write the result here. Then decide: a third bay in the enclosure, a separate belt module with a cable, or no vibrator.
 

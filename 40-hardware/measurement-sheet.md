@@ -107,10 +107,11 @@ The clip takes a belt of up to 4.5 mm. A belt thinner than 2 mm does not preload
 Do these steps after the measurements. Each result changes one constant in `ui-unit/src/main.cpp`.
 
 1. Set `kHasDualButton` to `true` and upload the firmware.
-2. Press the red key. Then press the blue key.
-3. Write the result in E1. If the keys work only when released, or the screen reacts all the time, set `kDualActiveHigh` to `false`.
-4. Put the board in the enclosure position from [Board position](#board-position). Look at the screen.
-5. Write the result in E2. If the text is upside down, set the display rotation to 3.
+2. Connect USB, open `pio device monitor` and type `!`. The table board stops and the board self-test starts (firmware `dev` `c9eeb51`). Type `help` for the commands.
+3. Press the red key. Then press the blue key. The console prints the value for `kDualActiveHigh`; `keys` shows both keys. If a key gives no change, type `pull down` or `pull up`.
+4. Write the result in E1. Set `kDualActiveHigh` to the value from the console.
+5. Put the board in the enclosure position from [Board position](#board-position). Type `rot 1` or `rot 3` until the line `< HAT2 END` is at the Hat2 end.
+6. Write the result in E2. Set the display rotation to the value that you used.
 
 | No. | Check | Expected | Constant | Result |
 |---|---|---|---|---|
