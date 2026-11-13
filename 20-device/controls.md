@@ -101,7 +101,7 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 8. After payment, press STEP (the key reads `CLEAR`): `TABLE FREE`.
 ## Open points
 
-1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
+1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md). The shift log gives the stage times: firmware `dev` `939676f`, see [read the shift log](../30-field/30-field.md#read-the-shift-log).
 2. Desk test: done. Artemy passed it in 4-key mode on run 5, 2026-11-13; see the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays). Open findings from the desk test stay in the audit.
 3. Vibration module: the M5Stack Unit Vibrator (U059) is the candidate `[A]` 2026-11-13, see the [shopping list](../40-hardware/stage-0-bom.md#recommended-silent-alert). The firmware drives it (`kVibroPin`, PWM limit, firmware `dev` `29ffb53`). The [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) decides if it stays.
 4. Skipping dessert: done. The dessert stage is removed and STEP goes from `MAIN` to `BILL` in 1 press (desk test D6).
