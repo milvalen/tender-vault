@@ -15,7 +15,7 @@ parent: README.md
 
 **Project:** TENDER, device TND-01 `[A]`, 2026-11-13.
 
-**Summary:** a self-contained wearable unit on the forearm or the apron belt. The device helps a server through a shift without a phone, the internet or the restaurant POS. Details: [concept](10-concept/concept.md).
+**Summary:** a self-contained wearable unit on the apron belt. The device helps a server through a shift without a phone, the internet or the restaurant POS. Details: [concept](10-concept/concept.md).
 
 ## Stage 0: prototype without soldering
 
@@ -23,6 +23,7 @@ parent: README.md
 - [ ] **Artemy:** buy the boards and modules from the [stage 0 shopping list](40-hardware/stage-0-bom.md).
 - [ ] **Artemy:** when the boards arrive, fill in the [measurement sheet](40-hardware/measurement-sheet.md) and give it to Claude.
 - [ ] **Claude:** update the enclosure and firmware constants from the measurement sheet, then run the fit checks.
+- [ ] **Artemy:** order the enclosure print with the [print order](40-hardware/print-order.md) runbook, after the package has no `-DRAFT`.
 - [x] **Claude:** make 3 enclosure [concept sketches](10-concept/concept-sketches.md) in the [design language](10-concept/design-language.md). Done 2026-11-13.
 - [x] **Artemy:** pick a sketch direction or a mix. Direction B `[A]` 2026-11-13; the enclosure revisions already follow it.
 - [x] **Claude:** build the first parametric enclosure in `tender-hardware` (build123d). Rev 0.1 in `dev`, 2026-11-13; see [hardware](40-hardware/40-hardware.md).
@@ -49,7 +50,6 @@ parent: README.md
 
 ## Open questions
 
-- Is it allowed to wear the device on the floor? The answer sets the form: a forearm sleeve or a hidden belt module.
 - Which computer runs voice: Raspberry Pi Zero 2 WH, or a cloud request through the phone? See [device](20-device/device.md).
 
 ## Navigation

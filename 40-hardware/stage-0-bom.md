@@ -52,7 +52,7 @@ Notes:
 
 | Item | Purpose | Price |
 |---|---|---|
-| Print by an on-demand service, SLA resin | front shell, 4 key parts | not checked |
+| Print by an on-demand service, SLA resin | front shell, 4 key parts, 2 of each (1 spare). See the [print order](print-order.md) | not checked |
 | Print by an on-demand service, PA12 nylon (MJF or SLS) | back cover with the spring belt clip; resin breaks in the clip | not checked |
 | 4 × M2 × 16 self-tapping screws | back cover | not checked |
 | White paint marker | fill the engraved markings | not checked |

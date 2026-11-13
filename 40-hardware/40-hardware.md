@@ -15,6 +15,7 @@ parent: ../Home.md
 
 - [Stage 0 shopping list](stage-0-bom.md): boards and modules without soldering.
 - [Measurement sheet](measurement-sheet.md): values to measure on the real boards before the enclosure print.
+- [Print order](print-order.md): how to make the print package and order the enclosure print.
 
 The enclosure model, the wiring and the full BOM are in the [tender-hardware](https://github.com/milvalen/tender-hardware) repository.
 
