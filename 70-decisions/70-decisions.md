@@ -15,6 +15,17 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Desk test changes: table strip, no dessert stage
+
+**Decision:** after the first desk test runs `[A]`:
+
+- tables are chosen on a fixed strip in number order (finding D5);
+- the dessert stage is removed, and the STEP key label names the next stage (finding D6);
+- ACK removes the dessert hint;
+- the simulator counts extra presses apart from wrong-table actions (finding D7).
+
+**Consequence:** the [controls](../20-device/controls.md) page and the firmware on `ai/table-board` changed. The desk test runs again.
+
 ## 2026-11-13. Design review changes
 
 **Decision:** apply all changes R1–R9 of the [design review of enclosure rev 0.1](../10-concept/design-review-rev-0-1.md) `[A]`. One enclosure part for each firmware key, key functions engraved and shown on screen (`STEP`, `NEXT`, `ACK`, `REQ`), no visor, no fixed battery marking, no orange part on the enclosure. The screen uses black, white, the accent and grey for secondary text.

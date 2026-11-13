@@ -72,10 +72,10 @@ Findings of the scripted run `[Claude]`:
 |---|---|---|---|
 | D1 | 2-key mode: an overdue request turned hold B into ACK. The request could not be closed and alerted every 3 min | P3, P6 | fixed in firmware `43e4681`: hold B closes an open request first, label `HOLD B: DONE` |
 | D2 | No stage for "check brought". `BILL` alerts while the guests pay | P6 | open: see [controls](../20-device/controls.md#open-points) |
-| D3 | Skipping dessert needs 2 STEP presses | P3 | open: 5 of 7 tables in the script |
+| D3 | Skipping dessert needs 2 STEP presses | P3 | done: see D6 |
 | D4 | 132 of 180 presses are NEXT to reach a table | P1 | open: measure with Artemy; a direct table choice can come with voice (stage 1) |
 | D5 | Desk test, Artemy, first minute: "I do not understand how to select a table" `[A]` 2026-11-13. The big number is the selected table, but nothing shows a list or a cursor. NEXT replaces the content in place, and the order is by urgency, so the next table is not predictable | P3, P9 | done in firmware `ai/table-board`: fixed table strip in number order with a box on the selected table; NEXT moves in number order. Scripted player: 82 instead of 132 move presses in 4-key mode |
-| D6 | Desk test, Artemy, full shift in 4-key mode: "I got confused that we always pass through dessert" `[A]` 2026-11-13. 98 STEP presses for about 30 needed changes. 4 of 4 check requests missed. The stage cycle has a fixed `DESSERT` step, and the STEP key does not say which stage comes next, so Artemy pressed STEP around the full cycle | P2, P3, P4 | open: proposal is no dessert stage and a STEP label that names the next stage |
-| D7 | The simulator score counted 72 extra STEP presses on the correct table as wrong-table actions. Only 1 of 73 was on a table without guests. The score must count extra presses apart from wrong-table actions | — | open: fix in the simulator |
+| D6 | Desk test, Artemy, full shift in 4-key mode: "I got confused that we always pass through dessert" `[A]` 2026-11-13. 98 STEP presses for about 30 needed changes. 4 of 4 check requests missed. The stage cycle has a fixed `DESSERT` step, and the STEP key does not say which stage comes next, so Artemy pressed STEP around the full cycle | P2, P3, P4 | done in firmware `ai/table-board`: no dessert stage; the STEP key label names the next stage (`ORDER`, `SERVED`, `CHECK`, `CLEAR`); ACK removes the dessert hint |
+| D7 | The simulator score counted 72 extra STEP presses on the correct table as wrong-table actions. Only 1 of 73 was on a table without guests. The score must count extra presses apart from wrong-table actions | — | done: the score has a separate line for extra presses |
 
 [Parent](10-concept.md)

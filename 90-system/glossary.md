@@ -27,7 +27,7 @@ One term means one concept. Use the term from the "Use" column.
 | menu item | a dish or drink from the menu | item, product |
 | modifier | a change to a menu item: "no bacon", "no ice" | add-on |
 | timer | the time count since an event at a table | reminder |
-| stage | the service step of a table: `SEAT`, `ORD`, `MAIN`, `DSRT`, `BILL`, `FREE` | status, phase |
+| stage | the service step of a table: `SEAT`, `ORD`, `MAIN`, `BILL`, `FREE` | status, phase |
 | threshold | the timer value at which the device signals | limit, deadline |
 | request | a small guest request with a short timer; it does not change the stage | task, ask |
 | pass | the place where the kitchen puts ready dishes for servers | window, counter |

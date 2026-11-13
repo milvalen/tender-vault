@@ -30,7 +30,7 @@ After every press, the second line shows a 1 s confirmation of what changed. Exa
 
 NEXT moves the box one table to the right on the strip; after the last table it goes back to the first. In 4-key mode a long press of NEXT moves left. On a high alert the box moves to the alerting table by itself.
 
-The strip is in number order and does not change, so each table has a fixed place. Changed after desk test finding D5 `[A]` 2026-11-13: in the old design NEXT went through a list sorted by urgency, and Artemy could not tell how to reach a table.
+The strip is in number order and does not change, so each table has a fixed place. Changed after desk test finding D5 `[A]` 2026-11-13. In the old design NEXT went through a list sorted by urgency. Artemy could not tell how to reach a table.
 
 When the thumb wheel comes back, it moves the box in the same way.
 
@@ -59,18 +59,17 @@ Alerts have 2 levels. Only actions that a guest waits for raise an alert.
 | Level | When | What the device does |
 |---|---|---|
 | High | order not taken (`SEAT` 3 min), check not brought (`BILL` 3 min), guest request open 2 min | 1 burst of 2 s (vibration and screen), then a steady accent marker. The table becomes the selected table, so STEP acts on it. If the table is not served, the alert comes back after 3 min |
-| Low | offer dessert (`MAIN` 15 min) | Accent marker on the list only. No burst, no vibration |
+| Low | offer dessert (`MAIN` 15 min) | Accent marker on the strip only. No burst, no vibration. ACK on the table removes it until the next STEP |
 
 ## Table stages
 
-STEP moves a table through these stages. Thresholds are configurable. Artemy approved the values below `[A]` 2026-11-13; they are not tested on a shift yet.
+STEP moves a table through these stages. The STEP key label on the screen names the next stage: `SEAT`, `ORDER`, `SERVED`, `CHECK`, `CLEAR`. There is no dessert stage: changed after desk test finding D6 `[A]` 2026-11-13. Thresholds are configurable. Artemy approved the values below `[A]` 2026-11-13; they are not tested on a shift yet.
 
 | Stage | After STEP the screen says | Threshold | Action when due | Level |
 |---|---|---|---|---|
 | `SEAT` | GUESTS SEATED | 3 min | TAKE ORDER | high |
 | `ORD` | ORDER TAKEN | not set | — | — |
 | `MAIN` | MAINS SERVED | 15 min | OFFER DESSERT | low |
-| `DSRT` | DESSERT SERVED | not set | — | — |
 | `BILL` | CHECK REQUESTED | 3 min | BRING CHECK | high |
 | `FREE` | TABLE FREE | — | — | — |
 
@@ -91,7 +90,7 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 2. After 3 min, the device gives one burst and selects `TBL-07`. The screen says `TAKE ORDER`. Take the order and press STEP: `TBL-07 ORDER TAKEN`.
 3. A guest asks for water. Press REQUEST: `REQUEST OPEN`. If it is still open after 2 min, a high alert starts. Bring the water and press REQUEST again: `REQUEST DONE`.
 4. Serve the mains and press STEP. After 15 min, the list marks `OFFER DESSERT` without a burst.
-5. Serve the dessert and press STEP: `DESSERT SERVED`. If the guests take no dessert, skip this step.
+5. Offer dessert and press ACK: `DESSERT OFFERED`. The marker goes. Dessert needs no STEP: the table stays in `MAIN`.
 6. The guests ask for the check. Press STEP: `CHECK REQUESTED`. After 3 min without the check, a high alert starts: `BRING CHECK`.
 7. After payment, press STEP: `TABLE FREE`.
 ## Open points
@@ -99,8 +98,8 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
 2. Artemy runs the desk test from the [UX audit](../10-concept/ux-principles.md#desk-test-before-the-shift). The simulator is ready.
 3. Choose a vibration module for the stage 0 board `[?]`.
-4. Skipping dessert: step 5 is skipped in words, but the firmware still passes through `DESSERT SERVED`. The server presses STEP twice. The simulator shows this on 5 of 7 tables `[Claude]`. Check in the desk test whether this confuses.
+4. Skipping dessert: done. The dessert stage is removed and STEP goes from `MAIN` to `BILL` in 1 press (desk test D6).
 5. No stage for "check brought". `CHECK REQUESTED` alerts after 3 min even when the check is on the table and the guests are paying. The simulator gives this false alert on the slow-payment table `[Claude]`. Possible fix: a STEP after the check is brought, or a longer threshold.
-6. Moving between tables costs presses. In the simulated shift a scripted player used 132 of 180 presses on NEXT to reach the table `[Claude]`. The order by urgency helps for alerts, but not for floor events at any table. Check in the desk test.
+6. Moving between tables costs presses. The table strip in number order cut the presses of a scripted player from 132 to 79 in 4-key mode `[Claude]`. Check again in the desk test.
 
 [Parent](20-device.md)
