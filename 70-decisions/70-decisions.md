@@ -15,6 +15,10 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Desk test run 3 changes
+
+**Decision:** the label of the key that ends an alert is orange; the STEP key shows `HOLD: UNDO` for 5 s after each STEP; the simulator ends an alert only with the matching action `[A]`. Findings D9, D10, D12 in the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).
+
 ## 2026-11-13. Desk test changes: table strip, no dessert stage
 
 **Decision:** after the first desk test runs `[A]`:

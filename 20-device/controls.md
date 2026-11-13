@@ -24,7 +24,9 @@ Control scheme for the table board and timers ([function 1](functions.md#1-table
 5. The bottom line shows the current meaning of each key.
 6. The status line shows only what needs attention: `MUTED`, `LOW BATTERY` (below 25 %).
 
-After every press, the second line shows a 1 s confirmation of what changed. Example: `TBL-07 ORDER TAKEN`, `TBL-07 UNDONE`.
+After every press, the second line shows a 1 s confirmation of what changed. Example: `TBL-07 ORDER TAKEN`, `TBL-07 UNDONE`. For 5 s after a STEP the STEP key label reads `HOLD: UNDO` (desk test D10).
+
+During an alert the label of the key that ends it is orange: `REQ` for a guest request, the STEP key for a stage alert, `ACK` for the dessert hint (desk test D9).
 
 ## Choosing a table
 
