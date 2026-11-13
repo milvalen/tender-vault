@@ -60,7 +60,7 @@ Notes:
 Do not order the print before these checks:
 
 1. Measure the real StickS3 and Dual Button unit with the [measurement sheet](measurement-sheet.md).
-2. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. See the [rev 0.3 open points](40-hardware.md#enclosure-rev-03).
+2. Plug the USB-C cable and the Grove cable into the StickS3 at the same time: the plugs must not touch. A USB-C plug body of 5.3 mm or less is needed `[?]`. See the [plug check](40-hardware.md#plug-check).
 
 ### Where to print in Russia
 

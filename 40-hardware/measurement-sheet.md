@@ -59,15 +59,20 @@ Plug both cables into the StickS3 at the same time. The cable bay holds both plu
 
 | No. | Value | How to measure | Model | Source | Measured |
 |---|---|---|---|---|---|
-| P1 | USB-C plug body width | Across the plastic body, the long direction of the port | 12.5 | `[?]` | |
-| P2 | USB-C plug body thickness | Across the plastic body, the short direction of the port | 7.0 | `[?]` | |
+| P1 | USB-C plug body width | Across the plastic body, the long direction of the port | 12.35 | USB Type-C largest `[Claude]` | |
+| P2 | USB-C plug body thickness | Across the plastic body, the short direction of the port. 5.3 or less clears the Grove plug | 6.5 | USB Type-C largest `[Claude]` | |
 | P3 | Grove plug reach | Right end of the board to the farthest point of the Grove plug and the cable bend, with the cable bent down along the board | 8.0 or less | `[?]` | |
 | P4 | Gap between the plugs | Smallest gap between the USB-C plug body and the Grove plug or cable. Write 0 if they touch | more than 0 | open point 1 of rev 0.3 | |
 | P5 | Plugs pushed apart | Do the plugs push each other out of the ports? Yes or no | no | needed | |
+| P6 | Grove plug width | Across the part of the plug outside the port, the long direction | 9.9 | `[?]` | |
+| P7 | Grove plug thickness | Across the part of the plug outside the port, the short direction, with the latch | 4.5 | `[?]` | |
+| P8 | Grove plug out of the port | Right end of the board to the back of the Grove plug, without the cable | 4.0 | `[?]` | |
 
 If S8 is "bottom", tell Claude: the `NEXT` pusher on the top face does not reach key B.
 
-If P4 is 0 or P5 is "yes", stop here and tell Claude. The cable bay must change before the print.
+If P4 is 0 or P5 is "yes", stop here and tell Claude. Try a USB-C cable with a thinner or right-angle plug first: the ports on the board cannot move.
+
+Claude writes P1 to P8 into `Plugs` in `enclosure/params.py` and sets `Plugs.measured` to true. Then `build.py` fails on a plug problem.
 
 ## D. Dual Button unit
 

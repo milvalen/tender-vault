@@ -50,6 +50,17 @@ Status: built and checked in code, not printed. Accepted by Artemy into `dev` of
 
 Open points `[?]`: the clip force on a real belt, and whether the catch ridge holds when the server bends down.
 
+### Plug check
+
+Accepted by Artemy into `dev` of `tender-hardware`, commit `b970452`, 2026-11-13. Not checked with real plugs.
+
+- `build.py` models the USB-C plug body and the Grove plug with its cable bend at the right end of the StickS3. It checks that the plugs do not touch each other or the shell. The sizes are in `Plugs` in `enclosure/params.py`.
+- The plug sizes are guesses. USB-C plug body: 12.35 × 6.5 mm, the largest size in the USB Type-C specification `[Claude]`. Grove plug: 9.9 × 4.5 mm, 4 mm out of the port, from the 4-way JST PH housing `[?]`. While `Plugs.measured` is false, a plug problem is a warning.
+- The cable bay top moved up 0.6 mm. At the old height the widest USB-C plug body touched it.
+- Result with the guessed sizes: the USB-C plug body and the Grove plug overlap by 0.6 mm in height. The port centres are 4.9 mm apart. A USB-C plug body of 5.3 mm or less clears the Grove plug `[?]`.
+- The USB-C cable is needed only to charge and flash. If the plugs touch, use a thin or right-angle USB-C plug. The enclosure cannot move the ports.
+- The Grove plug with the cable bend needs 7.0 mm. The cable bay gives 9.7 mm.
+
 ## Enclosure rev 0.3
 
 Accepted by Artemy into `dev` of `tender-hardware`, commit `5c0953d`, 2026-11-13. Rev 0.4 adds the belt clip and the `TALK` key name.
@@ -65,7 +76,7 @@ Fits the real Dual Button unit. Sizes come from the maker drawings of the StickS
 
 Open points `[?]`:
 
-1. In the cable bay, the USB-C plug body and the Grove plug can touch: the ports are about 5 mm apart in height. Check with the real plugs before the print.
+1. In the cable bay, the USB-C plug body and the Grove plug can touch: the ports are about 5 mm apart in height. Check with the real plugs before the print. See the [plug check](#plug-check).
 2. The cable bay is 9.4 mm wide. A Grove cable of 20 cm does not fit in it; use a cable of 5 to 10 cm.
 3. Key B height on the StickS3 side and the cap retention are not measured.
 4. The vibration module has no place yet.
