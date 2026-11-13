@@ -71,7 +71,7 @@ Findings of the scripted run `[Claude]`:
 | # | Finding | Principle | Status |
 |---|---|---|---|
 | D1 | 2-key mode: an overdue request turned hold B into ACK. The request could not be closed and alerted every 3 min | P3, P6 | fixed in firmware `43e4681`: hold B closes an open request first, label `HOLD B: DONE` |
-| D2 | No stage for "check brought". `BILL` alerts while the guests pay | P6 | open: see [controls](../20-device/controls.md#open-points) |
+| D2 | No stage for "check brought". `BILL` alerts while the guests pay | P6 | done: stage `PAY` (check brought, no timer), firmware `dev` `7d8b0bd`; one more STEP for each table |
 | D3 | Skipping dessert needs 2 STEP presses | P3 | done: see D6 |
 | D4 | 132 of 180 presses are NEXT to reach a table | P1 | open: measure with Artemy; a direct table choice can come with voice (stage 1) |
 | D5 | Desk test, Artemy, first minute: "I do not understand how to select a table" `[A]` 2026-11-13. The big number is the selected table, but nothing shows a list or a cursor. NEXT replaces the content in place, and the order is by urgency, so the next table is not predictable | P3, P9 | done in firmware `ai/table-board`: fixed table strip in number order with a box on the selected table; NEXT moves in number order. Scripted player: 82 instead of 132 move presses in 4-key mode |

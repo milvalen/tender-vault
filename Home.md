@@ -47,7 +47,7 @@ parent: README.md
 - [x] **Claude:** vibration indicator `BZZ` in the desk-test simulator, so a `MUTED` alert can be seen. Accepted by Artemy into `tender-firmware` `dev` 2026-11-13, commit `2c4d4a5`.
 - [x] **Artemy:** review the release rule in `CLAUDE.md` ("`dev` goes to `main` only after a review of `dev`; the vault follows `dev`") on `feature/release-rule` and accept it into `dev`: `tender-firmware` `68b634e`, `tender-hardware` `9ae18ad`. Accepted into `dev` 2026-11-13. See the [decision log](70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
 - [x] **Artemy:** review the board self-test on `tender-firmware` `feature/self-test` `1274ce3` and accept it into `dev`. Type `!` in the serial console; it checks the Dual Button pins, display rotation, vibrator GPIO and PWM, battery and USB voltage, and the reset reason. Tests pass, the firmware builds; not run on a real board. Battery current still needs a multimeter. Accepted 2026-11-13, `tender-firmware` `dev` merge commit `c9eeb51`. Not run on a real board.
-- [ ] **Artemy:** review the `PAY` stage on `tender-firmware` `feature/check-brought` `ad41a42` and accept it into `dev`. In `BILL` the STEP key reads `BROUGHT`; `PAY` has no timer, so a slow payment gives no alert (desk test D2). Tests pass, the firmware builds; not run on a real board.
+- [x] **Artemy:** review the `PAY` stage on `tender-firmware` `feature/check-brought` `ad41a42` and accept it into `dev`. In `BILL` the STEP key reads `BROUGHT`; `PAY` has no timer, so a slow payment gives no alert (desk test D2). Accepted 2026-11-13, `tender-firmware` `dev` commit `7d8b0bd`. Not run on a real board.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions

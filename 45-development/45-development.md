@@ -17,7 +17,7 @@ Code lives in separate repositories. The vault does not copy code. Run commands 
 
 | Repository | Purpose | Status |
 |---|---|---|
-| [tender-firmware](https://github.com/milvalen/tender-firmware) | interface unit firmware; the phone voice link (stage 1) | `dev` `c9eeb51` (2026-11-13): table board, simulator, quiet floor `MUTED`, board self-test; not run on hardware |
+| [tender-firmware](https://github.com/milvalen/tender-firmware) | interface unit firmware; the phone voice link (stage 1) | `dev` `7d8b0bd` (2026-11-13): table board, simulator, quiet floor `MUTED`, board self-test, `PAY` stage; not run on hardware |
 | [tender-hardware](https://github.com/milvalen/tender-hardware) | parametric enclosure (build123d), wiring, BOM | `dev` `23b3785` (2026-11-13): enclosure rev 0.4, the print package and the tolerance coupons; not printed |
 
 ## Branches

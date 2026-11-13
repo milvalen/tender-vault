@@ -65,7 +65,7 @@ Alerts have 2 levels. Only actions that a guest waits for raise an alert.
 
 ## Table stages
 
-STEP moves a table through these stages. The STEP key label on the screen names the next stage: `SEAT`, `ORDER`, `SERVED`, `CHECK`, `CLEAR`. There is no dessert stage: changed after desk test finding D6 `[A]` 2026-11-13. Thresholds are configurable. Artemy approved the values below `[A]` 2026-11-13; they are not tested on a shift yet.
+STEP moves a table through these stages. The STEP key label on the screen names the next stage: `SEAT`, `ORDER`, `SERVED`, `CHECK`, `BROUGHT`, `CLEAR`. There is no dessert stage: changed after desk test finding D6 `[A]` 2026-11-13. The `PAY` stage (check brought, the guests pay) has no threshold: changed after desk test finding D2 `[A]` 2026-11-13, firmware `dev` `7d8b0bd`. Thresholds are configurable. Artemy approved the values below `[A]` 2026-11-13; they are not tested on a shift yet.
 
 | Stage | After STEP the screen says | Threshold | Action when due | Level |
 |---|---|---|---|---|
@@ -73,6 +73,7 @@ STEP moves a table through these stages. The STEP key label on the screen names 
 | `ORD` | ORDER TAKEN | not set | — | — |
 | `MAIN` | MAINS SERVED | 15 min | OFFER DESSERT | low |
 | `BILL` | CHECK REQUESTED | 3 min | BRING CHECK | high |
+| `PAY` | CHECK BROUGHT | not set | — | — |
 | `FREE` | TABLE FREE | — | — | — |
 
 ## Stage 0 key mapping
@@ -96,14 +97,15 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 4. Serve the mains and press STEP. After 15 min, the list marks `OFFER DESSERT` without a burst.
 5. Offer dessert and press ACK: `DESSERT OFFERED`. The marker goes. Dessert needs no STEP: the table stays in `MAIN`.
 6. The guests ask for the check. Press STEP: `CHECK REQUESTED`. After 3 min without the check, a high alert starts: `BRING CHECK`.
-7. After payment, press STEP: `TABLE FREE`.
+7. Bring the check and press STEP (the key reads `BROUGHT`): `CHECK BROUGHT`. There is no alert while the guests pay.
+8. After payment, press STEP (the key reads `CLEAR`): `TABLE FREE`.
 ## Open points
 
 1. Check the thresholds on a real shift and record the results in the [field notes](../30-field/30-field.md).
 2. Desk test: done. Artemy passed it in 4-key mode on run 5, 2026-11-13; see the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays). Open findings from the desk test stay in the audit.
 3. Vibration module: the M5Stack Unit Vibrator (U059) is the candidate `[A]` 2026-11-13, see the [shopping list](../40-hardware/stage-0-bom.md#recommended-silent-alert). The firmware drives it (`kVibroPin`, PWM limit, firmware `dev` `29ffb53`). The [vibrator desk test](../40-hardware/40-hardware.md#silent-alert-desk-test-first) decides if it stays.
 4. Skipping dessert: done. The dessert stage is removed and STEP goes from `MAIN` to `BILL` in 1 press (desk test D6).
-5. No stage for "check brought". `CHECK REQUESTED` alerts after 3 min even when the check is on the table and the guests are paying. The simulator gives this false alert on the slow-payment table `[Claude]`. Possible fix: a STEP after the check is brought, or a longer threshold.
+5. No stage for "check brought": done. The `PAY` stage has no timer; STEP in `BILL` reads `BROUGHT` (desk test D2, firmware `dev` `7d8b0bd`, 2026-11-13). Cost: one more STEP for each table. Scripted good player on the simulator shift: 4 high alerts, 0 false (before: 5, 1 false); 136 key presses (before: 121) `[Claude]`.
 6. Moving between tables costs presses. The table strip in number order cut the presses of a scripted player from 132 to 79 in 4-key mode `[Claude]`. Check again in the desk test.
 7. `MUTED` is the "quiet floor" mode. Decided `[A]` 2026-11-13, see the [decision log](../70-decisions/70-decisions.md#2026-11-13-muted-is-the-quiet-floor-mode):
    - alerts come by vibration only, with no screen burst;
