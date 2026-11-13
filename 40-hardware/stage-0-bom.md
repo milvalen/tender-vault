@@ -7,7 +7,7 @@ created: '2026-11-13'
 updated: '2026-11-13'
 observed: '2026-11-13'
 sensitivity: public
-source: docs.m5stack.com (StickS3, Unit Dual Button, Unit Vibrator), cnx-software.com (StickS3 launch price, 2026-01-23), thepihut.com, robotshop.com [Claude] 2026-11-13
+source: docs.m5stack.com (StickS3, Unit Dual Button, Unit Vibrator), cnx-software.com (StickS3 launch price, 2026-01-23), thepihut.com, robotshop.com, market.yandex.ru, eicom.ru [Claude] 2026-11-13
 parent: 40-hardware.md
 ---
 
@@ -15,7 +15,7 @@ parent: 40-hardware.md
 
 Approved by Artemy 2026-11-13 `[A]`. The list follows the desk test: the 4-key mode (StickS3 with the Dual Button unit) passed, the 2-key mode is the fallback. See the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).
 
-Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-13. Prices in Russia with delivery were not checked.
+Prices in the tables are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-13. For shops in Russia, see [Where to buy in Russia](#where-to-buy-in-russia).
 
 ## Required
 
@@ -25,6 +25,28 @@ Prices are in US dollars or pounds from shops outside Russia `[Claude]` 2026-11-
 | M5Stack Unit Dual Button (U025) | keys `ACK` and `REQ` on the Grove port | about £2.90 or €3.50 |
 | Grove cable HY2.0-4P, 5 to 10 cm | connects the Dual Button unit inside the enclosure; the 20 cm cable in the box does not fit in the cable bay | not checked `[?]` |
 | USB-C data cable | flashing and charging | probably at home `[?]` |
+
+## Where to buy in Russia
+
+Checked 2026-11-13 `[Claude]`. Prices include the delivery to a pickup point. Delivery times depend on the address and the seller; prices change daily.
+
+| Item | Shop | Price | Delivery |
+|---|---|---|---|
+| StickS3 | Yandex Market, seller with 43 sales and rating 5.0, ships from Russia | 4,090 RUB | about 2 days |
+| Dual Button unit (U025) | Yandex Market, ships from abroad | 506 RUB | about 2 weeks |
+| Dual Button unit (U025) | eicom.ru, 168 in stock | 539 RUB | 3 to 6 weeks |
+| Grove cable HY2.0-4P 10 cm, 5 pieces | Yandex Market, several sellers | 532 to 822 RUB | 3 to 4 weeks |
+| Unit Vibrator (N20, U059) | Yandex Market, ships from abroad | 508 RUB | about 2 weeks |
+| Unit Vibrator (N20, U059) | eicom.ru, 114 in stock | 539 RUB | 3 to 6 weeks |
+| Grove2Dupont cable 20 cm, 5 pairs (vibrator to Hat2 header) | Yandex Market, ships from abroad | 660 RUB | about 2 weeks |
+
+Total for the required items with the 4-key mode: about 5,130 RUB. With the silent alert: about 6,300 RUB.
+
+Notes:
+
+- Ozon also lists the StickS3 (about 3,230 RUB on sale, seen in search results). The product page was not checked: it showed an anti-bot check.
+- eicom.ru has only 20 cm and longer M5Stack Grove cables (A034-B: 20 cm). The 10 cm cables are from marketplace sellers; check the HY2.0-4P plug in the photos.
+- Order all at the same time: the StickS3 arrives first, the modules from abroad in about 2 weeks.
 
 ## Enclosure rev 0.3
 
