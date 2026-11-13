@@ -15,6 +15,10 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Desk test run 4 changes
+
+**Decision:** STEP closes an open guest request, and its label reads `DONE`; REQUEST only opens a request `[A]`. This replaces "a second press of REQUEST closes an open request" from the control scheme decision below. The undo hint moves to the status line. STEP keeps the snooze of an open request. Findings D14 to D17 in the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).
+
 ## 2026-11-13. Desk test run 3 changes
 
 **Decision:** the label of the key that ends an alert is orange; the STEP key shows `HOLD: UNDO` for 5 s after each STEP; the simulator ends an alert only with the matching action `[A]`. Findings D9, D10, D12 in the [UX audit](../10-concept/ux-principles.md#simulator-check-before-artemy-plays).

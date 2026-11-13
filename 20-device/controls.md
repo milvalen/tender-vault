@@ -24,9 +24,9 @@ Control scheme for the table board and timers ([function 1](functions.md#1-table
 5. The bottom line shows the current meaning of each key.
 6. The status line shows only what needs attention: `MUTED`, `LOW BATTERY` (below 25 %).
 
-After every press, the second line shows a 1 s confirmation of what changed. Example: `TBL-07 ORDER TAKEN`, `TBL-07 UNDONE`. For 5 s after a STEP the STEP key label reads `HOLD: UNDO` (desk test D10).
+After every press, the second line shows a 1 s confirmation of what changed. Example: `TBL-07 ORDER TAKEN`, `TBL-07 UNDONE`. For 5 s after a STEP the status line reads `HOLD STEP = UNDO` (desk test D10, D16).
 
-During an alert the label of the key that ends it is orange: `REQ` for a guest request, the STEP key for a stage alert, `ACK` for the dessert hint (desk test D9).
+During an alert the label of the key that ends it is orange (desk test D9). For a guest request or a stage alert it is the STEP key. For the dessert hint it is `ACK`.
 
 ## Choosing a table
 
@@ -44,7 +44,7 @@ One function per key. A long press is used only for rare actions that can be rev
 |---|---|---|
 | **1. STEP** | Move the table to the next stage. After a pickup, mark the menu item as served ([orders and pickup](orders-and-pickup.md)) | Undo the last step |
 | **2. ACK** | Stop the current alert. A high alert comes back after 3 min if the table is not served | Mute all alerts for 10 min |
-| **3. REQUEST** | Open a guest request (water, cutlery, napkins) with a 2 min timer. A second press closes it. The stage does not change | Open the table menu: table map by seat, allergens, number of guests, free the table |
+| **3. REQUEST** | Open a guest request (water, cutlery, napkins) with a 2 min timer. STEP closes it: while a request is open, the STEP key reads `DONE` (desk test D15). The stage does not change | Open the table menu: table map by seat, allergens, number of guests, free the table |
 
 Each key has its own shape, so the server can find it without a look:
 
@@ -81,8 +81,8 @@ The stage 0 board (M5Stack StickS3) has 2 keys and no wheel. Firmware: `tender-f
 
 | Mode | `STEP`: key A (front) | `NEXT`: key B (top) | `ACK`: red key | `REQ`: blue key |
 |---|---|---|---|---|
-| 4 keys: Dual Button unit on Grove | STEP, hold UNDO | NEXT table, hold previous | ACK, hold MUTE | REQUEST |
-| 2 keys: StickS3 alone | STEP, hold UNDO | NEXT table; hold: close the open request, else ACK when an alert is shown, else open a request | — | — |
+| 4 keys: Dual Button unit on Grove | STEP (`DONE` closes an open request), hold UNDO | NEXT table, hold previous | ACK, hold MUTE | open a REQUEST |
+| 2 keys: StickS3 alone | STEP (`DONE` closes an open request), hold UNDO | NEXT table; hold: ACK when an alert is shown, else open a request | — | — |
 
 The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen shows the current meaning: `HOLD NEXT: DONE`, `HOLD NEXT: ACK` or `HOLD NEXT: REQ`. An open request comes first, so an overdue request can always be closed. Use the 4-key mode if the desk test shows confusion.
 
@@ -90,7 +90,7 @@ The 2-key mode gives one key 3 meanings on hold. The bottom line of the screen s
 
 1. Guests sit at table 7. Select `TBL-07` with the wheel and press STEP. The screen confirms `TBL-07 GUESTS SEATED`.
 2. After 3 min, the device gives one burst and selects `TBL-07`. The screen says `TAKE ORDER`. Take the order and press STEP: `TBL-07 ORDER TAKEN`.
-3. A guest asks for water. Press REQUEST: `REQUEST OPEN`. If it is still open after 2 min, a high alert starts. Bring the water and press REQUEST again: `REQUEST DONE`.
+3. A guest asks for water. Press REQUEST: `REQUEST OPEN`. If it is still open after 2 min, a high alert starts. Bring the water and press STEP, which now reads `DONE`: `REQUEST DONE`.
 4. Serve the mains and press STEP. After 15 min, the list marks `OFFER DESSERT` without a burst.
 5. Offer dessert and press ACK: `DESSERT OFFERED`. The marker goes. Dessert needs no STEP: the table stays in `MAIN`.
 6. The guests ask for the check. Press STEP: `CHECK REQUESTED`. After 3 min without the check, a high alert starts: `BRING CHECK`.

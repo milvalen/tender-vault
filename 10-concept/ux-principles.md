@@ -83,9 +83,9 @@ Findings of the scripted run `[Claude]`:
 | D11 | 232 of 292 presses moved between tables (scripted player: 79). A thumb wheel would cut this | P1 | open: decide on the wheel and the Grove port plan |
 | D12 | The simulator counted a STEP on a request alert as a correct answer to the alert | — | done: REQUEST ends a request alert, STEP a stage alert, ACK and MUTE end all |
 | D13 | Desk test run 4, Artemy, 4-key mode `[A]` 2026-11-13: 32 of 37 floor events in time, 4 of 8 high alerts missed, 6 wrong-table, 19 extra presses, 3 questions. FAIL, worse than run 3 | — | record |
-| D14 | Firmware bug: STEP clears the alert snooze of the table. On an overdue request, STEP starts the same alert again at once. Each of the 2 missed request alerts was counted 2 times | P6 | open: fix in the core |
-| D15 | On both request alerts Artemy pressed STEP again, with `REQ` in orange. Artemy uses the main key as "done" | P3 | open: proposal is that STEP closes an open request first, with the label `DONE`; REQ only opens a request |
-| D16 | After the `HOLD: UNDO` label came, Artemy pressed STEP 5 more times on TBL-03 and asked 3 questions. The label hid what the next tap does | P3, P4 | open: proposal is to keep the next-stage label and show `HOLD = UNDO` in the status line |
-| D17 | Script: "order dessert. You serve it." made Artemy press STEP 5 times on TBL-07 to record the dessert. There is no dessert stage | — | open: change the line to "Guests at TBL-07 order dessert." |
+| D14 | Firmware bug: STEP clears the alert snooze of the table. On an overdue request, STEP starts the same alert again at once. Each of the 2 missed request alerts was counted 2 times | P6 | done: STEP keeps the snooze of an open request |
+| D15 | On both request alerts Artemy pressed STEP again, with `REQ` in orange. Artemy uses the main key as "done" | P3 | done: STEP reads `DONE` and closes an open request; REQ only opens |
+| D16 | After the `HOLD: UNDO` label came, Artemy pressed STEP 5 more times on TBL-03 and asked 3 questions. The label hid what the next tap does | P3, P4 | done: the key keeps the next-stage label; the status line reads `HOLD STEP = UNDO` for 5 s |
+| D17 | Script: "order dessert. You serve it." made Artemy press STEP 5 times on TBL-07 to record the dessert. There is no dessert stage | — | done in the shift script |
 
 [Parent](10-concept.md)
