@@ -36,15 +36,28 @@ The script stops with status 1 if a fit check fails. Then it writes no package.
 
 | Folder or file | Contents |
 |---|---|
-| `sla/` | front shell and 4 key caps, for SLA resin |
-| `pa12/` | back cover with the belt clip, for PA12 nylon |
+| `sla/` | front shell, 4 key caps and the SLA tolerance coupon, for SLA resin |
+| `pa12/` | back cover with the belt clip and the PA12 tolerance coupon, for PA12 nylon |
 | `step/` | 1 STEP file for each part, for services that take STEP |
 | `parts.csv` | part, material, quantity, volume, size and print notes |
 | `ORDER.txt` | the request to the service, the volumes and the commit |
 
-Quantities at `dev` 5fba3b9: 1 front shell, 1 back cover, 2 of each key cap. The second key cap is a spare. Each key cap is 0.2 to 0.4 cm³.
+Quantities at `dev` 23b3785: 1 front shell, 1 back cover, 2 of each key cap, 1 SLA coupon, 1 PA12 coupon. The second key cap is a spare. Each key cap is 0.2 to 0.4 cm³.
 
-Volumes with the spares: SLA 31.9 cm³, PA12 16.4 cm³.
+Volumes with the spares and the coupons: SLA 37.5 cm³, PA12 21.3 cm³. The PA12 coupon is 4.9 cm³; leave it out to save cost if needed.
+
+## Tolerance coupons
+
+Two small test parts go in the same order. They show the gaps that the service really gives. The next enclosure revision uses these results instead of guesses. Labels: key gaps are in hundredths of a millimetre per side, holes in tenths of a millimetre (`17` = 1.7 mm). Source: `tender-hardware` `enclosure/coupon.py` at `dev` `23b3785` `[Claude]` 2026-11-13.
+
+| Coupon | Material | Feature | Range | Model value |
+|---|---|---|---|---|
+| `coupon_sla` | SLA | window at the payload pocket size, label `POCKET 30` | 0.30 mm gap per side | 0.30 |
+| `coupon_sla` | SLA | square key holes | 0.10 to 0.30 mm gap per side | 0.20 |
+| `coupon_sla` | SLA | screw pilot bosses, 8 mm deep | 1.5 to 1.9 mm | 1.7 |
+| `coupon_sla` | SLA | engraving depth, each label cut to its own depth | 0.3 to 0.5 mm | 0.4 |
+| `coupon_pa12` | PA12 | 10 mm strip of the real belt clip profile | — | — |
+| `coupon_pa12` | PA12 | screw clearance holes with head recess | 2.2 to 2.6 mm | 2.4 |
 
 ## Place the order
 
@@ -66,8 +79,15 @@ Volumes with the spares: SLA 31.9 cm³, PA12 16.4 cm³.
 ## When the parts arrive
 
 1. Look at the engraving on the front shell. Each letter must be clear.
-2. Pull the clip tip out by hand by 3 to 4 mm. A 4.5 mm belt opens it by 3.5 mm. Release it. The tongue must return with no white marks.
-3. Put the boards in the front shell. Write each tight or loose fit in the [measurement sheet](measurement-sheet.md).
-4. Fill the engraving with the white paint marker.
+2. Put the StickS3 and the Dual Button unit in the window of `coupon_sla`. Write "tight", "good" or "loose".
+3. Put a spare key cap in each key hole of `coupon_sla`. Write the smallest gap where the cap moves freely.
+4. Turn an M2 self-tapping screw into each pilot boss of `coupon_sla`. Write the smallest hole where the boss does not crack and the screw holds.
+5. Look at the 3 engraving depths. Write the smallest depth that stays clear after the paint marker.
+6. Bend the clip strip of `coupon_pa12` 100 times by 3 to 4 mm. Then bend it until it breaks. Write the bend at the break.
+7. Push an M2 screw through each clearance hole of `coupon_pa12`. Write the smallest hole where the screw goes in freely.
+8. Pull the clip tip out by hand by 3 to 4 mm. A 4.5 mm belt opens it by 3.5 mm. Release it. The tongue must return with no white marks.
+9. Put the boards in the front shell. Write each tight or loose fit in the [measurement sheet](measurement-sheet.md).
+10. Fill the engraving with the white paint marker.
+11. Give the coupon results to Claude for the next enclosure revision.
 
 [Parent](40-hardware.md)
