@@ -55,9 +55,8 @@ Target: 10–12 h of a shift on one charge. Charging through USB-C. Measure the 
 
 ## Mounting
 
-2 options; the choice depends on the restaurant rules:
+The device is allowed on the floor, on the belt `[A]` 2026-11-13. It hangs on the apron belt with a spring clip, screen up. See the [decision log](../70-decisions/70-decisions.md#2026-11-13-the-device-is-worn-on-the-belt).
 
-1. A forearm sleeve, screen toward the face.
-2. A hidden module on the apron belt, screen up.
+Rejected: a forearm sleeve with the screen toward the face (sketch A).
 
 [Parent](20-device.md)

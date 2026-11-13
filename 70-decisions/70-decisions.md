@@ -15,6 +15,14 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. The device is worn on the belt
+
+**Decision:** the restaurant allows the device on the floor, on the belt `[A]`. TND-01 is a belt module with a spring clip. This closes the open question "Is it allowed to wear the device on the floor?" on Home.
+
+**Rejected:** a forearm sleeve (sketch A).
+
+**Consequence:** the [mounting](../20-device/device.md#mounting) has 1 option. The enclosure direction B and the belt clip of rev 0.4 stay.
+
 ## 2026-11-13. Working-rule changes go straight into dev
 
 **Decision:** changes to working rules only (`CLAUDE.md`, branch and process rules) go straight into `dev`, without a `feature/<area>` review `[A]`. Code, enclosure models and other work still go through `feature/<area>` and Artemy's review. `dev` still goes to `main` only after a careful review and an explicit command from Artemy.
