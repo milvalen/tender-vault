@@ -84,13 +84,16 @@ The StickS3 has no vibration motor ([UX audit](../10-concept/ux-principles.md) A
 
 | Item | Purpose | Price |
 |---|---|---|
-| M5Stack Unit Vibrator (U059) | vibration on a high alert. N20 motor, 5 V, GPIO or PWM | about $3 |
-| Cable HY2.0-4P to female 2.54 mm pins | connects the vibrator to the Hat2 header: the Grove port is taken by the Dual Button unit | not checked `[?]` |
+| M5Stack Unit Vibrator (U059) | vibration on a high alert. N20 motor, 5 V, GPIO or PWM. 32 × 24 × 8 mm, 10.6 g | about $3 |
+| Cable HY2.0-4P to **male** 2.54 mm pins | connects the vibrator to the Hat2 header: the Grove port is taken by the Dual Button unit. The Hat2 header has sockets, so the cable needs pins | not checked `[?]` |
+
+Correction 2026-11-13 `[Claude]`: an earlier version of this list gave a cable with female pins. Female pins do not fit the Hat2 sockets. The "Grove2Dupont" cable in [Where to buy in Russia](#where-to-buy-in-russia) is correct only if its ends are male; check the photos before the order.
 
 Open points `[?]`:
 
-- The vibrator connects to a free GPIO, 5 V and GND on the Hat2 header (G1 to G8 are on the header). Confirm the pins and the 5 V output on the real board, then set `kVibroPin` in the firmware.
-- The enclosure has no place for the vibrator yet.
+- The vibrator connects to a free GPIO, 5 V and GND on the Hat2 header (G1 to G8 are on the header). Confirm the pins and the 5 V output on battery on the real board, then set `kVibroPin` in the firmware.
+- The maker gives 5 V at 424 mA for the motor at 10 kHz PWM, 50 % duty (docs.m5stack.com, U059) `[Claude]`. The StickS3 page gives a limit of 0.38 A for 5 V on the Grove port. The firmware now switches the pin fully on; limit the PWM duty before a long test.
+- The enclosure has no place for the vibrator. Do the [vibrator desk test](40-hardware.md#silent-alert-desk-test-first) first.
 
 ## For voice (stage 1)
 

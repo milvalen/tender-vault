@@ -15,6 +15,12 @@ parent: ../Home.md
 
 Add a new decision at the top with the [template](../90-system/templates/decision.md).
 
+## 2026-11-13. Vibrator: desk test before an enclosure place
+
+**Decision:** test the Unit Vibrator on an open board before the enclosure gets a place for it `[A]`. See [silent alert: desk test first](../40-hardware/40-hardware.md#silent-alert-desk-test-first).
+
+**Rejected for now:** a third bay below the Dual Button unit (shell about 78 × 90 × 31 mm `[?]`) and a separate belt module with a cable. The decision comes after the test.
+
 ## 2026-11-13. Belt clip and final key names
 
 **Decision:** the enclosure hangs on the belt with a spring clip, as a hand-held radio does, and comes off at any time `[A]`. The engravings name the keys of the final version with voice: the REQUEST key becomes `TALK` (hold and speak) `[A]`. There is no separate talk button. See [enclosure rev 0.4](../40-hardware/40-hardware.md#enclosure-rev-04).

@@ -17,6 +17,26 @@ parent: ../Home.md
 
 The enclosure model, the wiring and the full BOM are in the [tender-hardware](https://github.com/milvalen/tender-hardware) repository.
 
+## Silent alert: desk test first
+
+Status: planned. Decided by Artemy `[A]` 2026-11-13: test the vibrator on an open board before the enclosure gets a place for it.
+
+Why the enclosure does not change now `[Claude]` 2026-11-13:
+
+- The Unit Vibrator (U059) is 32 × 24 × 8 mm. It does not fit in rev 0.4 in any orientation. Behind the boards there is no depth. On edge it needs 24 mm of depth; the inside is 15.4 mm. The cable bay is 9.4 mm wide. Below the lower bay there is about 7.8 mm.
+- The Hat2 header is on the screen end of the StickS3 (maker drawing K150), at the left wall. The left wall is 7.6 mm and holds the screws. A 2.54 mm pin plug with the cable bend needs about 15 to 18 mm `[?]`.
+- A third bay below the Dual Button unit makes the shell about 78 × 90 × 31 mm `[?]`, from 68 × 62 × 31 mm. The desk test shows if the silent alert is worth this size.
+
+Test steps:
+
+1. Connect the vibrator to the Hat2 header with the Grove cable to male pins: signal to a free GPIO (G1 to G8), 5 V, GND. Write down the pins.
+2. Set `kVibroPin` in `tender-firmware` and limit the PWM duty (see the [shopping list](stage-0-bom.md#recommended-silent-alert) for the current).
+3. Run on battery, USB not connected. Check that the 5 V output works and the board does not restart when the motor starts.
+4. Put the board and the vibrator in a pocket or tape them to the belt. Walk and bend. Is a high alert felt through the clothes? Is it heard by a guest at the table?
+5. Measure the battery time with the alerts on.
+
+Write the result here. Then decide: a third bay in the enclosure, a separate belt module with a cable, or no vibrator.
+
 ## Enclosure rev 0.4
 
 Status: built and checked in code, not printed. Accepted by Artemy into `dev` of `tender-hardware`, commit `535f230`, 2026-11-13.
