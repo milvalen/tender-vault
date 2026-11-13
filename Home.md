@@ -46,6 +46,7 @@ parent: README.md
 - [x] **Artemy:** review `MUTED` on `feature/quiet-mute` and accept it into `dev`. Accepted 2026-11-13, merge commit `52725fd`. The first press on an off screen only turns it on.
 - [x] **Claude:** vibration indicator `BZZ` in the desk-test simulator, so a `MUTED` alert can be seen. Accepted by Artemy into `tender-firmware` `dev` 2026-11-13, commit `2c4d4a5`.
 - [x] **Artemy:** review the release rule in `CLAUDE.md` ("`dev` goes to `main` only after a review of `dev`; the vault follows `dev`") on `feature/release-rule` and accept it into `dev`: `tender-firmware` `68b634e`, `tender-hardware` `9ae18ad`. Accepted into `dev` 2026-11-13. See the [decision log](70-decisions/70-decisions.md#2026-11-13-the-vault-records-the-state-of-dev).
+- [ ] **Artemy:** review the board self-test (serial console `!`: Dual Button pins, display rotation, vibrator GPIO and PWM, battery and USB voltage, reset reason) on `tender-firmware` `feature/self-test` `1274ce3` and accept it into `dev`. Tests pass, the firmware builds; not run on a real board. Battery current still needs a multimeter.
 - [ ] **Artemy:** after 2–3 shifts, write observations in the [field notes](30-field/30-field.md).
 
 ## Open questions
