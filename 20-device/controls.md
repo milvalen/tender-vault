@@ -61,7 +61,7 @@ Alerts have 2 levels. Only actions that a guest waits for raise an alert.
 | Level | When | What the device does |
 |---|---|---|
 | High | order not taken (`SEAT` 3 min), check not brought (`BILL` 3 min), guest request open 2 min | 1 burst of 2 s (vibration and screen), then a steady accent marker. The table becomes the selected table, so STEP acts on it. If the table is not served, the alert comes back after 3 min |
-| Low | offer dessert (`MAIN` 15 min) | Accent marker on the strip only. No burst, no vibration. ACK on the table removes it until the next STEP |
+| Low | offer dessert (`MAIN` 15 min); mains not served (`ORD` 10 min) | Accent marker on the strip and the text on the screen. No burst, no vibration; the selection does not move. ACK on the table removes it until the next STEP (`MAINS CHECKED` for `ORD`) |
 
 ## Table stages
 
@@ -70,11 +70,13 @@ STEP moves a table through these stages. The STEP key label on the screen names 
 | Stage | After STEP the screen says | Threshold | Action when due | Level |
 |---|---|---|---|---|
 | `SEAT` | GUESTS SEATED | 3 min | TAKE ORDER | high |
-| `ORD` | ORDER TAKEN | not set | — | — |
+| `ORD` | ORDER TAKEN | 10 min | CHECK MAINS | low |
 | `MAIN` | MAINS SERVED | 15 min | OFFER DESSERT | low |
 | `BILL` | CHECK REQUESTED | 3 min | BRING CHECK | high |
 | `PAY` | CHECK BROUGHT | not set | — | — |
 | `FREE` | TABLE FREE | — | — | — |
+
+The `ORD` hint shows a table where `SERVED` may be forgotten (desk test D20). Artemy chose 10 min `[A]` 2026-11-13, firmware `dev` `d5a8b01`. The simulator kitchen takes 6 to 8 min; check the real `ORD` time in the shift log.
 
 ## Stage 0 key mapping
 
